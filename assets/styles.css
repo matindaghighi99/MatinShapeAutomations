@@ -1603,6 +1603,16 @@ input, textarea, select { font-family: inherit; }
 .password-toggle:hover { color: var(--ink); background: rgba(28,25,23,.05); }
 .password-toggle:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 1px; }
 .form-hint { font-size: 12px; color: var(--ink-mute); margin-top: 6px; }
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-error {
+  color: #B91C1C;
+  background: rgba(185,28,28,.08);
+  border: 1px solid rgba(185,28,28,.25);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  margin: 0 0 20px;
+  font-size: 13px;
+}
 .form-success {
   display: none;
   text-align: center;

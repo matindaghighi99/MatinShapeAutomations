@@ -271,17 +271,8 @@
     });
   });
 
-  /* ---------- Contact form (demo submit) ---------- */
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const fields = contactForm.querySelector('.form-fields');
-      const success = contactForm.querySelector('.form-success');
-      fields.style.display = 'none';
-      success.classList.add('show');
-    });
-  }
+  /* ---------- Contact form ----------
+     The contact page's intake console is handled in assets/contact.js. */
 })();
 
 

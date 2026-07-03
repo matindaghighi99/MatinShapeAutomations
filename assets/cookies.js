@@ -8,9 +8,21 @@
   var STORAGE_KEY = 'ms_cookie_consent';
   var MAX_AGE = 60 * 60 * 24 * 365; // 1 year, in seconds
 
+  // localStorage is a fallback for contexts where document.cookie doesn't
+  // persist across page loads (e.g. local file:// testing).
+  function readLocalStorage() {
+    try { return window.localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+  function writeLocalStorage(value) {
+    try {
+      if (value) window.localStorage.setItem(STORAGE_KEY, value);
+      else window.localStorage.removeItem(STORAGE_KEY);
+    } catch (e) { /* ignore */ }
+  }
+
   function readConsent() {
     var match = document.cookie.match(/(?:^|;\s*)ms_cookie_consent=([^;]+)/);
-    return match ? decodeURIComponent(match[1]) : null;
+    return (match ? decodeURIComponent(match[1]) : null) || readLocalStorage();
   }
 
   function writeConsent(value) {
@@ -18,6 +30,7 @@
     document.cookie =
       STORAGE_KEY + '=' + encodeURIComponent(value) +
       '; Max-Age=' + MAX_AGE + '; Path=/; SameSite=Lax' + secure;
+    writeLocalStorage(value);
   }
 
   function log(action) {
