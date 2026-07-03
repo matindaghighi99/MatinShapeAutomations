@@ -1,0 +1,15 @@
+# Cloudflare Pages — security response headers
+# Applied to every route. See https://developers.cloudflare.com/pages/configuration/headers/
+/*
+  # Force HTTPS for 1 year. includeSubDomains protects every *.matinshape.com host —
+  # only keep it if ALL subdomains are served over HTTPS. 'preload' is intentionally
+  # omitted: submitting to the preload list is hard to reverse. Add it later once stable.
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  # Clickjacking protection (legacy header + modern CSP equivalent).
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+  # Don't let other origins pull our assets cross-site.
+  Cross-Origin-Resource-Policy: same-origin
+  # Belt-and-suspenders — these already pass, kept here so they survive as real headers.
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
