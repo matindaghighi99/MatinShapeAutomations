@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-src 'none'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<title>Projects — MATIN SHAPE System Concepts and Automation Blueprints</title>
-<meta name="description" content="Inside the MATIN SHAPE system vault: concept AI phone agents, CRM pipelines, booking automations, and dashboards — demo architectures that show exactly how the studio designs and builds." />
+<title>Projects — The MATIN SHAPE System Vault</title>
+<meta name="description" content="The MATIN SHAPE system vault: AI reception, CRM pipelines, booking engines, and dashboards — every project honestly labeled as a system concept, prototype preview, or demo architecture." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231C1917'/%3E%3Cpath d='M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z' fill='%23C6A15B'/%3E%3Cpath d='M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5' fill='none' stroke='%23C6A15B' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="assets/styles.css" />
 <link rel="stylesheet" href="assets/projects.css" />
 </head>
-<body class="dark-page">
+<body class="vault-page">
 
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -72,75 +72,157 @@
 <header class="dk-hero page-enter">
   <div class="dk-beam" aria-hidden="true"></div>
   <div class="container">
-    <span class="eyebrow centered">Case files — the system vault</span>
+    <span class="eyebrow centered">The system vault</span>
     <h1>Systems that work the <span class="gold-word">night shift</span>.</h1>
     <p class="section-sub">
-      Every case below is a fully designed system concept — answering calls,
-      chasing invoices, qualifying leads, booking jobs. This is how MATIN SHAPE
-      thinks, architected end to end and shown with modeled outcomes.
+      A vault of fully designed automation systems — reception agents, CRM
+      pipelines, booking engines, dashboards. No invented results, no borrowed
+      logos. Just how MATIN SHAPE architects a business, end to end.
     </p>
+
+    <!-- Floating automation-node command center -->
+    <div class="cc-wrap reveal" aria-label="Vault command center schematic">
+      <div class="cc-head">
+        <span class="cc-title">Command center — vault schematic</span>
+        <span class="cc-live"><i aria-hidden="true"></i>Every node buildable</span>
+      </div>
+      <svg id="commandCenter" class="schematic cc" viewBox="0 0 980 344" role="img"
+           aria-label="Schematic of an automation command center: call intake, form capture, and WhatsApp feed a central logic core, which drives the calendar, CRM sync, follow-ups, a voice agent, and a dashboard.">
+        <path class="wire wire-1" d="M190 62 C 300 62 340 130 415 154"/>
+        <path class="wire wire-2" d="M170 170 L 415 168"/>
+        <path class="wire wire-3" d="M190 278 C 300 278 340 206 415 182"/>
+        <path class="wire wire-4" d="M790 62 C 680 62 640 130 565 154"/>
+        <path class="wire wire-5" d="M810 170 L 565 168"/>
+        <path class="wire wire-6" d="M790 278 C 680 278 640 206 565 182"/>
+        <path class="wire wire-7" d="M490 68 L 490 140"/>
+        <path class="wire wire-8" d="M490 196 L 490 272"/>
+
+        <g class="mnode cc-float-a">
+          <rect x="40" y="40" width="150" height="44" rx="12"/>
+          <circle class="mnode-dot" cx="62" cy="62" r="3.5"/>
+          <text x="76" y="66">CALL INTAKE</text>
+        </g>
+        <g class="mnode cc-float-b">
+          <rect x="20" y="148" width="150" height="44" rx="12"/>
+          <circle class="mnode-dot" cx="42" cy="170" r="3.5"/>
+          <text x="56" y="174">FORM CAPTURE</text>
+        </g>
+        <g class="mnode cc-float-c">
+          <rect x="40" y="256" width="150" height="44" rx="12"/>
+          <circle class="mnode-dot" cx="62" cy="278" r="3.5"/>
+          <text x="76" y="282">WHATSAPP</text>
+        </g>
+        <g class="mnode">
+          <rect x="415" y="24" width="150" height="44" rx="12"/>
+          <circle class="mnode-dot" cx="437" cy="46" r="3.5"/>
+          <text x="451" y="50">VOICE AGENT</text>
+        </g>
+        <g class="mnode cc-core">
+          <rect x="415" y="140" width="150" height="56" rx="16"/>
+          <path d="M490 148 494 153 490 158 486 153Z" class="cc-core-mark"/>
+          <text x="447" y="180">LOGIC CORE</text>
+        </g>
+        <g class="mnode">
+          <rect x="415" y="272" width="150" height="44" rx="12"/>
+          <circle class="mnode-dot" cx="437" cy="294" r="3.5"/>
+          <text x="451" y="298">DASHBOARD</text>
+        </g>
+        <g class="mnode cc-float-a">
+          <rect x="790" y="40" width="150" height="44" rx="12"/>
+          <circle class="mnode-dot" cx="812" cy="62" r="3.5"/>
+          <text x="826" y="66">CALENDAR</text>
+        </g>
+        <g class="mnode cc-float-b">
+          <rect x="810" y="148" width="150" height="44" rx="12"/>
+          <circle class="mnode-dot" cx="832" cy="170" r="3.5"/>
+          <text x="846" y="174">CRM SYNC</text>
+        </g>
+        <g class="mnode cc-float-c">
+          <rect x="790" y="256" width="150" height="44" rx="12"/>
+          <circle class="mnode-dot" cx="812" cy="278" r="3.5"/>
+          <text x="826" y="282">FOLLOW-UPS</text>
+        </g>
+
+        <circle class="pulse-dot" r="3.5">
+          <animateMotion dur="2.6s" repeatCount="indefinite" path="M170 170 L 415 168"/>
+        </circle>
+        <circle class="pulse-dot" r="3.5">
+          <animateMotion dur="2.8s" begin="1s" repeatCount="indefinite" path="M490 68 L 490 140"/>
+        </circle>
+        <circle class="pulse-dot" r="3.5">
+          <animateMotion dur="3s" begin="1.7s" repeatCount="indefinite" path="M810 170 L 565 168"/>
+        </circle>
+
+        <g class="map-status">
+          <circle cx="46" cy="332" r="3.5"/>
+          <text x="58" y="336">VAULT SCHEMATIC — CONCEPTS, NOT CLAIMS</text>
+        </g>
+      </svg>
+    </div>
 
     <div class="dk-hero-stats">
       <div class="dk-stat reveal">
         <b>9</b>
-        <span>system blueprints</span>
+        <span>system concepts</span>
       </div>
       <div class="dk-stat reveal" style="--d:.1s">
         <b>6</b>
-        <span>automation categories</span>
+        <span>automation disciplines</span>
       </div>
       <div class="dk-stat reveal" style="--d:.2s">
-        <b>24<em>/7</em></b>
-        <span>designed to run</span>
+        <b>4</b>
+        <span>build stages</span>
       </div>
       <div class="dk-stat reveal" style="--d:.3s">
-        <b>1</b>
-        <span>founder on every blueprint</span>
+        <b>0</b>
+        <span>invented metrics</span>
       </div>
     </div>
 
     <p class="dk-note reveal">
-      These are system concepts and prototype previews that show the kind of
-      automation architecture MATIN SHAPE designs. Real client results are only
-      published with permission.
+      Everything in this vault is labeled for exactly what it is — a
+      <strong>system concept</strong>, <strong>prototype preview</strong>, or
+      <strong>demo architecture</strong>. No fabricated client results, no stock
+      "case studies". Real outcomes are published only with a client's written
+      permission.
     </p>
   </div>
 </header>
 
-<!-- ============ FEATURED SYSTEM ============ -->
-<section class="dk-section" style="padding-top: 20px;" aria-labelledby="featuredTitle">
+<!-- ============ FEATURED: AI RECEPTION OS ============ -->
+<section class="dk-section" id="featured" style="padding-top: 20px;" aria-labelledby="featuredTitle">
   <div class="container">
     <div class="dk-label reveal">01 / Featured system</div>
 
     <div class="featured-sys reveal">
       <div class="fs-copy">
-        <span class="fs-tag"><i aria-hidden="true"></i>SYS.001 — VOICEDESK · FLAGSHIP CONCEPT</span>
-        <h2 id="featuredTitle">The receptionist that answers in <span class="gold-word">three seconds</span>, forever.</h2>
-        <p class="deploy">Concept deployment · modeled on a 12-truck HVAC company</p>
+        <span class="fs-tag"><i aria-hidden="true"></i>SYS.001 — AI RECEPTION OS · SYSTEM CONCEPT</span>
+        <h2 id="featuredTitle">The receptionist that never lets a call <span class="gold-word">ring out</span>.</h2>
+        <p class="deploy">Flagship concept · designed for appointment-based service businesses</p>
         <p>
           An AI phone agent that picks up every call on the second ring, speaks
-          with a natural human voice, books jobs straight into the crew calendar,
-          quotes from the live price sheet, and wakes the on-call tech for real
-          emergencies. The front office goes from drowning to silent.
+          with a natural human voice, books jobs straight into the live crew
+          calendar, quotes from your price sheet, and wakes the on-call tech
+          for real emergencies. The front office goes quiet — in the good way.
         </p>
         <div class="fs-problem">
-          <strong>The problem this concept targets:</strong> service businesses
-          routinely lose after-hours and mid-job calls to voicemail — often
-          thousands of dollars of booked work every month, gone silently.
+          <strong>The problem this concept targets:</strong> after-hours and
+          mid-job calls dying in voicemail, while the work goes to whoever
+          answers first.
         </div>
 
-        <div class="fs-metrics" aria-label="Modeled targets">
+        <div class="fs-metrics" aria-label="System logic">
           <div class="fs-metric">
-            <b>Every call</b>
-            <span>Target: nothing rings out, ever</span>
+            <b>Answer</b>
+            <span>Every call picked up by a natural voice agent — no voicemail path exists.</span>
           </div>
           <div class="fs-metric">
-            <b>Seconds</b>
-            <span>Goal: pickup faster than a front desk</span>
+            <b>Decide</b>
+            <span>The intent engine books, quotes, or wakes the on-call tech.</span>
           </div>
           <div class="fs-metric">
-            <b>After-hours</b>
-            <span>Designed to recover missed evening jobs</span>
+            <b>Log</b>
+            <span>Transcript, outcome, and next step written to the CRM.</span>
           </div>
         </div>
 
@@ -161,7 +243,7 @@
       </div>
 
       <div class="fs-map">
-        <svg id="autoMap" class="auto-map" viewBox="0 0 520 560" role="img"
+        <svg id="autoMap" class="schematic auto-map" viewBox="0 0 520 560" role="img"
              aria-label="Automation map: a caller reaches a Twilio line, an ElevenLabs voice agent answers, an OpenAI intent engine decides whether to book a job, escalate an emergency, or send a quote, and everything is logged to the CRM.">
           <path class="wire wire-1" d="M160 52 L330 52"/>
           <path class="wire wire-2" d="M410 74 C410 118 310 112 292 150"/>
@@ -226,24 +308,53 @@
           </circle>
 
           <g class="map-status">
-            <circle cx="200" cy="545" r="3.5"/>
-            <text x="212" y="549">SYSTEM ONLINE — 24/7</text>
+            <circle cx="180" cy="546" r="3.5"/>
+            <text x="192" y="550">CONCEPT SCHEMATIC — BUILD-READY</text>
           </g>
         </svg>
       </div>
+
+      <template data-sys-tpl="reception">
+        <header class="smx-head">
+          <span class="sys-code">SYS.001 — AI RECEPTION OS</span>
+          <span class="sys-status concept"><i aria-hidden="true"></i>SYSTEM CONCEPT</span>
+        </header>
+        <h3 class="smx-title"><span class="code-name">AI Reception OS</span> — the front desk that never sleeps</h3>
+        <div class="sd-label">System architecture</div>
+        <div class="flow">
+          <span class="fnode">Inbound Call</span><span class="farrow" aria-hidden="true"></span>
+          <span class="fnode">Twilio Line</span><span class="farrow" aria-hidden="true"></span>
+          <span class="fnode hub">Voice + Intent Engine</span><span class="farrow" aria-hidden="true"></span>
+          <span class="fnode">Book · Quote · Escalate</span><span class="farrow" aria-hidden="true"></span>
+          <span class="fnode">CRM Log</span>
+        </div>
+        <div class="smx-grid">
+          <div class="smx-block"><h4>Designed for</h4><p>Service businesses where whoever answers first wins the job — and where every missed call is silent, invisible loss.</p></div>
+          <div class="smx-block"><h4>How the logic runs</h4><p>Every call is picked up by a natural voice agent. The intent engine books into the live crew calendar, quotes from your price sheet, or wakes the on-call tech for a genuine emergency. The transcript and outcome land in the CRM before the caller hangs up.</p></div>
+          <div class="smx-block"><h4>Where humans stay in the loop</h4><p>Emergencies always reach a person. The agent transfers on request, and it never improvises a price that isn't on the sheet.</p></div>
+        </div>
+        <div class="sys-tools"><span>Twilio</span><span>ElevenLabs</span><span>OpenAI</span><span>Make</span><span>Airtable</span></div>
+        <p class="smx-honesty">Shown as a system concept — a buildable blueprint, not a claim about client results.</p>
+        <div class="smx-actions">
+          <a href="contact.html" class="btn-gold magnetic">
+            <span>Build this system</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </template>
     </div>
   </div>
 </section>
 
-<!-- ============ SYSTEM VAULT ============ -->
+<!-- ============ SYSTEM VAULT — FILTERABLE CAPSULES ============ -->
 <section class="dk-section" id="systems" style="padding-top: 30px;" aria-labelledby="vaultTitle">
   <div class="container">
     <div class="dk-label reveal">02 / The system vault</div>
     <h2 class="dk-title reveal" id="vaultTitle">Eight more systems from the <span class="gold-word">drafting table</span>.</h2>
     <p class="dk-sub reveal">
-      Filter by discipline, open any system to see its full architecture.
-      Metrics shown are modeled outcomes — the targets each system is
-      engineered to hit, not client claims.
+      Filter by discipline, then preview any system to see its full
+      architecture and logic. Each capsule carries an honest label —
+      system concept, prototype preview, or demo architecture.
     </p>
 
     <div class="filter-bar reveal" id="filterBar" role="group" aria-label="Filter systems by discipline">
@@ -263,7 +374,7 @@
         <div class="sys-glare" aria-hidden="true"></div>
         <header class="sys-head">
           <span class="sys-code">SYS.002 — FLOWLINE</span>
-          <span class="sys-status"><i aria-hidden="true"></i>DEMO BUILD</span>
+          <span class="sys-status demo"><i aria-hidden="true"></i>DEMO ARCHITECTURE</span>
         </header>
         <div class="sys-visual" aria-hidden="true">
           <svg viewBox="0 0 260 150">
@@ -272,48 +383,62 @@
             <rect x="160" y="18" width="64" height="112" rx="8" fill="rgba(28,25,23,.03)" stroke="rgba(198,161,91,.4)"/>
             <text class="v-mono" x="24" y="34" font-size="8" fill="#78716C">NEW</text>
             <text class="v-mono" x="96" y="34" font-size="8" fill="#78716C">QUALIFIED</text>
-            <text class="v-mono" x="168" y="34" font-size="8" fill="#A16207">WON</text>
+            <text class="v-mono" x="168" y="34" font-size="8" fill="#A16207">ROUTED</text>
             <rect x="22" y="44" width="52" height="15" rx="4" fill="rgba(28,25,23,.06)"/>
             <rect x="22" y="64" width="52" height="15" rx="4" fill="rgba(28,25,23,.06)"/>
             <rect x="94" y="44" width="52" height="15" rx="4" fill="rgba(28,25,23,.08)"/>
             <rect x="166" y="44" width="52" height="15" rx="4" fill="rgba(198,161,91,.25)"/>
             <rect class="v-card-move" x="22" y="86" width="52" height="15" rx="4" fill="rgba(198,161,91,.55)"/>
-            <text class="v-mono v-blink" x="70" y="145" font-size="8.5" fill="#A16207">SPEED-TO-LEAD · 90 SECONDS</text>
+            <text class="v-mono v-blink" x="70" y="145" font-size="8.5" fill="#A16207">CAPTURE → SCORE → ROUTE</text>
           </svg>
         </div>
         <div class="sys-body">
           <span class="sys-cat">CRM Systems</span>
           <h3><span class="code-name">Flowline</span> — Lead Capture &amp; CRM Pipeline</h3>
           <p class="sys-desc">
-            Six lead sources, one nervous system. Every inbound lead is captured,
-            enriched, scored by AI, and placed in front of the right sales rep
-            with a pre-written first touch — in ninety seconds flat.
+            Many lead sources, one nervous system. Every inbound lead is
+            captured, enriched, scored by AI, and placed in front of the right
+            person with a pre-written first touch — while the lead is still warm.
           </p>
-          <div class="sys-metrics qual" data-label="Modeled targets">
-            <div class="sm"><b>Target: 90-second first response</b></div>
-            <div class="sm"><b>Goal: no lead left waiting</b></div>
-            <div class="sm"><b>One unified pipeline by design</b></div>
+          <div class="sys-metrics qual" data-label="System logic">
+            <div class="sm"><b>Every source lands in one intake</b></div>
+            <div class="sm"><b>AI scores before a human sees it</b></div>
+            <div class="sm"><b>Rep alerted with a full brief</b></div>
           </div>
           <div class="sys-tools"><span>Make</span><span>HubSpot</span><span>OpenAI</span><span>Twilio</span></div>
-          <button class="sys-cta" aria-expanded="false" aria-controls="sysd-flowline">
-            <span class="sys-cta-label">View System</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <button class="sys-cta" aria-haspopup="dialog">
+            <span class="sys-cta-label">Preview System</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
-        <div class="sys-detail" id="sysd-flowline">
-          <div class="sys-detail-inner">
-            <div class="sd-label">System architecture</div>
-            <div class="flow">
-              <span class="fnode">6 Lead Sources</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Make Webhooks</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode hub">AI Enrich + Score</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">HubSpot Pipeline</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Instant SMS + Rep Alert</span>
-            </div>
-            <p><strong>The problem:</strong> a solar installer's leads arrived from ads, forms, referrals, and marketplaces into separate inboxes. Average first response: four days. Most leads had already signed elsewhere.</p>
-            <p><strong>The system:</strong> every source now fires into one Make pipeline that enriches the lead, scores intent with OpenAI, creates the HubSpot deal, and texts the prospect within 90 seconds — before routing it to the rep with a full brief.</p>
+        <template data-sys-tpl="flowline">
+          <header class="smx-head">
+            <span class="sys-code">SYS.002 — FLOWLINE</span>
+            <span class="sys-status demo"><i aria-hidden="true"></i>DEMO ARCHITECTURE</span>
+          </header>
+          <h3 class="smx-title"><span class="code-name">Flowline</span> — Lead Capture &amp; CRM Pipeline</h3>
+          <div class="sd-label">System architecture</div>
+          <div class="flow">
+            <span class="fnode">Lead Sources</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Make Webhooks</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode hub">AI Enrich + Score</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">HubSpot Pipeline</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Instant SMS + Rep Alert</span>
           </div>
-        </div>
+          <div class="smx-grid">
+            <div class="smx-block"><h4>Designed for</h4><p>Teams whose leads arrive from ads, forms, referrals, and marketplaces into separate inboxes — where the speed of the first reply decides who wins the deal.</p></div>
+            <div class="smx-block"><h4>How the logic runs</h4><p>Every source fires into one pipeline. The lead is enriched, scored for intent by AI, and written to the CRM as a clean deal. The prospect gets an instant, personal first touch; the rep gets the lead with a one-paragraph brief attached.</p></div>
+            <div class="smx-block"><h4>Where humans stay in the loop</h4><p>Reps own every conversation after the first touch. Scoring thresholds are tuned with you — the system never silently changes who it prioritizes.</p></div>
+          </div>
+          <div class="sys-tools"><span>Make</span><span>HubSpot</span><span>OpenAI</span><span>Twilio</span></div>
+          <p class="smx-honesty">Shown as a demo architecture — a buildable blueprint, not a claim about client results.</p>
+          <div class="smx-actions">
+            <a href="contact.html" class="btn-gold magnetic">
+              <span>Build this system</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </template>
       </article>
 
       <!-- SYS.003 BOOKSMITH -->
@@ -321,12 +446,12 @@
         <div class="sys-glare" aria-hidden="true"></div>
         <header class="sys-head">
           <span class="sys-code">SYS.003 — BOOKSMITH</span>
-          <span class="sys-status"><i aria-hidden="true"></i>DEMO BUILD</span>
+          <span class="sys-status proto"><i aria-hidden="true"></i>PROTOTYPE PREVIEW</span>
         </header>
         <div class="sys-visual" aria-hidden="true">
           <svg viewBox="0 0 260 150">
             <text class="v-mono" x="20" y="26" font-size="8.5" fill="#78716C">THIS WEEK</text>
-            <text class="v-mono" x="170" y="26" font-size="8.5" fill="#A16207">94% BOOKED</text>
+            <text class="v-mono" x="164" y="26" font-size="8.5" fill="#A16207">AUTO-FILLED</text>
             <g>
               <rect x="20" y="38" width="30" height="22" rx="5" fill="rgba(198,161,91,.4)"/>
               <rect x="56" y="38" width="30" height="22" rx="5" fill="rgba(198,161,91,.4)"/>
@@ -354,35 +479,49 @@
           <span class="sys-cat">Automations</span>
           <h3><span class="code-name">Booksmith</span> — Smart Appointment Booking</h3>
           <p class="sys-desc">
-            A booking engine for a three-location detailing studio that collects
-            deposits, sends escalating reminders, and auto-refills cancelled
-            slots from a waitlist — no human scheduling, no double-books.
+            A booking engine for multi-location appointment businesses that
+            collects deposits, sends escalating reminders, and auto-refills
+            cancelled slots from a waitlist — no phone tag, no double-books.
           </p>
-          <div class="sys-metrics qual" data-label="Modeled targets">
-            <div class="sm"><b>Target: near-zero no-shows</b></div>
-            <div class="sm"><b>Goal: deposits collected upfront</b></div>
-            <div class="sm"><b>Cancelled slots auto-refilled</b></div>
+          <div class="sys-metrics qual" data-label="System logic">
+            <div class="sm"><b>Deposit gates the calendar slot</b></div>
+            <div class="sm"><b>Reminders escalate by channel</b></div>
+            <div class="sm"><b>Cancellation → instant waitlist offer</b></div>
           </div>
           <div class="sys-tools"><span>GoHighLevel</span><span>Twilio</span><span>Stripe</span><span>n8n</span></div>
-          <button class="sys-cta" aria-expanded="false" aria-controls="sysd-booksmith">
-            <span class="sys-cta-label">View System</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <button class="sys-cta" aria-haspopup="dialog">
+            <span class="sys-cta-label">Preview System</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
-        <div class="sys-detail" id="sysd-booksmith">
-          <div class="sys-detail-inner">
-            <div class="sd-label">System architecture</div>
-            <div class="flow">
-              <span class="fnode">Site Widget</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode hub">GoHighLevel Calendar</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Stripe Deposit</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">SMS Reminder Cascade</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Waitlist Auto-Refill</span>
-            </div>
-            <p><strong>The problem:</strong> one in five appointments no-showed, staff burned hours on phone tag, and Saturday slots double-booked across locations.</p>
-            <p><strong>The system:</strong> bookings require a deposit at checkout, reminders escalate from email to SMS to a voice call, and any cancellation instantly offers the slot to the waitlist. The calendar runs itself.</p>
+        <template data-sys-tpl="booksmith">
+          <header class="smx-head">
+            <span class="sys-code">SYS.003 — BOOKSMITH</span>
+            <span class="sys-status proto"><i aria-hidden="true"></i>PROTOTYPE PREVIEW</span>
+          </header>
+          <h3 class="smx-title"><span class="code-name">Booksmith</span> — Smart Appointment Booking</h3>
+          <div class="sd-label">System architecture</div>
+          <div class="flow">
+            <span class="fnode">Site Widget</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode hub">GoHighLevel Calendar</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Stripe Deposit</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">SMS Reminder Cascade</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Waitlist Auto-Refill</span>
           </div>
-        </div>
+          <div class="smx-grid">
+            <div class="smx-block"><h4>Designed for</h4><p>Appointment businesses where an empty slot and a double-booked slot cost the same thing: money and trust.</p></div>
+            <div class="smx-block"><h4>How the logic runs</h4><p>A booking isn't confirmed until the deposit clears at checkout. Reminders escalate from email to SMS to a voice call as the appointment approaches. The moment anyone cancels, the slot is offered to the waitlist automatically — across every location, from one calendar of record.</p></div>
+            <div class="smx-block"><h4>Where humans stay in the loop</h4><p>Staff can freeze, override, or hand-place any booking. Refund and rescheduling rules are yours — encoded once, applied consistently.</p></div>
+          </div>
+          <div class="sys-tools"><span>GoHighLevel</span><span>Twilio</span><span>Stripe</span><span>n8n</span></div>
+          <p class="smx-honesty">Shown as a prototype preview — a buildable blueprint, not a claim about client results.</p>
+          <div class="smx-actions">
+            <a href="contact.html" class="btn-gold magnetic">
+              <span>Build this system</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </template>
       </article>
 
       <!-- SYS.004 SENTINEL -->
@@ -390,7 +529,7 @@
         <div class="sys-glare" aria-hidden="true"></div>
         <header class="sys-head">
           <span class="sys-code">SYS.004 — SENTINEL</span>
-          <span class="sys-status"><i aria-hidden="true"></i>DEMO BUILD</span>
+          <span class="sys-status demo"><i aria-hidden="true"></i>DEMO ARCHITECTURE</span>
         </header>
         <div class="sys-visual" aria-hidden="true">
           <svg viewBox="0 0 260 150">
@@ -402,43 +541,57 @@
             <g class="v-typing" transform="translate(30, 100)">
               <circle cx="0" cy="0" r="3"/><circle cx="10" cy="0" r="3"/><circle cx="20" cy="0" r="3"/>
             </g>
-            <text class="v-mono v-blink" x="140" y="128" font-size="8.5" fill="#047857">78% RESOLVED · NO HUMAN</text>
-            <text class="v-mono" x="20" y="145" font-size="8" fill="#78716C">AVG FIRST RESPONSE · 2 MIN</text>
+            <text class="v-mono v-blink" x="118" y="128" font-size="8.5" fill="#047857">ROUTINE → AUTO-RESOLVED</text>
+            <text class="v-mono" x="20" y="145" font-size="8" fill="#78716C">COMPLEX → HUMAN + FULL CONTEXT</text>
           </svg>
         </div>
         <div class="sys-body">
           <span class="sys-cat">AI Agents</span>
           <h3><span class="code-name">Sentinel</span> — AI Customer Support Agent</h3>
           <p class="sys-desc">
-            A support agent trained on 40,000 past tickets, the product catalog,
-            and live order data. It resolves the routine majority instantly and hands
-            humans the hard cases with full context attached.
+            A support agent grounded in your help docs, product catalog, and
+            live order data. It resolves the routine majority instantly and
+            hands humans the hard cases with full context attached.
           </p>
-          <div class="sys-metrics qual" data-label="Modeled targets">
-            <div class="sm"><b>Target: instant first response</b></div>
-            <div class="sm"><b>Goal: routine tickets auto-resolved</b></div>
-            <div class="sm"><b>Human handoff with full context</b></div>
+          <div class="sys-metrics qual" data-label="System logic">
+            <div class="sm"><b>Answers grounded in order data</b></div>
+            <div class="sm"><b>Routine resolved automatically</b></div>
+            <div class="sm"><b>Sensitive → human, with context</b></div>
           </div>
           <div class="sys-tools"><span>OpenAI</span><span>Supabase</span><span>Make</span><span>Slack</span></div>
-          <button class="sys-cta" aria-expanded="false" aria-controls="sysd-sentinel">
-            <span class="sys-cta-label">View System</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <button class="sys-cta" aria-haspopup="dialog">
+            <span class="sys-cta-label">Preview System</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
-        <div class="sys-detail" id="sysd-sentinel">
-          <div class="sys-detail-inner">
-            <div class="sd-label">System architecture</div>
-            <div class="flow">
-              <span class="fnode">Email + Chat Inbox</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode hub">RAG Engine · Supabase Vectors</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Order API Lookup</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Auto-Resolve</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Slack Escalation</span>
-            </div>
-            <p><strong>The problem:</strong> an e-commerce brand doing 40k orders a year had a 61-hour first-response time. Refund requests aged into chargebacks; the support team was permanently underwater.</p>
-            <p><strong>The system:</strong> every message is answered in minutes with real order data. Anything sensitive — legal, VIP, angry — escalates to a human in Slack with a one-paragraph brief and a suggested reply.</p>
+        <template data-sys-tpl="sentinel">
+          <header class="smx-head">
+            <span class="sys-code">SYS.004 — SENTINEL</span>
+            <span class="sys-status demo"><i aria-hidden="true"></i>DEMO ARCHITECTURE</span>
+          </header>
+          <h3 class="smx-title"><span class="code-name">Sentinel</span> — AI Customer Support Agent</h3>
+          <div class="sd-label">System architecture</div>
+          <div class="flow">
+            <span class="fnode">Email + Chat Inbox</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode hub">RAG Engine · Supabase Vectors</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Order API Lookup</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Auto-Resolve</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Slack Escalation</span>
           </div>
-        </div>
+          <div class="smx-grid">
+            <div class="smx-block"><h4>Designed for</h4><p>Support inboxes where routine questions — order status, returns, sizing — bury the conversations that actually need a person.</p></div>
+            <div class="smx-block"><h4>How the logic runs</h4><p>Each incoming message is answered from a retrieval engine built on your help docs, catalog, and live order data — so replies cite real facts, not guesses. Routine tickets are resolved and closed automatically. Anything sensitive — legal, VIP, angry — escalates to a human in Slack with a one-paragraph brief and a suggested reply.</p></div>
+            <div class="smx-block"><h4>Where humans stay in the loop</h4><p>The escalation rules are explicit and reviewable. The agent never issues refunds, changes orders, or makes promises on its own authority.</p></div>
+          </div>
+          <div class="sys-tools"><span>OpenAI</span><span>Supabase</span><span>Make</span><span>Slack</span></div>
+          <p class="smx-honesty">Shown as a demo architecture — a buildable blueprint, not a claim about client results.</p>
+          <div class="smx-actions">
+            <a href="contact.html" class="btn-gold magnetic">
+              <span>Build this system</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </template>
       </article>
 
       <!-- SYS.005 LEDGERLIGHT -->
@@ -446,7 +599,7 @@
         <div class="sys-glare" aria-hidden="true"></div>
         <header class="sys-head">
           <span class="sys-code">SYS.005 — LEDGERLIGHT</span>
-          <span class="sys-status"><i aria-hidden="true"></i>DEMO BUILD</span>
+          <span class="sys-status proto"><i aria-hidden="true"></i>PROTOTYPE PREVIEW</span>
         </header>
         <div class="sys-visual" aria-hidden="true">
           <svg viewBox="0 0 260 150">
@@ -455,7 +608,7 @@
             <rect class="v-bar" x="52" y="62" width="18" height="56" rx="3" fill="rgba(198,161,91,.5)"/>
             <rect class="v-bar" x="78" y="48" width="18" height="70" rx="3" fill="rgba(198,161,91,.65)"/>
             <rect class="v-bar" x="104" y="30" width="18" height="88" rx="3" fill="rgba(228,205,151,.85)"/>
-            <text class="v-mono" x="20" y="138" font-size="8" fill="#78716C">ON-TIME PAYMENT · 96%</text>
+            <text class="v-mono" x="20" y="138" font-size="8" fill="#78716C">CHASE SEQUENCE · ACTIVE</text>
             <g class="v-mono" font-size="8.5">
               <text x="150" y="42" fill="#57534E">INV-2041</text><text class="v-pop d1" x="215" y="42" fill="#047857">PAID</text>
               <text x="150" y="66" fill="#57534E">INV-2042</text><text class="v-pop d2" x="215" y="66" fill="#047857">PAID</text>
@@ -468,35 +621,49 @@
           <span class="sys-cat">Dashboards</span>
           <h3><span class="code-name">Ledgerlight</span> — Invoice &amp; Admin Dashboard</h3>
           <p class="sys-desc">
-            The back office of a 20-person agency, compressed into one screen.
-            Invoices generate themselves from completed work, chase themselves
-            politely, and report cash position in real time.
+            A back office compressed into one screen. Invoices generate
+            themselves from completed work, chase themselves politely, and
+            report cash position in real time.
           </p>
-          <div class="sys-metrics qual" data-label="Modeled targets">
-            <div class="sm"><b>Target: minutes of admin, not hours</b></div>
-            <div class="sm"><b>Goal: invoices that chase themselves</b></div>
-            <div class="sm"><b>Live cash visibility, always</b></div>
+          <div class="sys-metrics qual" data-label="System logic">
+            <div class="sm"><b>Completed work triggers the invoice</b></div>
+            <div class="sm"><b>Unpaid → polite chase sequence</b></div>
+            <div class="sm"><b>Cash position always live</b></div>
           </div>
           <div class="sys-tools"><span>n8n</span><span>Airtable</span><span>Google Sheets</span><span>OpenAI</span></div>
-          <button class="sys-cta" aria-expanded="false" aria-controls="sysd-ledgerlight">
-            <span class="sys-cta-label">View System</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <button class="sys-cta" aria-haspopup="dialog">
+            <span class="sys-cta-label">Preview System</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
-        <div class="sys-detail" id="sysd-ledgerlight">
-          <div class="sys-detail-inner">
-            <div class="sd-label">System architecture</div>
-            <div class="flow">
-              <span class="fnode">Job Completed Trigger</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode hub">n8n Invoice Builder</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Polite Chase Sequence</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Airtable Ledger</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Live Cash Dashboard</span>
-            </div>
-            <p><strong>The problem:</strong> the founder spent every Friday afternoon building invoices and every Monday chasing them. Cash position lived in her head and three spreadsheets.</p>
-            <p><strong>The system:</strong> completed projects trigger invoice generation within the hour. Unpaid invoices are chased on a warm, escalating schedule written in the agency's voice. One dashboard shows cash, aging, and forecast — always current.</p>
+        <template data-sys-tpl="ledgerlight">
+          <header class="smx-head">
+            <span class="sys-code">SYS.005 — LEDGERLIGHT</span>
+            <span class="sys-status proto"><i aria-hidden="true"></i>PROTOTYPE PREVIEW</span>
+          </header>
+          <h3 class="smx-title"><span class="code-name">Ledgerlight</span> — Invoice &amp; Admin Dashboard</h3>
+          <div class="sd-label">System architecture</div>
+          <div class="flow">
+            <span class="fnode">Job Completed Trigger</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode hub">n8n Invoice Builder</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Polite Chase Sequence</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Airtable Ledger</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Live Cash Dashboard</span>
           </div>
-        </div>
+          <div class="smx-grid">
+            <div class="smx-block"><h4>Designed for</h4><p>Founders whose cash position lives in their head and three spreadsheets — and whose Friday afternoons disappear into invoicing.</p></div>
+            <div class="smx-block"><h4>How the logic runs</h4><p>A completed project triggers invoice generation within the hour. Unpaid invoices enter a warm, escalating chase sequence written in your voice. The ledger and cash dashboard update in real time — cash on hand, aging, and forecast on one screen.</p></div>
+            <div class="smx-block"><h4>Where humans stay in the loop</h4><p>The chase pauses the moment a client replies. Write-offs, discounts, and payment plans always require a human click.</p></div>
+          </div>
+          <div class="sys-tools"><span>n8n</span><span>Airtable</span><span>Google Sheets</span><span>OpenAI</span></div>
+          <p class="smx-honesty">Shown as a prototype preview — a buildable blueprint, not a claim about client results.</p>
+          <div class="smx-actions">
+            <a href="contact.html" class="btn-gold magnetic">
+              <span>Build this system</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </template>
       </article>
 
       <!-- SYS.006 PULSEFEED -->
@@ -504,7 +671,7 @@
         <div class="sys-glare" aria-hidden="true"></div>
         <header class="sys-head">
           <span class="sys-code">SYS.006 — PULSEFEED</span>
-          <span class="sys-status"><i aria-hidden="true"></i>DEMO BUILD</span>
+          <span class="sys-status demo"><i aria-hidden="true"></i>DEMO ARCHITECTURE</span>
         </header>
         <div class="sys-visual" aria-hidden="true">
           <svg viewBox="0 0 260 150">
@@ -521,43 +688,57 @@
               <rect x="158" y="72" width="40" height="28" rx="6" fill="rgba(198,161,91,.4)"/>
               <rect class="v-blink" x="204" y="72" width="36" height="28" rx="6" fill="rgba(198,161,91,.5)"/>
             </g>
-            <text class="v-mono" x="20" y="122" font-size="8.5" fill="#A16207">14 POSTS / WEEK</text>
-            <text class="v-mono" x="20" y="138" font-size="8" fill="#78716C">HUMAN TIME · 45 MIN APPROVALS</text>
+            <text class="v-mono" x="20" y="122" font-size="8.5" fill="#A16207">DRAFT → APPROVE → PUBLISH</text>
+            <text class="v-mono" x="20" y="138" font-size="8" fill="#78716C">HUMAN APPROVAL GATE · ALWAYS ON</text>
           </svg>
         </div>
         <div class="sys-body">
           <span class="sys-cat">Content Systems</span>
           <h3><span class="code-name">Pulsefeed</span> — Social Content Automation Engine</h3>
           <p class="sys-desc">
-            An engine that turns one weekly voice memo into fourteen on-brand
+            An engine that turns one weekly voice memo into a week of on-brand
             posts. Drafts arrive in Slack for a thumbs-up; approved content
             schedules itself across LinkedIn and Instagram.
           </p>
-          <div class="sys-metrics qual" data-label="Modeled targets">
-            <div class="sm"><b>Target: consistent on-brand publishing</b></div>
-            <div class="sm"><b>Goal: minutes of founder time weekly</b></div>
-            <div class="sm"><b>Approval always stays human</b></div>
+          <div class="sys-metrics qual" data-label="System logic">
+            <div class="sm"><b>One memo becomes a week of drafts</b></div>
+            <div class="sm"><b>Nothing publishes without approval</b></div>
+            <div class="sm"><b>Winning posts recycled automatically</b></div>
           </div>
           <div class="sys-tools"><span>Airtable</span><span>OpenAI</span><span>Make</span><span>Meta API</span></div>
-          <button class="sys-cta" aria-expanded="false" aria-controls="sysd-pulsefeed">
-            <span class="sys-cta-label">View System</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <button class="sys-cta" aria-haspopup="dialog">
+            <span class="sys-cta-label">Preview System</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
-        <div class="sys-detail" id="sysd-pulsefeed">
-          <div class="sys-detail-inner">
-            <div class="sd-label">System architecture</div>
-            <div class="flow">
-              <span class="fnode">Voice Memo Drop</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode hub">Brand-Voice Draft Engine</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Slack Approval</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Airtable Queue</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Auto-Publish</span>
-            </div>
-            <p><strong>The problem:</strong> a consultancy's founder knew content drove their pipeline but shipped two posts a week — on a good week. Ghostwriters missed the voice; the calendar had more gaps than posts.</p>
-            <p><strong>The system:</strong> one rambling voice memo becomes a week of drafts written by a fine-tuned brand voice model. The founder approves with an emoji reaction. Everything else — formatting, scheduling, recycling winners — is machinery.</p>
+        <template data-sys-tpl="pulsefeed">
+          <header class="smx-head">
+            <span class="sys-code">SYS.006 — PULSEFEED</span>
+            <span class="sys-status demo"><i aria-hidden="true"></i>DEMO ARCHITECTURE</span>
+          </header>
+          <h3 class="smx-title"><span class="code-name">Pulsefeed</span> — Social Content Automation Engine</h3>
+          <div class="sd-label">System architecture</div>
+          <div class="flow">
+            <span class="fnode">Voice Memo Drop</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode hub">Brand-Voice Draft Engine</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Slack Approval</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Airtable Queue</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Auto-Publish</span>
           </div>
-        </div>
+          <div class="smx-grid">
+            <div class="smx-block"><h4>Designed for</h4><p>Founders who know content drives their pipeline but never have the week it demands — and who won't publish anything that doesn't sound like them.</p></div>
+            <div class="smx-block"><h4>How the logic runs</h4><p>One rambling voice memo becomes a week of drafts, written by an engine tuned to your voice and past posts. Drafts land in Slack; an emoji reaction approves them. Formatting, scheduling, and recycling proven posts is machinery — the ideas stay yours.</p></div>
+            <div class="smx-block"><h4>Where humans stay in the loop</h4><p>Nothing publishes without explicit approval. The gate is structural — there is no auto-publish path around it.</p></div>
+          </div>
+          <div class="sys-tools"><span>Airtable</span><span>OpenAI</span><span>Make</span><span>Meta API</span></div>
+          <p class="smx-honesty">Shown as a demo architecture — a buildable blueprint, not a claim about client results.</p>
+          <div class="smx-actions">
+            <a href="contact.html" class="btn-gold magnetic">
+              <span>Build this system</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </template>
       </article>
 
       <!-- SYS.007 KEYHOLDER -->
@@ -565,7 +746,7 @@
         <div class="sys-glare" aria-hidden="true"></div>
         <header class="sys-head">
           <span class="sys-code">SYS.007 — KEYHOLDER</span>
-          <span class="sys-status"><i aria-hidden="true"></i>DEMO BUILD</span>
+          <span class="sys-status concept"><i aria-hidden="true"></i>SYSTEM CONCEPT</span>
         </header>
         <div class="sys-visual" aria-hidden="true">
           <svg viewBox="0 0 260 150">
@@ -576,9 +757,9 @@
             <rect class="v-pop d2" x="20" y="78" width="120" height="22" rx="11" fill="rgba(28,25,23,.05)"/>
             <text class="v-mono v-pop d2" x="30" y="92" font-size="7.5" fill="#57534E">Pre-approved · YES</text>
             <path class="v-draw" d="M 175 108 A 38 38 0 1 1 235 108" stroke="#C6A15B" stroke-width="5" fill="none" stroke-linecap="round"/>
-            <text class="v-mono v-pop d3" x="193" y="95" font-size="12" fill="#A16207">87</text>
-            <text class="v-mono v-pop d3" x="178" y="112" font-size="7.5" fill="#047857">HOT LEAD</text>
-            <text class="v-mono" x="20" y="140" font-size="8" fill="#78716C">ROUTED TO AGENT · SUMMARY ATTACHED</text>
+            <text class="v-mono v-pop d3" x="190" y="95" font-size="9" fill="#A16207">SCORE</text>
+            <text class="v-mono v-pop d3" x="178" y="112" font-size="7.5" fill="#047857">ROUTE: AGENT</text>
+            <text class="v-mono" x="20" y="140" font-size="8" fill="#78716C">QUALIFIED → AGENT · SUMMARY ATTACHED</text>
           </svg>
         </div>
         <div class="sys-body">
@@ -589,31 +770,45 @@
             budget, timeline, financing — then hands agents only the buyers
             worth their weekend, with a briefing attached.
           </p>
-          <div class="sys-metrics qual" data-label="Modeled targets">
-            <div class="sm"><b>Target: every lead engaged in seconds</b></div>
-            <div class="sm"><b>Goal: agents meet only real buyers</b></div>
-            <div class="sm"><b>Cold leads quietly nurtured back</b></div>
+          <div class="sys-metrics qual" data-label="System logic">
+            <div class="sm"><b>Every lead interviewed in chat</b></div>
+            <div class="sm"><b>Score decides the route</b></div>
+            <div class="sm"><b>Cold leads nurtured, not discarded</b></div>
           </div>
           <div class="sys-tools"><span>OpenAI</span><span>WhatsApp API</span><span>n8n</span><span>GoHighLevel</span></div>
-          <button class="sys-cta" aria-expanded="false" aria-controls="sysd-keyholder">
-            <span class="sys-cta-label">View System</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <button class="sys-cta" aria-haspopup="dialog">
+            <span class="sys-cta-label">Preview System</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
-        <div class="sys-detail" id="sysd-keyholder">
-          <div class="sys-detail-inner">
-            <div class="sd-label">System architecture</div>
-            <div class="flow">
-              <span class="fnode">Portal Leads</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode hub">WhatsApp Qualifier Agent</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Intent Scoring</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Hot → Agent + Brief</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Warm → Nurture Loop</span>
-            </div>
-            <p><strong>The problem:</strong> a 14-agent brokerage paid premium rates for portal leads, then let 60% go cold because agents couldn't call fast enough — and hated qualifying tire-kickers.</p>
-            <p><strong>The system:</strong> every lead gets a natural WhatsApp conversation within sixty seconds. Qualified buyers land on an agent's phone with budget, timeline, and financing already confirmed. Everyone else enters a patient nurture loop designed to quietly bring cold leads back.</p>
+        <template data-sys-tpl="keyholder">
+          <header class="smx-head">
+            <span class="sys-code">SYS.007 — KEYHOLDER</span>
+            <span class="sys-status concept"><i aria-hidden="true"></i>SYSTEM CONCEPT</span>
+          </header>
+          <h3 class="smx-title"><span class="code-name">Keyholder</span> — Real Estate Lead Qualification Bot</h3>
+          <div class="sd-label">System architecture</div>
+          <div class="flow">
+            <span class="fnode">Portal Leads</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode hub">WhatsApp Qualifier Agent</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Intent Scoring</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Hot → Agent + Brief</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Warm → Nurture Loop</span>
           </div>
-        </div>
+          <div class="smx-grid">
+            <div class="smx-block"><h4>Designed for</h4><p>Brokerages paying premium rates for portal leads that go cold before anyone can call — and agents tired of qualifying tire-kickers.</p></div>
+            <div class="smx-block"><h4>How the logic runs</h4><p>Every lead gets a natural WhatsApp conversation within the minute — budget, timeline, financing, intent. The score decides the route: qualified buyers land on an agent's phone with a briefing already attached; everyone else enters a patient nurture loop designed to bring them back when they're ready.</p></div>
+            <div class="smx-block"><h4>Where humans stay in the loop</h4><p>Agents own every conversation after handoff. The nurture cadence is reviewed with you — it's a schedule you approve, not a black box.</p></div>
+          </div>
+          <div class="sys-tools"><span>OpenAI</span><span>WhatsApp API</span><span>n8n</span><span>GoHighLevel</span></div>
+          <p class="smx-honesty">Shown as a system concept — a buildable blueprint, not a claim about client results.</p>
+          <div class="smx-actions">
+            <a href="contact.html" class="btn-gold magnetic">
+              <span>Build this system</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </template>
       </article>
 
       <!-- SYS.008 MEDLOOP -->
@@ -621,7 +816,7 @@
         <div class="sys-glare" aria-hidden="true"></div>
         <header class="sys-head">
           <span class="sys-code">SYS.008 — MEDLOOP</span>
-          <span class="sys-status concept"><i aria-hidden="true"></i>CONCEPT BUILD</span>
+          <span class="sys-status concept"><i aria-hidden="true"></i>SYSTEM CONCEPT</span>
         </header>
         <div class="sys-visual" aria-hidden="true">
           <svg viewBox="0 0 260 150">
@@ -645,35 +840,49 @@
           <span class="sys-cat">Automations</span>
           <h3><span class="code-name">Medloop</span> — Clinic Appointment Automation</h3>
           <p class="sys-desc">
-            A concept system for private clinics: AI intake before arrival,
-            reminder cascades that patients actually answer, and cancelled
+            A concept system for private clinics: conversational intake before
+            arrival, reminder cascades patients actually answer, and cancelled
             slots backfilled from the waitlist in seconds — not days.
           </p>
-          <div class="sys-metrics qual" data-label="Modeled targets">
-            <div class="sm"><b>Target: far fewer front-desk calls</b></div>
-            <div class="sm"><b>Goal: no-shows sharply reduced</b></div>
-            <div class="sm"><b>Gaps refilled from the waitlist</b></div>
+          <div class="sys-metrics qual" data-label="System logic">
+            <div class="sm"><b>Intake completed before arrival</b></div>
+            <div class="sm"><b>Reminders match each patient's channel</b></div>
+            <div class="sm"><b>Cancellations backfill from waitlist</b></div>
           </div>
           <div class="sys-tools"><span>Make</span><span>Airtable</span><span>Twilio</span><span>OpenAI</span></div>
-          <button class="sys-cta" aria-expanded="false" aria-controls="sysd-medloop">
-            <span class="sys-cta-label">View System</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <button class="sys-cta" aria-haspopup="dialog">
+            <span class="sys-cta-label">Preview System</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
-        <div class="sys-detail" id="sysd-medloop">
-          <div class="sys-detail-inner">
-            <div class="sd-label">System architecture</div>
-            <div class="flow">
-              <span class="fnode">AI Intake Forms</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode hub">Scheduling Core</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Reminder Cascade</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Cancellation Detector</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Waitlist Backfill</span>
-            </div>
-            <p><strong>The problem:</strong> clinic front desks spend most of the day on the phone — intake, rescheduling, reminders — while one in five booked patients simply doesn't show.</p>
-            <p><strong>The system (concept):</strong> patients complete conversational intake before arriving, reminders escalate through the channels each patient actually reads, and every cancellation triggers an instant waitlist offer. Designed HIPAA-conscious: patient data stays inside the clinic's own systems.</p>
+        <template data-sys-tpl="medloop">
+          <header class="smx-head">
+            <span class="sys-code">SYS.008 — MEDLOOP</span>
+            <span class="sys-status concept"><i aria-hidden="true"></i>SYSTEM CONCEPT</span>
+          </header>
+          <h3 class="smx-title"><span class="code-name">Medloop</span> — Clinic Appointment Automation</h3>
+          <div class="sd-label">System architecture</div>
+          <div class="flow">
+            <span class="fnode">AI Intake Forms</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode hub">Scheduling Core</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Reminder Cascade</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Cancellation Detector</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Waitlist Backfill</span>
           </div>
-        </div>
+          <div class="smx-grid">
+            <div class="smx-block"><h4>Designed for</h4><p>Private clinics whose front desk spends the day on the phone — intake, rescheduling, reminders — while booked patients quietly fail to show.</p></div>
+            <div class="smx-block"><h4>How the logic runs</h4><p>Patients complete conversational intake before they arrive. Reminders escalate through the channels each patient actually reads. Every cancellation triggers an instant waitlist offer, so the schedule heals itself instead of leaking.</p></div>
+            <div class="smx-block"><h4>Where humans stay in the loop</h4><p>Clinical questions always route to staff. Designed HIPAA-conscious from the first sketch: patient data stays inside the clinic's own systems.</p></div>
+          </div>
+          <div class="sys-tools"><span>Make</span><span>Airtable</span><span>Twilio</span><span>OpenAI</span></div>
+          <p class="smx-honesty">Shown as a system concept — a buildable blueprint, not a claim about client results.</p>
+          <div class="smx-actions">
+            <a href="contact.html" class="btn-gold magnetic">
+              <span>Build this system</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </template>
       </article>
 
       <!-- SYS.009 STOREFRONT -->
@@ -681,7 +890,7 @@
         <div class="sys-glare" aria-hidden="true"></div>
         <header class="sys-head">
           <span class="sys-code">SYS.009 — STOREFRONT</span>
-          <span class="sys-status"><i aria-hidden="true"></i>DEMO BUILD</span>
+          <span class="sys-status proto"><i aria-hidden="true"></i>PROTOTYPE PREVIEW</span>
         </header>
         <div class="sys-visual" aria-hidden="true">
           <svg viewBox="0 0 260 150">
@@ -691,64 +900,186 @@
             <circle cx="56" cy="30" r="3" fill="rgba(198,161,91,.6)"/>
             <line x1="20" y1="42" x2="240" y2="42" stroke="rgba(244,239,230,.1)"/>
             <path class="v-draw" d="M 48 108 A 26 26 0 1 1 88 108" stroke="#C6A15B" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-            <text class="v-mono v-pop d2" x="58" y="96" font-size="10" fill="#A16207">100</text>
-            <text class="v-mono" x="50" y="122" font-size="7" fill="#78716C">SPEED</text>
+            <text class="v-mono v-pop d2" x="57" y="96" font-size="10" fill="#A16207">&lt;1s</text>
+            <text class="v-mono" x="44" y="122" font-size="7" fill="#78716C">LOAD BUDGET</text>
             <path class="v-draw" d="M 118 108 A 26 26 0 1 1 158 108" stroke="#C6A15B" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-            <text class="v-mono v-pop d3" x="130" y="96" font-size="10" fill="#A16207">98</text>
-            <text class="v-mono" x="126" y="122" font-size="7" fill="#78716C">SEO</text>
-            <text class="v-mono v-pop d4" x="182" y="86" font-size="11" fill="#047857">4.6%</text>
-            <text class="v-mono" x="180" y="100" font-size="7" fill="#78716C">CONVERSION</text>
-            <text class="v-mono" x="180" y="112" font-size="7" fill="#78716C">WAS 0.8%</text>
+            <text class="v-mono v-pop d3" x="128" y="96" font-size="10" fill="#A16207">SEO</text>
+            <text class="v-mono" x="122" y="122" font-size="7" fill="#78716C">BUILT-IN</text>
+            <text class="v-mono v-pop d4" x="178" y="86" font-size="9" fill="#047857">CONCIERGE</text>
+            <text class="v-mono" x="180" y="100" font-size="7" fill="#78716C">ANSWERS 24/7</text>
+            <text class="v-mono" x="180" y="112" font-size="7" fill="#78716C">BOOKING WIRED</text>
           </svg>
         </div>
         <div class="sys-body">
           <span class="sys-cat">Websites</span>
           <h3><span class="code-name">Storefront</span> — Conversion Website &amp; Booking Platform</h3>
           <p class="sys-desc">
-            A ground-up rebuild for a premium detailing studio: cinematic site,
-            sub-second loads, an AI concierge that answers before doubt sets in,
-            and booking wired straight into Booksmith.
+            A ground-up website system for premium services: cinematic design,
+            sub-second load budget, an AI concierge that answers before doubt
+            sets in, and booking wired straight into Booksmith.
           </p>
-          <div class="sys-metrics qual" data-label="Modeled targets">
-            <div class="sm"><b>Target: sub-second page loads</b></div>
-            <div class="sm"><b>Goal: visitors become booked calls</b></div>
-            <div class="sm"><b>Concierge that answers at 2 AM</b></div>
+          <div class="sys-metrics qual" data-label="System logic">
+            <div class="sm"><b>Loads before doubt sets in</b></div>
+            <div class="sm"><b>Concierge answers from real pricing</b></div>
+            <div class="sm"><b>Every visit routed toward booking</b></div>
           </div>
           <div class="sys-tools"><span>Supabase</span><span>OpenAI</span><span>GoHighLevel</span></div>
-          <button class="sys-cta" aria-expanded="false" aria-controls="sysd-storefront">
-            <span class="sys-cta-label">View System</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <button class="sys-cta" aria-haspopup="dialog">
+            <span class="sys-cta-label">Preview System</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
-        <div class="sys-detail" id="sysd-storefront">
-          <div class="sys-detail-inner">
-            <div class="sd-label">System architecture</div>
-            <div class="flow">
-              <span class="fnode">Static Edge Site</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode hub">AI Concierge Chat</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Booking Engine</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Review Automation</span><span class="farrow" aria-hidden="true"></span>
-              <span class="fnode">Supabase Analytics</span>
-            </div>
-            <p><strong>The problem:</strong> a studio charging $1,200 per detail had a website that looked like a coupon flyer — 0.8% of visitors booked, and nobody answered the chat bubble.</p>
-            <p><strong>The system:</strong> a luxury storefront that loads in under a second, an AI concierge trained on services and pricing that answers in the brand's voice at 2 AM, and post-service review requests designed to climb local search rankings.</p>
+        <template data-sys-tpl="storefront">
+          <header class="smx-head">
+            <span class="sys-code">SYS.009 — STOREFRONT</span>
+            <span class="sys-status proto"><i aria-hidden="true"></i>PROTOTYPE PREVIEW</span>
+          </header>
+          <h3 class="smx-title"><span class="code-name">Storefront</span> — Conversion Website &amp; Booking Platform</h3>
+          <div class="sd-label">System architecture</div>
+          <div class="flow">
+            <span class="fnode">Static Edge Site</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode hub">AI Concierge Chat</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Booking Engine</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Review Automation</span><span class="farrow" aria-hidden="true"></span>
+            <span class="fnode">Supabase Analytics</span>
           </div>
-        </div>
+          <div class="smx-grid">
+            <div class="smx-block"><h4>Designed for</h4><p>Premium services whose website looks cheaper than the work — and whose visitors leave with questions nobody was awake to answer.</p></div>
+            <div class="smx-block"><h4>How the logic runs</h4><p>A static edge site with a sub-second load budget carries the brand. An AI concierge trained only on your services and pricing answers in your voice at any hour, and every path on the site routes toward a booked appointment. After the job, review requests go out automatically to feed local search.</p></div>
+            <div class="smx-block"><h4>Where humans stay in the loop</h4><p>The concierge hands off to a person on request, and its knowledge base contains only what you've approved — nothing scraped, nothing guessed.</p></div>
+          </div>
+          <div class="sys-tools"><span>Supabase</span><span>OpenAI</span><span>GoHighLevel</span></div>
+          <p class="smx-honesty">Shown as a prototype preview — a buildable blueprint, not a claim about client results.</p>
+          <div class="smx-actions">
+            <a href="contact.html" class="btn-gold magnetic">
+              <span>Build this system</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </template>
       </article>
 
     </div>
   </div>
 </section>
 
-<!-- ============ BUILD YOUR SYSTEM ============ -->
+<!-- ============ CHOOSE YOUR BOTTLENECK ============ -->
+<section class="dk-section" id="recommender" aria-labelledby="recTitle">
+  <div class="container">
+    <div class="dk-label reveal">03 / Choose your bottleneck</div>
+    <h2 class="dk-title reveal" id="recTitle">Start from the pain, not the <span class="gold-word">tech</span>.</h2>
+    <p class="dk-sub reveal">
+      Pick the sentence that sounds most like your week. The vault will point
+      you at the system designed for exactly that bottleneck.
+    </p>
+
+    <div class="rec-chips reveal" role="group" aria-label="Common bottlenecks">
+      <button class="rec-chip" data-rec="reception"
+              data-rec-name="AI Reception OS"
+              data-rec-code="SYS.001"
+              data-rec-why="Calls that ring out are the most invisible leak there is. This concept removes the voicemail path entirely — every call is answered, decided, and logged.">
+        Calls ring out or die in voicemail
+      </button>
+      <button class="rec-chip" data-rec="flowline"
+              data-rec-name="Flowline"
+              data-rec-code="SYS.002"
+              data-rec-why="When leads scatter across inboxes, speed dies first. Flowline funnels every source into one pipeline and puts a scored, briefed lead in front of a rep while it's still warm.">
+        Leads go cold before we reply
+      </button>
+      <button class="rec-chip" data-rec="booksmith"
+              data-rec-name="Booksmith"
+              data-rec-code="SYS.003"
+              data-rec-why="No-shows are a system problem, not a customer problem. Deposits, escalating reminders, and waitlist backfill make the calendar defend itself.">
+        No-shows drain the calendar
+      </button>
+      <button class="rec-chip" data-rec="sentinel"
+              data-rec-name="Sentinel"
+              data-rec-code="SYS.004"
+              data-rec-why="Most support volume is the same twenty questions. Sentinel resolves the routine majority from real order data and hands humans the hard cases with context.">
+        The support inbox is underwater
+      </button>
+      <button class="rec-chip" data-rec="ledgerlight"
+              data-rec-name="Ledgerlight"
+              data-rec-code="SYS.005"
+              data-rec-why="Invoicing and chasing shouldn't be a founder's Friday. Ledgerlight generates, chases, and reports — and pauses the moment a client replies.">
+        Admin and invoices eat my week
+      </button>
+      <button class="rec-chip" data-rec="pulsefeed"
+              data-rec-name="Pulsefeed"
+              data-rec-code="SYS.006"
+              data-rec-why="Consistency beats brilliance in content. Pulsefeed turns one voice memo into a week of on-brand drafts — and nothing ships without your approval.">
+        Content never actually ships
+      </button>
+      <button class="rec-chip" data-rec="keyholder"
+              data-rec-name="Keyholder"
+              data-rec-code="SYS.007"
+              data-rec-why="Agents shouldn't spend weekends interviewing tire-kickers. Keyholder qualifies every lead in chat and routes only real buyers — with a briefing attached.">
+        Good leads buried under tire-kickers
+      </button>
+      <button class="rec-chip" data-rec="medloop"
+              data-rec-name="Medloop"
+              data-rec-code="SYS.008"
+              data-rec-why="A clinic front desk on the phone all day is a scheduling system that doesn't exist yet. Medloop handles intake, reminders, and backfill so staff can look up.">
+        The front desk is drowning in calls
+      </button>
+      <button class="rec-chip" data-rec="storefront"
+              data-rec-name="Storefront"
+              data-rec-code="SYS.009"
+              data-rec-why="A slow, silent website loses the sale before you know it happened. Storefront pairs a sub-second site with a concierge that answers — and routes everything to booking.">
+        The website doesn't book anyone
+      </button>
+    </div>
+
+    <div class="rec-panel reveal" id="recPanel" aria-live="polite">
+      <p class="rec-hint">Pick a bottleneck above — the matching system appears here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FROM CONCEPT TO BUILD ============ -->
+<section class="dk-section" id="concept-to-build" aria-labelledby="ctbTitle">
+  <div class="container">
+    <div class="dk-label reveal">04 / From concept to build</div>
+    <h2 class="dk-title reveal" id="ctbTitle">How a vault concept becomes your <span class="gold-word">production system</span>.</h2>
+
+    <div class="ctb-grid">
+      <div class="ctb-step reveal">
+        <span class="ctb-num">01</span>
+        <h3>Concept</h3>
+        <p>A complete system design — architecture, logic, stack, failure paths. Exactly what you're browsing in this vault.</p>
+        <span class="ctb-tag">You are here</span>
+      </div>
+      <div class="ctb-step reveal" style="--d:.08s">
+        <span class="ctb-num">02</span>
+        <h3>Blueprint</h3>
+        <p>The concept is mapped to your tools, rules, and edge cases in a strategy session. You keep the document either way.</p>
+        <span class="ctb-tag">Strategy call</span>
+      </div>
+      <div class="ctb-step reveal" style="--d:.16s">
+        <span class="ctb-num">03</span>
+        <h3>Prototype</h3>
+        <p>A working preview runs on your real workflows — with human approval gates wired in from day one, not bolted on later.</p>
+        <span class="ctb-tag">Working preview</span>
+      </div>
+      <div class="ctb-step reveal" style="--d:.24s">
+        <span class="ctb-num">04</span>
+        <h3>Production</h3>
+        <p>Hardened, monitored, documented, and handed over with training. Boring by design — it just runs.</p>
+        <span class="ctb-tag">Live system</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
 <section class="dk-section" aria-labelledby="buildTitle">
   <div class="container">
     <div class="build-cta reveal">
       <div class="dk-beam" aria-hidden="true"></div>
       <div class="cta-eyebrow">Next case file: yours</div>
-      <h2 id="buildTitle">Your business could be running itself by <span class="gold-word">next month</span>.</h2>
+      <h2 id="buildTitle">The vault is a starting point, not a <span class="gold-word">trophy case</span>.</h2>
       <p>
-        Book a 30-minute systems call. We'll map the three highest-ROI
+        Book a 30-minute systems call. We'll map the three highest-impact
         automations hiding in your operation and hand you the blueprint —
         whether we build it or not.
       </p>
@@ -764,6 +1095,17 @@
 </section>
 
 </main>
+
+<!-- ============ SYSTEM PREVIEW MODAL ============ -->
+<div class="sys-modal" id="sysModal" role="dialog" aria-modal="true" aria-label="System preview" hidden>
+  <div class="sys-modal-backdrop" data-modal-close></div>
+  <div class="sys-modal-card">
+    <button class="sys-modal-close" data-modal-close aria-label="Close system preview">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="sys-modal-body" id="sysModalBody"></div>
+  </div>
+</div>
 
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
