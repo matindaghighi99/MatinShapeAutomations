@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-src 'none'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>The Workshop — MATIN SHAPE</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231C1917'/%3E%3Cpath d='M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z' fill='%23C6A15B'/%3E%3Cpath d='M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5' fill='none' stroke='%23C6A15B' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Italiana&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<style>
+/* ============================================================
+   The Workshop — dashboard layout
+   ============================================================ */
+body { background: var(--bg-warm); }
+
+.dash {
+  display: grid;
+  grid-template-columns: 264px 1fr;
+  min-height: 100vh;
+}
+
+/* ---- Sidebar ---- */
+.dash-side {
+  background: var(--ink);
+  position: sticky; top: 0;
+  height: 100vh;
+  display: flex; flex-direction: column;
+  padding: 30px 18px 22px;
+  z-index: 100;
+}
+.dash-side .nav-logo { color: #FDFDFB; padding: 0 12px; }
+.dash-nav { margin-top: 44px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.dash-nav button {
+  display: flex; align-items: center; gap: 13px;
+  padding: 13px 16px;
+  border-radius: 14px;
+  font-size: 14px; font-weight: 500;
+  color: rgba(253,253,251,.55);
+  text-align: left;
+  transition: all .35s var(--ease-luxe);
+  position: relative;
+  cursor: pointer;
+}
+.dash-nav button svg { flex-shrink: 0; }
+.dash-nav button:hover { color: #FDFDFB; background: rgba(255,255,255,.05); }
+.dash-nav button.active {
+  color: #FDFDFB;
+  background: rgba(198,161,91,.12);
+}
+.dash-nav button.active::before {
+  content: '';
+  position: absolute; left: 0; top: 25%; bottom: 25%;
+  width: 3px; border-radius: 3px;
+  background: var(--gold-bright);
+}
+.dash-user {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 12px;
+  border-top: 1px solid rgba(255,255,255,.09);
+}
+.dash-user-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-bright), #A9853F);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600; color: #241A0C;
+  flex-shrink: 0;
+}
+.dash-user-name { font-size: 13.5px; font-weight: 600; color: #FDFDFB; line-height: 1.3; }
+.dash-user-role { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: rgba(253,253,251,.4); }
+.dash-logout {
+  margin-left: auto;
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(253,253,251,.45);
+  transition: all .3s;
+  cursor: pointer;
+}
+.dash-logout:hover { color: #F87171; background: rgba(248,113,113,.1); }
+
+/* ---- Main ---- */
+.dash-main { padding: 30px 38px 60px; min-width: 0; }
+.dash-topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.dash-greeting h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  line-height: 1.15;
+}
+.dash-greeting h1 em { color: var(--gold); }
+.dash-date {
+  font-family: var(--font-mono);
+  font-size: 11.5px; letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-top: 6px;
+}
+.dash-topbar .btn-gold { padding: 14px 26px; font-size: 14px; }
+
+/* ---- Views ---- */
+.view { display: none; animation: view-in .5s var(--ease-luxe); }
+.view.active { display: block; }
+@keyframes view-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Cards ---- */
+.dcard {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px 26px;
+  box-shadow: var(--shadow-sm);
+}
+.dcard-title {
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 18px;
+}
+
+/* ---- Stat cards ---- */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.stat-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: transform .5s var(--ease-luxe), box-shadow .5s;
+}
+.stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.stat-card::after {
+  content: '';
+  position: absolute; top: 0; left: 22px; right: 22px;
+  height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold-bright), transparent);
+}
+.stat-card .sc-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px; letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.stat-card .sc-value {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 500;
+  margin-top: 8px;
+  font-variant-numeric: tabular-nums;
+}
+.stat-card .sc-sub { font-size: 12px; color: var(--gold); font-weight: 600; margin-top: 4px; }
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+/* ---- Call list ---- */
+.call-list { display: flex; flex-direction: column; gap: 10px; }
+.call-item {
+  display: flex; align-items: center; gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg-warm);
+  transition: border-color .3s, transform .3s var(--ease-luxe);
+}
+.call-item:hover { border-color: rgba(198,161,91,.45); transform: translateX(3px); }
+.call-time {
+  font-family: var(--font-mono);
+  font-size: 12px; font-weight: 500;
+  color: var(--gold);
+  min-width: 76px;
+  line-height: 1.4;
+}
+.call-time small { display: block; color: var(--ink-mute); font-size: 10px; }
+.call-info { flex: 1; min-width: 0; }
+.call-client { font-size: 14px; font-weight: 600; }
+.call-meta { font-size: 12px; color: var(--ink-mute); margin-top: 2px; }
+.call-type {
+  font-family: var(--font-mono);
+  font-size: 9.5px; letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.ct-strategy   { background: rgba(198,161,91,.16); color: #7A5504; border: 1px solid rgba(198,161,91,.35); }
+.ct-checkin    { background: rgba(28,25,23,.06); color: var(--ink-soft); border: 1px solid var(--border-strong); }
+.ct-demo       { background: rgba(59,130,246,.1); color: #1D4ED8; border: 1px solid rgba(59,130,246,.25); }
+.ct-onboarding { background: rgba(16,185,129,.1); color: #047857; border: 1px solid rgba(16,185,129,.25); }
+.ct-review     { background: rgba(168,85,247,.1); color: #7E22CE; border: 1px solid rgba(168,85,247,.25); }
+.call-actions { display: flex; gap: 6px; }
+.icon-btn {
+  width: 34px; height: 34px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-mute);
+  transition: all .3s;
+  cursor: pointer;
+}
+.icon-btn:hover { background: var(--gold-pale); color: var(--gold); }
+.icon-btn.danger:hover { background: rgba(220,38,38,.08); color: #DC2626; }
+
+.empty-msg {
+  text-align: center;
+  padding: 30px 16px;
+  color: var(--ink-mute);
+  font-size: 13.5px;
+}
+.empty-msg svg { margin: 0 auto 12px; opacity: .4; }
+
+/* ---- Notes ---- */
+.notes-area {
+  width: 100%;
+  min-height: 180px;
+  border: none;
+  resize: vertical;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: transparent;
+  font-family: var(--font-body);
+}
+.notes-area:focus { outline: none; }
+.notes-saved {
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity .4s;
+}
+.notes-saved.show { opacity: 1; }
+
+/* ---- Calendar ---- */
+.cal-layout {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 18px;
+}
+.cal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 18px;
+}
+.cal-month {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 600;
+}
+.cal-nav { display: flex; gap: 8px; }
+.cal-nav button {
+  width: 38px; height: 38px;
+  border-radius: 12px;
+  border: 1px solid var(--border-strong);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-soft);
+  background: #fff;
+  transition: all .3s;
+  cursor: pointer;
+}
+.cal-nav button:hover { border-color: var(--gold-bright); color: var(--gold); }
+.cal-grid-head, .cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+.cal-grid-head span {
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  text-align: center;
+  padding: 8px 0;
+}
+.cal-day {
+  min-height: 86px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  background: var(--bg-warm);
+  cursor: pointer;
+  transition: all .3s var(--ease-luxe);
+  display: flex; flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+.cal-day:hover { border-color: var(--gold-bright); background: #fff; transform: translateY(-2px); }
+.cal-day.other { opacity: .35; }
+.cal-day.today { border-color: var(--gold); background: rgba(243,233,210,.4); }
+.cal-day.selected { border-color: var(--ink); background: #fff; box-shadow: var(--shadow-sm); }
+.cal-day-num { font-size: 12.5px; font-weight: 600; }
+.cal-day.today .cal-day-num {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+}
+.cal-chip {
+  font-size: 9.5px; font-weight: 600;
+  padding: 3px 7px;
+  border-radius: 6px;
+  background: rgba(198,161,91,.18);
+  color: #7A5504;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.cal-more { font-size: 9px; color: var(--ink-mute); font-weight: 600; }
+
+.day-panel-date {
+  font-family: var(--font-display);
+  font-size: 1.25rem; font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ---- Clients table ---- */
+.client-table { width: 100%; border-collapse: collapse; }
+.client-table th {
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-strong);
+  font-weight: 500;
+}
+.client-table td {
+  padding: 15px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13.5px;
+  vertical-align: middle;
+}
+.client-table tr { transition: background .25s; }
+.client-table tbody tr:hover { background: var(--bg-warm); }
+.client-cell { display: flex; align-items: center; gap: 12px; }
+.client-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--ink), #4A3F35);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.client-name { font-weight: 600; }
+.client-company { font-size: 11.5px; color: var(--ink-mute); }
+.status-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+.status-pill i { width: 6px; height: 6px; border-radius: 50%; }
+.st-active { background: rgba(16,185,129,.1); color: #047857; }
+.st-active i { background: #10B981; }
+.st-lead { background: rgba(198,161,91,.14); color: #7A5504; }
+.st-lead i { background: var(--gold-bright); }
+.st-paused { background: rgba(28,25,23,.06); color: var(--ink-mute); }
+.st-paused i { background: var(--ink-mute); }
+.client-value { font-family: var(--font-mono); font-size: 12.5px; font-weight: 500; }
+
+/* ---- Tasks ---- */
+.task-progress {
+  height: 6px; border-radius: 6px;
+  background: var(--border);
+  overflow: hidden;
+  margin: 6px 0 20px;
+}
+.task-progress i {
+  display: block; height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--gold-bright), var(--gold));
+  transition: width .6s var(--ease-luxe);
+}
+.task-add { display: flex; gap: 10px; margin-bottom: 18px; }
+.task-add input {
+  flex: 1;
+  padding: 13px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  font-size: 14px;
+  background: var(--bg-warm);
+  transition: border-color .3s, box-shadow .3s;
+}
+.task-add input:focus {
+  outline: none;
+  border-color: var(--gold-bright);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(198,161,91,.14);
+}
+.task-add button { padding: 0 22px; border-radius: 12px; }
+.task-list { display: flex; flex-direction: column; gap: 8px; }
+.task-row {
+  display: flex; align-items: center; gap: 13px;
+  padding: 13px 15px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-warm);
+  transition: all .3s;
+}
+.task-row:hover { border-color: rgba(198,161,91,.4); }
+.task-check {
+  width: 22px; height: 22px;
+  border-radius: 7px;
+  border: 1.5px solid var(--border-strong);
+  display: flex; align-items: center; justify-content: center;
+  color: transparent;
+  background: #fff;
+  transition: all .3s var(--ease-luxe);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.task-row.done .task-check {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+.task-text { flex: 1; font-size: 14px; }
+.task-row.done .task-text { text-decoration: line-through; opacity: .5; }
+
+/* ---- Tools ---- */
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 18px;
+}
+.roi-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.roi-field label {
+  display: block;
+  font-size: 12.5px; font-weight: 600;
+  margin-bottom: 7px;
+}
+.roi-field input[type="number"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  font-size: 14px;
+  background: var(--bg-warm);
+}
+.roi-field input[type="number"]:focus {
+  outline: none;
+  border-color: var(--gold-bright);
+  box-shadow: 0 0 0 4px rgba(198,161,91,.14);
+}
+.roi-slider-row { margin-bottom: 20px; }
+.roi-slider-row label { display: flex; justify-content: space-between; font-size: 12.5px; font-weight: 600; margin-bottom: 10px; }
+.roi-slider-row output { color: var(--gold); font-family: var(--font-mono); }
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--gold);
+  height: 5px;
+  cursor: pointer;
+}
+.roi-result {
+  border-radius: 16px;
+  background: var(--ink);
+  padding: 24px 26px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.roi-result .pm b { color: #FDFDFB; font-family: var(--font-display); font-size: 1.8rem; font-weight: 500; }
+.roi-result .pm b em { color: var(--gold-bright); font-style: italic; }
+.roi-result .pm span { color: rgba(253,253,251,.5); font-size: 11px; }
+.quick-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.quick-link {
+  display: flex; align-items: center; gap: 11px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg-warm);
+  font-size: 13px; font-weight: 600;
+  color: var(--ink-soft);
+  transition: all .35s var(--ease-luxe);
+  cursor: pointer;
+}
+.quick-link:hover {
+  border-color: var(--gold-bright);
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+}
+.quick-link svg { color: var(--gold); flex-shrink: 0; }
+
+/* ---- Modal ---- */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(28,25,23,.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9500;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  opacity: 0; visibility: hidden;
+  transition: opacity .4s, visibility .4s;
+}
+.modal-overlay.open { opacity: 1; visibility: visible; }
+.modal {
+  width: min(480px, 100%);
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px 34px;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(24px) scale(.97);
+  transition: transform .45s var(--ease-luxe);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-overlay.open .modal { transform: translateY(0) scale(1); }
+.modal h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 600;
+  margin-bottom: 22px;
+}
+.modal .form-group { margin-bottom: 16px; }
+.modal-actions { display: flex; gap: 12px; margin-top: 24px; }
+.modal-actions .btn-gold, .modal-actions .btn-ghost { flex: 1; padding: 15px 20px; font-size: 14px; }
+
+/* ---- Toast ---- */
+.toast {
+  position: fixed;
+  bottom: 28px; left: 50%;
+  transform: translate(-50%, 80px);
+  background: var(--ink);
+  color: #FDFDFB;
+  padding: 14px 24px;
+  border-radius: 100px;
+  font-size: 13.5px; font-weight: 500;
+  display: flex; align-items: center; gap: 10px;
+  box-shadow: var(--shadow-lg);
+  z-index: 9600;
+  transition: transform .5s var(--ease-luxe);
+}
+.toast.show { transform: translate(-50%, 0); }
+.toast svg { color: var(--gold-bright); }
+
+/* ---- Responsive ---- */
+@media (max-width: 1080px) {
+  .stat-cards { grid-template-columns: repeat(2, 1fr); }
+  .overview-grid, .cal-layout, .tools-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .dash { grid-template-columns: 1fr; }
+  .dash-side {
+    position: sticky; top: 0;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .dash-side .nav-logo { display: none; }
+  .dash-nav {
+    margin-top: 0;
+    flex-direction: row;
+    overflow-x: auto;
+    flex: 1;
+    gap: 2px;
+  }
+  .dash-nav button { padding: 10px 13px; font-size: 12.5px; white-space: nowrap; }
+  .dash-nav button.active::before { display: none; }
+  .dash-user { border-top: none; padding: 0; }
+  .dash-user-info { display: none; }
+  .dash-main { padding: 22px 16px 50px; }
+  .cal-day { min-height: 58px; padding: 5px; }
+  .cal-chip { display: none; }
+  .cal-day .cal-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--gold);
+  }
+  .client-table th:nth-child(3), .client-table td:nth-child(3) { display: none; }
+}
+
+/* ---- Site Health ---- */
+.ob-row { display: flex; align-items: center; gap: 12px; padding: 7px 0; font-size: 13px; }
+.ob-row .ob-name { min-width: 120px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ob-row .ob-bar { flex: 1; height: 8px; border-radius: 8px; background: var(--border); overflow: hidden; }
+.ob-row .ob-bar i { display: block; height: 100%; border-radius: 8px; background: linear-gradient(90deg, var(--gold-bright), var(--gold)); }
+.ob-row .ob-count { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-mute); min-width: 30px; text-align: right; }
+.ob-err { padding: 10px 13px; border: 1px solid rgba(220,38,38,.2); background: rgba(220,38,38,.05); border-radius: 10px; font-size: 12px; margin-bottom: 8px; }
+.ob-err b { color: #B91C1C; font-family: var(--font-mono); font-size: 11px; word-break: break-word; }
+.ob-err span { color: var(--ink-mute); display: block; margin-top: 2px; font-size: 11px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .view { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<div class="dash">
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="dash-side">
+    <a href="index.html" class="nav-logo" aria-label="MATIN SHAPE home">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <defs><linearGradient id="msTile" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#E4CD97"/><stop offset=".55" stop-color="#C6A15B"/><stop offset="1" stop-color="#A9853F"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#msTile)"/><path d="M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z" fill="#1C1917"/><path d="M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5" fill="none" stroke="#1C1917" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      MATIN <span class="wm-gold">SHAPE</span>
+    </a>
+
+    <nav class="dash-nav" aria-label="Dashboard">
+      <button class="active" data-view="overview">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg>
+        Overview
+      </button>
+      <button data-view="calendar">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>
+        Call Calendar
+      </button>
+      <button data-view="clients">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5a5 5 0 0 1 6 4.5"/></svg>
+        Clients
+      </button>
+      <button data-view="tasks">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3.5 5.5 1 1 2-2M3.5 11.5l1 1 2-2M3.5 17.5l1 1 2-2"/></svg>
+        Tasks
+      </button>
+      <button data-view="tools">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14.7 6.3a4.5 4.5 0 0 0-6.1 5.5L3 17.4V21h3.6l5.6-5.6a4.5 4.5 0 0 0 5.5-6.1l-2.8 2.8-2.5-.7-.7-2.5 3-2.6Z"/></svg>
+        CEO Tools
+      </button>
+      <button data-view="health">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 12h-3l-2.5 7-5-14L9 12H2"/></svg>
+        Site Health
+      </button>
+    </nav>
+
+    <div class="dash-user">
+      <div class="dash-user-avatar" id="userAvatar">M</div>
+      <div class="dash-user-info">
+        <div class="dash-user-name" id="userName">CEO</div>
+        <div class="dash-user-role">Founder &amp; CEO</div>
+      </div>
+      <button class="dash-logout" id="logoutBtn" aria-label="Sign out" title="Sign out">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M9 21H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3"/><path d="m16 17 5-5-5-5M21 12H9"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="dash-main">
+    <div class="dash-topbar">
+      <div class="dash-greeting">
+        <h1 id="greeting">Good morning, <em>boss</em>.</h1>
+        <div class="dash-date" id="todayDate"></div>
+      </div>
+      <button class="btn-gold" id="newCallBtn">
+        <span>+ Schedule a call</span>
+      </button>
+    </div>
+
+    <!-- ===== OVERVIEW ===== -->
+    <section class="view active" id="view-overview">
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="sc-label">Calls today</div>
+          <div class="sc-value" id="statToday">0</div>
+          <div class="sc-sub" id="statTodayNext">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-label">Calls this week</div>
+          <div class="sc-value" id="statWeek">0</div>
+          <div class="sc-sub">across all clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-label">Active clients</div>
+          <div class="sc-value" id="statClients">0</div>
+          <div class="sc-sub" id="statLeads">0 leads in pipeline</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-label">Open tasks</div>
+          <div class="sc-value" id="statTasks">0</div>
+          <div class="sc-sub" id="statTasksDone">0 completed</div>
+        </div>
+      </div>
+
+      <div class="overview-grid">
+        <div class="dcard">
+          <div class="dcard-title">
+            Upcoming calls
+            <button class="icon-btn" data-goto="calendar" title="Open calendar" aria-label="Open calendar">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+          <div class="call-list" id="upcomingList"></div>
+        </div>
+        <div class="dcard">
+          <div class="dcard-title">
+            Quick notes
+            <span class="notes-saved" id="notesSaved">Saved</span>
+          </div>
+          <textarea class="notes-area" id="notesArea" placeholder="Ideas, reminders, things to tell the team… autosaves as you type."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CALENDAR ===== -->
+    <section class="view" id="view-calendar">
+      <div class="cal-layout">
+        <div class="dcard">
+          <div class="cal-header">
+            <div class="cal-month" id="calMonth"></div>
+            <div class="cal-nav">
+              <button id="calPrev" aria-label="Previous month">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <button id="calToday" aria-label="Go to today" style="width:auto; padding:0 14px; font-size:12px; font-weight:600;">Today</button>
+              <button id="calNext" aria-label="Next month">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="cal-grid-head">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+          <div class="cal-grid" id="calGrid"></div>
+        </div>
+        <div class="dcard">
+          <div class="dcard-title">
+            Selected day
+            <button class="icon-btn" id="dayAddBtn" title="Add call this day" aria-label="Add call on selected day">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+          </div>
+          <div class="day-panel-date" id="dayPanelDate"></div>
+          <div class="call-list" id="dayCallList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLIENTS ===== -->
+    <section class="view" id="view-clients">
+      <div class="dcard">
+        <div class="dcard-title">
+          Client book
+          <button class="btn-ghost" id="addClientBtn" style="padding: 10px 18px; font-size: 13px;">
+            <span>+ Add client</span>
+          </button>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="client-table">
+            <thead>
+              <tr>
+                <th>Client</th>
+                <th>Status</th>
+                <th>Monthly value</th>
+                <th style="width:60px;"></th>
+              </tr>
+            </thead>
+            <tbody id="clientRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TASKS ===== -->
+    <section class="view" id="view-tasks">
+      <div class="dcard" style="max-width: 720px;">
+        <div class="dcard-title">CEO task list <span id="taskCount"></span></div>
+        <div class="task-progress"><i id="taskProgress" style="width:0%"></i></div>
+        <div class="task-add">
+          <input type="text" id="taskInput" placeholder="Add a task and press Enter…" aria-label="New task" />
+          <button class="btn-primary" id="taskAddBtn"><span>Add</span></button>
+        </div>
+        <div class="task-list" id="taskList"></div>
+      </div>
+    </section>
+
+    <!-- ===== TOOLS ===== -->
+    <section class="view" id="view-tools">
+      <div class="tools-grid">
+        <div class="dcard">
+          <div class="dcard-title">Automation ROI calculator — close deals with it</div>
+          <div class="roi-row">
+            <div class="roi-field">
+              <label for="roiHours">Manual hours / week</label>
+              <input type="number" id="roiHours" value="25" min="1" max="500" />
+            </div>
+            <div class="roi-field">
+              <label for="roiRate">Loaded hourly cost ($)</label>
+              <input type="number" id="roiRate" value="45" min="1" max="1000" />
+            </div>
+          </div>
+          <div class="roi-slider-row">
+            <label for="roiPct">Automation coverage <output id="roiPctOut">70%</output></label>
+            <input type="range" id="roiPct" min="10" max="95" value="70" step="5" />
+          </div>
+          <div class="roi-result">
+            <div class="pm"><b id="roiWeekly">17.5<em> hrs</em></b><span>freed every week</span></div>
+            <div class="pm"><b id="roiAnnual">$40,950</b><span>recovered annually</span></div>
+          </div>
+        </div>
+
+        <div class="dcard">
+          <div class="dcard-title">Quick launch</div>
+          <div class="quick-links">
+            <a class="quick-link" href="https://mail.google.com" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 8 9 6 9-6"/></svg>
+              Inbox
+            </a>
+            <a class="quick-link" href="https://calendar.google.com" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>
+              Calendar
+            </a>
+            <a class="quick-link" href="https://dashboard.stripe.com" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10h18"/></svg>
+              Payments
+            </a>
+            <a class="quick-link" href="https://www.notion.so" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M4 4h13l3 3v13H4Z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+              Docs
+            </a>
+            <a class="quick-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 11v5M8 8v.01M12 16v-5m0 0a2.5 2.5 0 0 1 5 1.5V16"/></svg>
+              LinkedIn
+            </a>
+            <a class="quick-link" href="https://web.whatsapp.com" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.2-4.6A9 9 0 1 1 21 12Z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+          <div class="dcard-title" style="margin-top: 26px;">Pipeline snapshot</div>
+          <div class="roi-result" style="grid-template-columns: 1fr 1fr;">
+            <div class="pm"><b id="pipeMRR">$0</b><span>active monthly revenue</span></div>
+            <div class="pm"><b id="pipePotential">$0</b><span>potential from leads</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SITE HEALTH ===== -->
+    <section class="view" id="view-health">
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="sc-label">Pageviews · 7d</div>
+          <div class="sc-value" id="obViews">0</div>
+          <div class="sc-sub" id="obSessions">0 sessions</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-label">JS errors · 7d</div>
+          <div class="sc-value" id="obErrors">0</div>
+          <div class="sc-sub" id="obErrSub">all clear</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-label">Avg page load</div>
+          <div class="sc-value" id="obLoad">&mdash;</div>
+          <div class="sc-sub">recent visits, this browser</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-label">Core web vitals</div>
+          <div class="sc-value" id="obLCP">&mdash;</div>
+          <div class="sc-sub" id="obCLS">LCP &middot; CLS &middot; INP</div>
+        </div>
+      </div>
+
+      <div class="overview-grid">
+        <div class="dcard">
+          <div class="dcard-title">
+            Traffic by page
+            <button class="icon-btn danger" id="obClear" title="Clear telemetry" aria-label="Clear telemetry">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+            </button>
+          </div>
+          <div id="obPages"></div>
+          <div class="dcard-title" style="margin-top:26px;">Top clicked actions</div>
+          <div id="obClicks"></div>
+        </div>
+
+        <div class="dcard">
+          <div class="dcard-title">Recent errors</div>
+          <div id="obErrList"></div>
+
+          <div class="dcard-title" style="margin-top:26px;">Security &amp; session</div>
+          <div id="obSession" style="font-size:13px; color:var(--ink-mute); line-height:1.8;"></div>
+
+          <form id="pwForm" style="margin-top:16px;">
+            <div class="form-group">
+              <label for="pwCur">Current password</label>
+              <input type="password" id="pwCur" autocomplete="current-password" maxlength="128" />
+            </div>
+            <div class="form-group">
+              <label for="pwNew">New password <span style="color:var(--ink-mute); font-weight:400;">(min 10 chars)</span></label>
+              <input type="password" id="pwNew" autocomplete="new-password" maxlength="128" />
+            </div>
+            <button type="submit" class="btn-ghost" style="width:100%; padding:14px;"><span>Update password</span></button>
+            <p class="form-hint" id="pwMsg" style="margin-top:10px; word-break:break-all;"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ============ CALL MODAL ============ -->
+<div class="modal-overlay" id="callModalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="callModalTitle">
+    <h2 id="callModalTitle">Schedule a call</h2>
+    <form id="callForm">
+      <input type="hidden" id="callId" />
+      <div class="form-group">
+        <label for="callClient">Client name <em style="color:var(--gold)">*</em></label>
+        <input type="text" id="callClient" required placeholder="e.g. Sofia Martinez — Meridian" list="clientOptions" />
+        <datalist id="clientOptions"></datalist>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="callDate">Date <em style="color:var(--gold)">*</em></label>
+          <input type="date" id="callDate" required />
+        </div>
+        <div class="form-group">
+          <label for="callTime">Time <em style="color:var(--gold)">*</em></label>
+          <input type="time" id="callTime" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="callDur">Duration</label>
+          <select id="callDur">
+            <option value="15">15 min</option>
+            <option value="30" selected>30 min</option>
+            <option value="45">45 min</option>
+            <option value="60">60 min</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="callType">Type</label>
+          <select id="callType">
+            <option>Strategy</option>
+            <option>Check-in</option>
+            <option>Demo</option>
+            <option>Onboarding</option>
+            <option>Review</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="callNotes">Notes</label>
+        <textarea id="callNotes" style="min-height:80px;" placeholder="Agenda, links, things to remember…"></textarea>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-ghost" id="callCancel"><span>Cancel</span></button>
+        <button type="submit" class="btn-gold"><span id="callSubmitLabel">Save call</span></button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ============ CLIENT MODAL ============ -->
+<div class="modal-overlay" id="clientModalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="clientModalTitle">
+    <h2 id="clientModalTitle">Add a client</h2>
+    <form id="clientForm">
+      <div class="form-group">
+        <label for="clName">Contact name <em style="color:var(--gold)">*</em></label>
+        <input type="text" id="clName" required placeholder="e.g. Daniel Okafor" />
+      </div>
+      <div class="form-group">
+        <label for="clCompany">Company</label>
+        <input type="text" id="clCompany" placeholder="e.g. Northwind Logistics" />
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="clStatus">Status</label>
+          <select id="clStatus">
+            <option>Active</option>
+            <option>Lead</option>
+            <option>Paused</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="clValue">Monthly value ($)</label>
+          <input type="number" id="clValue" min="0" placeholder="4500" />
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-ghost" id="clientCancel"><span>Cancel</span></button>
+        <button type="submit" class="btn-gold"><span>Add client</span></button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+  <span id="toastMsg">Saved</span>
+</div>
+
+<script src="assets/observe.js"></script>
+<script src="assets/auth.js"></script>
+<script src="assets/dashboard.js"></script>
+</body>
+</html>

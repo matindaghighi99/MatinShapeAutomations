@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-src 'none'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>About — Founder-Led AI Automation Studio | MATIN SHAPE</title>
+<meta name="description" content="MATIN SHAPE is a founder-led automation studio built on a simple belief: repetitive work should be invisible, and good systems should be calm." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231C1917'/%3E%3Cpath d='M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z' fill='%23C6A15B'/%3E%3Cpath d='M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5' fill='none' stroke='%23C6A15B' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Italiana&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/enhance.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="MATIN SHAPE home">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <defs><linearGradient id="msGold" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#E4CD97"/><stop offset=".55" stop-color="#C6A15B"/><stop offset="1" stop-color="#A9853F"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="#1C1917"/><path d="M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z" fill="url(#msGold)"/><path d="M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5" fill="none" stroke="url(#msGold)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      MATIN <span class="wm-gold">SHAPE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="login.html" class="nav-portal" aria-label="Client Portal — private access" title="Client Portal — for existing clients">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.6" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="contact.html" class="nav-cta magnetic">Book a call</a>
+      <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="login.html" class="portal-link">Client Portal</a>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero page-enter">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow centered">The studio</span>
+    <h1>Small studio. <span class="gold-word">Obsessive</span> standards.</h1>
+    <p class="section-sub">
+      MATIN SHAPE was founded on a simple observation: the most valuable people
+      in every company spend half their week on work a machine should do.
+      We exist to give that time back — calmly.
+    </p>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ BIG QUOTE ============ -->
+<section class="section" style="padding-top: clamp(40px, 6vw, 80px);">
+  <div class="container reveal">
+    <p class="big-quote">
+      "Luxury isn't gold leaf and marble. Luxury is a Tuesday afternoon where
+      nothing is on fire — because the systems simply <span class="gold-word">work</span>."
+    </p>
+    <p class="big-quote-author">— The MATIN SHAPE founding principle</p>
+  </div>
+</section>
+
+<!-- ============ FOUNDER STORY ============ -->
+<section class="section" id="founder" style="padding-top: clamp(30px, 5vw, 60px);">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">The founder</span>
+      <h2 class="section-title">Designed by <span class="gold-word">Matin</span>. Personally. Every time.</h2>
+    </div>
+
+    <div class="founder-panel">
+      <div class="founder-mark reveal" data-photo="images/Founder.jpg">
+        <img alt="Matin, founder of MATIN SHAPE" loading="lazy" />
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="rgba(28,25,23,.03)" stroke="rgba(198,161,91,.5)" stroke-width=".6"/>
+          <path d="M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z" fill="#C6A15B"/>
+          <path d="M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5" fill="none" stroke="#C6A15B" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="fm-name">MATIN</span>
+        <span class="fm-role">Founder &amp; Systems Designer</span>
+        <div class="fm-plate">
+          <span class="fm-eyebrow">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9Z"/></svg>
+            Founder &amp; Systems Designer
+          </span>
+          <b>Matin</b>
+        </div>
+      </div>
+
+      <div class="founder-copy reveal" style="--d:.12s">
+        <h3>The studio exists because busywork is a design flaw — not a fact of life.</h3>
+        <p>
+          Matin started MATIN SHAPE after watching the same story repeat inside
+          good companies: talented people copying data between tools, chasing
+          follow-ups from memory, answering the same question forty times a
+          week. Not because anyone chose that — because nobody had designed
+          the alternative.
+        </p>
+        <p>
+          So the studio designs the alternative. Not "automation" as a pile of
+          Zapier triggers, but as a considered system: mapped against how your
+          business actually operates, built with the fewest moving parts that
+          will do the job, documented like a product, and boring in the best
+          possible sense of the word.
+        </p>
+        <p>
+          It's deliberately a small studio. Matin designs every blueprint
+          himself and brings in trusted specialists per build — voice, data,
+          integrations — so every system ships with senior hands on it and
+          one person accountable for the whole: him.
+        </p>
+        <ul class="founder-points">
+          <li><span class="fp-num">01</span><span><b>Watch first, build second.</b> Every engagement starts with a week inside your real workflows.</span></li>
+          <li><span class="fp-num">02</span><span><b>Say no early.</b> If an automation won't pay for itself, you'll hear it on the first call.</span></li>
+          <li><span class="fp-num">03</span><span><b>Leave things learnable.</b> Handover docs so clear your next hire masters them in an afternoon.</span></li>
+        </ul>
+        <div class="founder-actions">
+          <a href="contact.html" class="btn-primary magnetic">
+            <span>Book a Strategy Call</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VALUES ============ -->
+<section class="section process">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">What we believe</span>
+      <h2 class="section-title">Three rules we never <span class="gold-word">break</span>.</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="value-num">RULE / 01</div>
+        <h3>Boring is beautiful</h3>
+        <p>
+          The best automation is the one you forget exists. We optimize for
+          systems that run for years without drama — not demos that impress
+          for a week.
+        </p>
+      </div>
+      <div class="value-card reveal" style="--d:.1s">
+        <div class="value-num">RULE / 02</div>
+        <h3>Value before code</h3>
+        <p>
+          Every workflow we propose must earn its keep — hours back, leads
+          answered, invoices paid. If we can't articulate the return, we don't
+          build it.
+        </p>
+      </div>
+      <div class="value-card reveal" style="--d:.2s">
+        <div class="value-num">RULE / 03</div>
+        <h3>Few clients, deep work</h3>
+        <p>
+          We take four new clients a quarter. Not because it sounds exclusive —
+          because bespoke systems require the kind of attention you can't
+          split forty ways.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ BELIEFS / NEVER BUILD ============ -->
+<section class="section" style="padding-top: clamp(30px, 5vw, 60px);">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">The compass</span>
+      <h2 class="section-title">What we believe — and what we <span class="gold-word">refuse</span> to build.</h2>
+    </div>
+
+    <div class="belief-cols">
+      <div class="belief-card reveal">
+        <h3>What MATIN SHAPE believes</h3>
+        <ul>
+          <li>Automation should simplify, not complicate.</li>
+          <li>AI should help people work better — not replace the human side of a business.</li>
+          <li>Beautiful systems are easier to trust, monitor, and maintain.</li>
+          <li>Strategy matters more than tools. Always.</li>
+          <li>Every workflow should have a clear owner, a fallback, and a purpose.</li>
+          <li>The best automation feels quiet when it works and obvious when it needs attention.</li>
+        </ul>
+      </div>
+      <div class="belief-card no reveal" style="--d:.1s">
+        <h3>What we never build</h3>
+        <ul>
+          <li>Messy automations with no strategy behind them.</li>
+          <li>Fake AI demos that don't survive contact with real operations.</li>
+          <li>Systems with no human fallback when something unusual happens.</li>
+          <li>Tool stacks the client can't understand or maintain.</li>
+          <li>Overcomplicated workflows built just to look advanced.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STUDIO PRINCIPLES (honest, no invented numbers) ============ -->
+<section class="principles" aria-label="How the studio works">
+  <div class="container">
+    <div class="principles-grid">
+      <div class="principle reveal">
+        <div class="principle-kicker">Structure</div>
+        <h3>Founder-led</h3>
+        <p>One accountable designer on every system, start to finish.</p>
+      </div>
+      <div class="principle reveal" style="--d:.1s">
+        <div class="principle-kicker">Method</div>
+        <h3>Blueprint before build</h3>
+        <p>You see the full system on paper before anything is wired up.</p>
+      </div>
+      <div class="principle reveal" style="--d:.2s">
+        <div class="principle-kicker">Capacity</div>
+        <h3>Four clients / quarter</h3>
+        <p>Deliberately small, so every build gets senior attention.</p>
+      </div>
+      <div class="principle reveal" style="--d:.3s">
+        <div class="principle-kicker">Handover</div>
+        <h3>Documented like a product</h3>
+        <p>Every system ships with monitoring and a plain-English manual.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-panel reveal">
+      <div class="cta-grid-bg" aria-hidden="true"></div>
+      <div class="cta-orb cta-orb-1" aria-hidden="true"></div>
+      <div class="cta-orb cta-orb-2" aria-hidden="true"></div>
+      <div class="cta-content">
+        <div class="cta-eyebrow">Work with the studio</div>
+        <h2>Sound like your kind of <span class="gold-word">partner</span>?</h2>
+        <p>
+          Thirty minutes with Matin. Bring your messiest process — leave with
+          a blueprint for fixing it, whether we build it together or not.
+        </p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn-gold magnetic">
+            <span>Book a Strategy Call</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="MATIN SHAPE home">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#1C1917"/><path d="M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z" fill="url(#msGold)"/><path d="M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5" fill="none" stroke="url(#msGold)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          MATIN <span class="wm-gold">SHAPE</span>
+        </a>
+        <p>A founder-led AI automation studio. We build the quiet machinery behind exceptional businesses.</p>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="about.html#founder">The founder</a></li>
+          <li><a href="login.html" title="Private client access">Client Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@matinshape.studio">hello@matinshape.studio</a></li>
+          <li><a href="contact.html">Book a call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MATIN SHAPE Automation Studio. All rights reserved.</span>
+      <span class="footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/observe.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

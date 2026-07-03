@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-src 'none'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>MATIN SHAPE — AI Automation Systems for Modern Businesses</title>
+<meta name="description" content="MATIN SHAPE designs AI agents, workflow automations, CRM systems, dashboards, and operating systems that help businesses reduce busywork and move with less friction." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231C1917'/%3E%3Cpath d='M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z' fill='%23C6A15B'/%3E%3Cpath d='M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5' fill='none' stroke='%23C6A15B' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Italiana&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/enhance.css" />
+</head>
+<body class="home locked">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-word">
+    <span>M</span><span>A</span><span>T</span><span>I</span><span>N</span><span>&nbsp;</span><span class="gold">S</span><span class="gold">H</span><span class="gold">A</span><span class="gold">P</span><span class="gold">E</span>
+  </div>
+  <div class="preloader-bar"><i id="loadBar"></i></div>
+  <div class="preloader-pct" id="loadPct">00</div>
+</div>
+
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<!-- Navigation -->
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="MATIN SHAPE home">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <defs><linearGradient id="msGold" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#E4CD97"/><stop offset=".55" stop-color="#C6A15B"/><stop offset="1" stop-color="#A9853F"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="#1C1917"/><path d="M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z" fill="url(#msGold)"/><path d="M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5" fill="none" stroke="url(#msGold)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      MATIN <span class="wm-gold">SHAPE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="login.html" class="nav-portal" aria-label="Client Portal — private access" title="Client Portal — for existing clients">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.6" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="contact.html" class="nav-cta magnetic">Book a call</a>
+      <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="login.html" class="portal-link">Client Portal</a>
+</div>
+
+<!-- ============ SIGNATURE HERO ============ -->
+<header class="hero home-hero">
+  <div class="hh-beam" aria-hidden="true"></div>
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hh-copy">
+      <span class="hero-eyebrow">Founder-led AI automation studio</span>
+      <h1>
+        <span class="line"><span>Your business,</span></span>
+        <span class="line"><span>running itself —</span></span>
+        <span class="line"><span><span class="gold-word">beautifully.</span></span></span>
+      </h1>
+      <p class="hero-sub">
+        MATIN SHAPE designs AI agents, automations, and operating systems that
+        remove busywork, connect your tools, and help your business move with
+        less friction.
+      </p>
+      <div class="hero-ctas">
+        <a href="contact.html" class="btn-gold magnetic">
+          <span>Book a Strategy Call</span>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="projects.html" class="btn-ghost arrow-right magnetic">
+          <span>Explore Systems</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="hh-trustline" aria-label="Studio principles">
+        <span><i aria-hidden="true"></i>Strategy before tools</span>
+        <span><i aria-hidden="true"></i>Founder-designed blueprints</span>
+        <span><i aria-hidden="true"></i>Weeks to first system</span>
+      </div>
+    </div>
+
+    <div class="hh-visual" aria-hidden="true">
+      <div class="hh-visual-inner">
+        <svg id="heroSystem" viewBox="0 0 560 560" role="img"
+             aria-label="An automation core assembling itself: phone agent, CRM sync, booking, and follow-up modules connect to a glowing central system.">
+          <defs>
+            <linearGradient id="hhg" x1="180" y1="180" x2="380" y2="380" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#E4CD97"/><stop offset=".55" stop-color="#C6A15B"/><stop offset="1" stop-color="#A9853F"/>
+            </linearGradient>
+            <radialGradient id="hhGlow" cx="50%" cy="50%" r="50%">
+              <stop stop-color="rgba(198,161,91,.28)"/><stop offset="1" stop-color="rgba(198,161,91,0)"/>
+            </radialGradient>
+          </defs>
+
+          <!-- orbital rings -->
+          <g class="hh-ring hh-ring-a">
+            <g class="hh-spin-a">
+              <circle class="ring-line" cx="280" cy="280" r="118" stroke-dasharray="3 10"/>
+            </g>
+          </g>
+          <g class="hh-ring hh-ring-b">
+            <g class="hh-spin-b">
+              <circle class="ring-line" cx="280" cy="280" r="182" stroke-dasharray="2 14"/>
+              <circle class="hh-sat" cx="280" cy="98" r="4"/>
+              <circle class="hh-sat-2" cx="438" cy="371" r="3.5"/>
+              <circle class="hh-sat-2" cx="122" cy="371" r="3.5"/>
+            </g>
+          </g>
+
+          <!-- wires -->
+          <path class="hh-wire hh-wire-1" d="M194 130 C 240 152 242 198 258 234"/>
+          <path class="hh-wire hh-wire-2" d="M390 152 C 342 172 330 202 314 234"/>
+          <path class="hh-wire hh-wire-3" d="M186 428 C 232 410 242 362 258 326"/>
+          <path class="hh-wire hh-wire-4" d="M372 410 C 332 394 322 358 308 326"/>
+          <path class="hh-wire hh-wire-5" d="M144 274 C 190 274 206 278 232 280"/>
+          <path class="hh-wire hh-wire-6" d="M416 274 C 370 274 354 278 328 280"/>
+
+          <!-- core -->
+          <g class="hh-core">
+            <circle class="hh-core-glow" cx="280" cy="280" r="108" fill="url(#hhGlow)"/>
+            <rect x="232" y="232" width="96" height="96" rx="24" fill="#1C1917" stroke="url(#hhg)" stroke-width="1.4"/>
+            <path d="M280 245 287 253.5 280 262 273 253.5Z" fill="url(#hhg)"/>
+            <path d="M257 308 V281 L280 300 303 281 V308" fill="none" stroke="url(#hhg)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+
+          <!-- modules -->
+          <g class="hh-mod hh-mod-1">
+            <rect x="36" y="96" width="158" height="46" rx="13"/>
+            <circle class="led" cx="58" cy="119" r="3.5"/>
+            <text x="72" y="123">PHONE AGENT</text>
+          </g>
+          <g class="hh-mod hh-mod-2">
+            <rect x="390" y="120" width="134" height="46" rx="13"/>
+            <circle class="led" cx="412" cy="143" r="3.5"/>
+            <text x="426" y="147">CRM SYNC</text>
+          </g>
+          <g class="hh-mod hh-mod-3">
+            <rect x="52" y="414" width="134" height="46" rx="13"/>
+            <circle class="led" cx="74" cy="437" r="3.5"/>
+            <text x="88" y="441">BOOKING</text>
+          </g>
+          <g class="hh-mod hh-mod-4">
+            <rect x="372" y="396" width="152" height="46" rx="13"/>
+            <circle class="led" cx="394" cy="419" r="3.5"/>
+            <text x="408" y="423">FOLLOW-UPS</text>
+          </g>
+          <g class="hh-mod hh-mod-5">
+            <rect x="14" y="252" width="130" height="44" rx="13"/>
+            <circle class="led" cx="36" cy="274" r="3.5"/>
+            <text x="50" y="278">HANDOFF</text>
+          </g>
+          <g class="hh-mod hh-mod-6">
+            <rect x="416" y="252" width="140" height="44" rx="13"/>
+            <circle class="led" cx="438" cy="274" r="3.5"/>
+            <text x="452" y="278">DASHBOARD</text>
+          </g>
+
+          <!-- data particles -->
+          <circle class="hh-pulse" r="3">
+            <animateMotion dur="2.4s" repeatCount="indefinite" path="M194 130 C 240 152 242 198 258 234"/>
+          </circle>
+          <circle class="hh-pulse" r="3">
+            <animateMotion dur="2.8s" begin="0.9s" repeatCount="indefinite" path="M372 410 C 332 394 322 358 308 326"/>
+          </circle>
+          <circle class="hh-pulse" r="3">
+            <animateMotion dur="2.6s" begin="1.7s" repeatCount="indefinite" path="M390 152 C 342 172 330 202 314 234"/>
+          </circle>
+
+          <g class="hh-status">
+            <circle cx="216" cy="546" r="3.5"/>
+            <text x="228" y="550">ALL SYSTEMS OPERATIONAL</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="wheel"></div>
+    Scroll
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ INDUSTRIES WE DESIGN SYSTEMS FOR ============ -->
+<section class="industries" aria-label="Industries we design systems for">
+  <p class="industries-label">Systems built for businesses like yours</p>
+  <div class="industry-chips reveal">
+    <span class="industry-chip">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M14.7 6.3a4.5 4.5 0 0 0-6.1 5.5L3 17.4V21h3.6l5.6-5.6a4.5 4.5 0 0 0 5.5-6.1l-2.8 2.8-2.5-.7-.7-2.5 3-2.6Z"/></svg>
+      Local service businesses
+    </span>
+    <span class="industry-chip">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M12 3v18M5 9h14M5 15h14"/><circle cx="12" cy="12" r="9"/></svg>
+      Clinics &amp; healthcare
+    </span>
+    <span class="industry-chip">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M4 20V8l8-5 8 5v12"/><path d="M4 20h16M10 20v-6h4v6"/></svg>
+      Real estate teams
+    </span>
+    <span class="industry-chip">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5a5 5 0 0 1 6 4.5"/></svg>
+      Coaches &amp; consultants
+    </span>
+    <span class="industry-chip">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12h8M12 8v8"/></svg>
+      Agencies &amp; studios
+    </span>
+    <span class="industry-chip">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="m3 21 4-1 11-11a2.4 2.4 0 0 0-3.4-3.4L3.6 16.6 3 21Z"/></svg>
+      Home improvement companies
+    </span>
+    <span class="industry-chip">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>
+      Appointment-based businesses
+    </span>
+    <span class="industry-chip">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3.5 5.5 1 1 2-2M3.5 11.5l1 1 2-2M3.5 17.5l1 1 2-2"/></svg>
+      Small teams drowning in admin
+    </span>
+  </div>
+</section>
+
+<!-- ============ PRINCIPLES ============ -->
+<section class="principles" aria-label="How the studio works">
+  <div class="container">
+    <div class="principles-grid">
+      <div class="principle reveal">
+        <div class="principle-kicker">Approach</div>
+        <h3>Strategy before tools</h3>
+        <p>We map the bottleneck before a single tool is chosen.</p>
+      </div>
+      <div class="principle reveal" style="--d:.1s">
+        <div class="principle-kicker">Studio</div>
+        <h3>Founder-led, always</h3>
+        <p>You talk to the person who designs and ships your system — no handoffs.</p>
+      </div>
+      <div class="principle reveal" style="--d:.2s">
+        <div class="principle-kicker">Speed</div>
+        <h3>Weeks, not quarters</h3>
+        <p>Your first system goes live fast, then gets refined in focused sprints.</p>
+      </div>
+      <div class="principle reveal" style="--d:.3s">
+        <div class="principle-kicker">Standard</div>
+        <h3>Calm by design</h3>
+        <p>Documented, monitored, boring-by-design machinery that just runs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE BUILD ============ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">What we build</span>
+      <h2 class="section-title">Six disciplines. One <span class="gold-word">seamless</span> machine.</h2>
+      <p class="section-sub">
+        Every engagement is bespoke — but everything we craft lives in one of
+        these six disciplines, engineered to work in concert.
+      </p>
+    </div>
+
+    <div class="bento">
+      <div class="bento-card wide reveal">
+        <div class="bento-glare" aria-hidden="true"></div>
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M5.6 18.4l2.1-2.1M12 18v3M16.3 16.3l2.1 2.1M18 12h3M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <h3>Workflow Automation</h3>
+        <p>
+          End-to-end pipelines that connect every tool you use — CRM, email,
+          billing, fulfilment — into one silent system that never drops a task,
+          never forgets a follow-up, and never takes a day off.
+        </p>
+        <div class="workflow-visual" aria-hidden="true">
+          <svg viewBox="0 0 640 120" fill="none">
+            <line class="wf-line" x1="120" y1="60" x2="250" y2="60"/>
+            <line class="wf-line" x1="370" y1="60" x2="500" y2="60"/>
+            <g class="wf-node-box">
+              <rect x="20" y="35" width="100" height="50" rx="14" fill="#FAF9F6" stroke="rgba(28,25,23,.12)"/>
+              <circle cx="45" cy="60" r="5" fill="#C6A15B"/>
+              <text x="58" y="64" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#44403C">Trigger</text>
+            </g>
+            <g class="wf-node-box">
+              <rect x="250" y="35" width="120" height="50" rx="14" fill="#1C1917"/>
+              <circle cx="275" cy="60" r="5" fill="#C6A15B"/>
+              <text x="288" y="64" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#FDFDFB">AI decision</text>
+            </g>
+            <g class="wf-node-box">
+              <rect x="500" y="35" width="120" height="50" rx="14" fill="#FAF9F6" stroke="rgba(198,161,91,.55)"/>
+              <circle cx="525" cy="60" r="5" fill="#A16207"/>
+              <text x="538" y="64" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#44403C">Delivered</text>
+            </g>
+          </svg>
+        </div>
+        <a class="bento-link" href="services.html"><span class="lnk">Explore workflows</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="bento-card reveal" style="--d:.1s">
+        <div class="bento-glare" aria-hidden="true"></div>
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        </div>
+        <h3>AI Phone Agents</h3>
+        <p>
+          Natural-sounding voice agents that answer every call, qualify leads,
+          and book appointments — no hold music, ever.
+        </p>
+        <a class="bento-link" href="services.html"><span class="lnk">Hear how it works</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="bento-card reveal" style="--d:.05s">
+        <div class="bento-glare" aria-hidden="true"></div>
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M17 18a4 4 0 0 0-8 0"/><circle cx="13" cy="11" r="3"/><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v4h-4"/></svg>
+        </div>
+        <h3>CRM Automation</h3>
+        <p>
+          Auto-enrichment, intelligent routing, and follow-up sequences that
+          organize sales activity — so no lead ever slips through the cracks.
+        </p>
+        <a class="bento-link" href="services.html"><span class="lnk">See the pipeline</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="bento-card reveal" style="--d:.1s">
+        <div class="bento-glare" aria-hidden="true"></div>
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>
+        </div>
+        <h3>Appointment Booking</h3>
+        <p>
+          Booking systems with deposits, smart reminders, and waitlist backfill —
+          the end of back-and-forth scheduling.
+        </p>
+        <a class="bento-link" href="services.html"><span class="lnk">See it fill a week</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="bento-card reveal" style="--d:.15s">
+        <div class="bento-glare" aria-hidden="true"></div>
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 15l4-6 4 3 5-8"/></svg>
+        </div>
+        <h3>Dashboards &amp; Reporting</h3>
+        <p>
+          Live KPI dashboards and automated weekly reports that show what's
+          actually happening — before you think to ask.
+        </p>
+        <a class="bento-link" href="services.html"><span class="lnk">View dashboards</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="bento-card reveal" style="--d:.2s">
+        <div class="bento-glare" aria-hidden="true"></div>
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 4h13l3 3v13H4Z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+        </div>
+        <h3>Website + Funnel Systems</h3>
+        <p>
+          Fast, conversion-focused sites wired straight into lead capture and
+          CRM — turning traffic into booked conversations.
+        </p>
+        <a class="bento-link" href="services.html"><span class="lnk">See the funnel</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="section-cta-row reveal">
+      <a class="link-arrow" href="services.html">
+        See every service in detail
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="data-divider" aria-hidden="true"></div>
+
+<!-- ============ VISUAL PROOF OF WORK ============ -->
+<section class="section" id="proof" style="padding-top: clamp(50px, 7vw, 90px);">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Visual proof of work</span>
+      <h2 class="section-title">What leaves the studio, <span class="gold-word">in motion</span>.</h2>
+      <p class="section-sub">
+        These are the interfaces and pipelines our systems are built from —
+        shown as concepts, not client results. Full walkthroughs live in the
+        system vault.
+      </p>
+    </div>
+
+    <div class="proof-grid">
+      <div class="proof-card reveal">
+        <div class="proof-visual" aria-hidden="true">
+          <span class="concept-chip">System concept</span>
+          <svg viewBox="0 0 260 150">
+            <text class="pv-mono" x="18" y="24" font-size="8.5" fill="#6E6862">LIVE CALL — 00:42</text>
+            <g class="pv-eq">
+              <rect x="20" y="40" width="6" height="46" rx="3" fill="#C6A15B"/>
+              <rect x="32" y="40" width="6" height="46" rx="3" fill="#D9BC80"/>
+              <rect x="44" y="40" width="6" height="46" rx="3" fill="#A9853F"/>
+              <rect x="56" y="40" width="6" height="46" rx="3" fill="#C6A15B"/>
+              <rect x="68" y="40" width="6" height="46" rx="3" fill="#E4CD97"/>
+              <rect x="80" y="40" width="6" height="46" rx="3" fill="#C6A15B"/>
+            </g>
+            <rect class="pv-pop d1" x="106" y="44" width="136" height="24" rx="12" fill="rgba(28,25,23,.05)" stroke="rgba(28,25,23,.12)"/>
+            <text class="pv-mono pv-pop d1" x="117" y="59" font-size="7.5" fill="#44403C">"Thursday 2:30 works."</text>
+            <rect class="pv-pop d2" x="106" y="76" width="118" height="24" rx="12" fill="rgba(198,161,91,.16)" stroke="rgba(198,161,91,.45)"/>
+            <text class="pv-mono pv-pop d2" x="117" y="91" font-size="7.5" fill="#7A5504">BOOKED + CONFIRMED</text>
+            <text class="pv-mono pv-blink" x="18" y="132" font-size="8.5" fill="#A16207">ANSWERED IN SECONDS · 24/7</text>
+          </svg>
+        </div>
+        <div class="proof-body">
+          <span class="proof-kicker">AI Phone Agent</span>
+          <h3>Call flow interface</h3>
+          <p>Natural voice, live calendar access, and a transcript of every call waiting in your inbox.</p>
+        </div>
+      </div>
+
+      <div class="proof-card reveal" style="--d:.1s">
+        <div class="proof-visual" aria-hidden="true">
+          <span class="concept-chip">Demo architecture</span>
+          <svg viewBox="0 0 260 150">
+            <rect x="16" y="24" width="64" height="94" rx="8" fill="rgba(28,25,23,.03)" stroke="rgba(28,25,23,.1)"/>
+            <rect x="90" y="24" width="64" height="94" rx="8" fill="rgba(28,25,23,.03)" stroke="rgba(28,25,23,.1)"/>
+            <rect x="164" y="24" width="64" height="94" rx="8" fill="rgba(28,25,23,.03)" stroke="rgba(198,161,91,.5)"/>
+            <text class="pv-mono" x="24" y="40" font-size="8" fill="#6E6862">NEW</text>
+            <text class="pv-mono" x="98" y="40" font-size="8" fill="#6E6862">QUALIFIED</text>
+            <text class="pv-mono" x="172" y="40" font-size="8" fill="#A16207">WON</text>
+            <rect x="22" y="50" width="52" height="14" rx="4" fill="rgba(28,25,23,.07)"/>
+            <rect x="96" y="50" width="52" height="14" rx="4" fill="rgba(28,25,23,.09)"/>
+            <rect x="170" y="50" width="52" height="14" rx="4" fill="rgba(198,161,91,.3)"/>
+            <rect class="pv-slide" x="22" y="72" width="52" height="14" rx="4" fill="rgba(198,161,91,.6)"/>
+            <text class="pv-mono pv-blink" x="18" y="138" font-size="8.5" fill="#A16207">NO LEAD LEFT WAITING</text>
+          </svg>
+        </div>
+        <div class="proof-body">
+          <span class="proof-kicker">CRM Automation</span>
+          <h3>Self-moving pipeline</h3>
+          <p>Leads are enriched, scored, and advanced automatically — your team only touches the ones worth closing.</p>
+        </div>
+      </div>
+
+      <div class="proof-card reveal" style="--d:.2s">
+        <div class="proof-visual" aria-hidden="true">
+          <span class="concept-chip">Example workflow</span>
+          <svg viewBox="0 0 260 150">
+            <line class="pv-dash" x1="32" y1="30" x2="32" y2="118" />
+            <circle class="pv-pop d1" cx="32" cy="36" r="4" fill="#C6A15B"/>
+            <text class="pv-mono pv-pop d1" x="48" y="40" font-size="8" fill="#44403C">DAY 0 — INSTANT REPLY</text>
+            <circle class="pv-pop d2" cx="32" cy="70" r="4" fill="#C6A15B"/>
+            <text class="pv-mono pv-pop d2" x="48" y="74" font-size="8" fill="#44403C">DAY 2 — GENTLE NUDGE</text>
+            <circle class="pv-pop d3" cx="32" cy="104" r="4" fill="#C6A15B"/>
+            <text class="pv-mono pv-pop d3" x="48" y="108" font-size="8" fill="#44403C">DAY 6 — FINAL CHECK-IN</text>
+            <rect class="pv-pop d4" x="44" y="122" width="152" height="20" rx="10" fill="rgba(198,161,91,.16)" stroke="rgba(198,161,91,.45)"/>
+            <text class="pv-mono pv-pop d4" x="56" y="135" font-size="7.5" fill="#7A5504">REPLY RECEIVED → BOOKED</text>
+          </svg>
+        </div>
+        <div class="proof-body">
+          <span class="proof-kicker">Workflow Automation</span>
+          <h3>Follow-up sequence</h3>
+          <p>Warm, well-timed follow-ups in your voice — sent while everyone sleeps, stopped the moment someone replies.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="proof-note reveal">
+      These previews represent the type of systems MATIN SHAPE designs and
+      builds. Real client results are added only when approved for public use.
+    </p>
+
+    <!-- ============ WORKFLOW SIMULATOR ============ -->
+    <div class="simulator reveal" id="simulator">
+      <div class="sim-head">
+        <h3 class="sim-title">Watch a lead become a booked call.</h3>
+        <button class="sim-replay" id="simReplay">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 5.5v13l11-6.5Z"/></svg>
+          <span>Run Simulation</span>
+        </button>
+      </div>
+      <div class="sim-track" id="simTrack">
+        <div class="sim-line" aria-hidden="true"><i id="simLine"></i></div>
+        <div class="sim-step" data-caption="A visitor submits your form at <strong>11:48 PM</strong>. No human is awake — the system is.">
+          <div class="sim-dot">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M4 4h13l3 3v13H4Z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+          </div>
+          <h4>Form submitted</h4>
+        </div>
+        <div class="sim-step" data-caption="Within <strong>90 seconds</strong>, the AI enriches the lead, checks fit, and scores intent.">
+          <div class="sim-dot">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7v1h1a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1.1A7 7 0 0 1 5.1 17H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h1V9a7 7 0 0 1 7-7Z"/><circle cx="9" cy="13" r="1" fill="currentColor"/><circle cx="15" cy="13" r="1" fill="currentColor"/></svg>
+          </div>
+          <h4>AI qualifies</h4>
+        </div>
+        <div class="sim-step" data-caption="A clean CRM record is created — enriched, tagged, and assigned. <strong>No copy-paste.</strong>">
+          <div class="sim-dot">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+          </div>
+          <h4>CRM record</h4>
+        </div>
+        <div class="sim-step" data-caption="A warm follow-up goes out by email and SMS — written in your voice, timed to be read.">
+          <div class="sim-dot">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="m3 11 18-8-8 18-2.5-7.5L3 11Z"/></svg>
+          </div>
+          <h4>Follow-up sent</h4>
+        </div>
+        <div class="sim-step" data-caption="The lead picks a slot from your live calendar. <strong>Booked</strong> — reminders scheduled automatically.">
+          <div class="sim-dot">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>
+          </div>
+          <h4>Booked</h4>
+        </div>
+        <div class="sim-step" data-caption="Your dashboard updates in real time. You see the whole journey — <strong>without touching any of it.</strong>">
+          <div class="sim-dot">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 15l4-6 4 3 5-8"/></svg>
+          </div>
+          <h4>Dashboard updates</h4>
+        </div>
+      </div>
+      <p class="sim-caption" id="simCaption" aria-live="polite">Press "Run Simulation" — or scroll on — to watch the system handle a real-world lead, end to end.</p>
+      <div class="sim-result" id="simResult" role="status">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        Booked consultation created
+      </div>
+    </div>
+
+    <div class="section-cta-row reveal">
+      <a href="projects.html" class="btn-ghost arrow-right magnetic">
+        <span>Explore the system vault</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="link-arrow" href="contact.html">
+        or book a strategy call
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPERATING SYSTEM PROCESS ============ -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">How the system comes online</span>
+      <h2 class="section-title">From bottleneck to <span class="gold-word">operating system</span>.</h2>
+    </div>
+
+    <div class="process-track six" id="processTrack">
+      <div class="process-line" aria-hidden="true"><i></i></div>
+
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Diagnose</h3>
+        <p>A deep audit of how work actually flows — and where it silently leaks.</p>
+        <span class="step-tag">Week 1</span>
+      </div>
+      <div class="step reveal" style="--d:.08s">
+        <div class="step-num">02</div>
+        <h3>Architect</h3>
+        <p>A bespoke blueprint: systems, tools, and what each workflow returns.</p>
+        <span class="step-tag">Week 2</span>
+      </div>
+      <div class="step reveal" style="--d:.16s">
+        <div class="step-num">03</div>
+        <h3>Build</h3>
+        <p>Focused sprints. The busywork starts disappearing week by week.</p>
+        <span class="step-tag">Weeks 3–5</span>
+      </div>
+      <div class="step reveal" style="--d:.24s">
+        <div class="step-num">04</div>
+        <h3>Test</h3>
+        <p>Edge cases, failure paths, and human overrides — proven before launch.</p>
+        <span class="step-tag">Week 5</span>
+      </div>
+      <div class="step reveal" style="--d:.32s">
+        <div class="step-num">05</div>
+        <h3>Launch</h3>
+        <p>The system goes live with monitoring, docs, and a trained team.</p>
+        <span class="step-tag">Week 6</span>
+      </div>
+      <div class="step reveal" style="--d:.4s">
+        <div class="step-num">06</div>
+        <h3>Optimize</h3>
+        <p>We watch, refine, and expand as you grow — a quiet engine room.</p>
+        <span class="step-tag">Ongoing</span>
+      </div>
+    </div>
+
+    <div class="section-cta-row reveal">
+      <a href="contact.html" class="btn-primary magnetic">
+        <span>Start with the diagnosis</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER ============ -->
+<section class="section" id="founder">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">The studio</span>
+      <h2 class="section-title">Founder-led systems, built with <span class="gold-word">taste</span>.</h2>
+    </div>
+
+    <div class="founder-panel">
+      <div class="founder-mark reveal" data-photo="images/Founder.jpg">
+        <img alt="Matin, founder of MATIN SHAPE" loading="lazy" />
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="rgba(28,25,23,.03)" stroke="rgba(198,161,91,.5)" stroke-width=".6"/>
+          <path d="M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z" fill="#C6A15B"/>
+          <path d="M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5" fill="none" stroke="#C6A15B" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="fm-name">MATIN</span>
+        <span class="fm-role">Founder &amp; Systems Designer</span>
+        <div class="fm-plate">
+          <span class="fm-eyebrow">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9Z"/></svg>
+            Founder &amp; Systems Designer
+          </span>
+          <b>Matin</b>
+        </div>
+      </div>
+
+      <div class="founder-copy reveal" style="--d:.12s">
+        <h3>Automation isn't the goal. A calmer business is.</h3>
+        <p>
+          "MATIN SHAPE started from a simple idea: most businesses don't need
+          more software — they need calmer systems. I design automations that
+          remove repetitive work, connect the tools already in place, and give
+          owners a cleaner way to run the day."
+        </p>
+        <p>
+          "The goal is not to make a business feel robotic. The goal is to make
+          it feel lighter, faster, and more in control." <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold);">— Matin</span>
+        </p>
+        <ul class="founder-points">
+          <li><span class="fp-num">01</span><span><b>Calm automation.</b> Systems should remove noise, not create more of it.</span></li>
+          <li><span class="fp-num">02</span><span><b>Human-first AI.</b> AI should support people, not erase the human side of the business.</span></li>
+          <li><span class="fp-num">03</span><span><b>Strategy before tools.</b> The workflow matters more than the software stack.</span></li>
+          <li><span class="fp-num">04</span><span><b>Built to be understood.</b> A good system is easy to explain, monitor, and improve.</span></li>
+          <li><span class="fp-num">05</span><span><b>Designed for scale.</b> Every build leaves room for the next stage of growth.</span></li>
+        </ul>
+        <div class="founder-actions">
+          <a href="contact.html" class="btn-primary magnetic">
+            <span>Talk to the founder</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="link-arrow" href="about.html">
+            More about the studio
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="data-divider" aria-hidden="true"></div>
+
+<!-- ============ BUILT FOR SYSTEMS, NOT HYPE ============ -->
+<section class="section" id="not-hype" style="padding-top: clamp(50px, 7vw, 90px);">
+  <div class="container">
+    <div class="reveal" style="text-align:center; display:flex; flex-direction:column; align-items:center;">
+      <span class="eyebrow centered">The honest version</span>
+      <h2 class="section-title">Built for systems, <span class="gold-word">not hype</span>.</h2>
+      <p class="section-sub" style="text-align:center;">
+        We're an early-stage studio and we'd rather show you how we think than
+        invent numbers. This is what every MATIN SHAPE build is measured against.
+      </p>
+    </div>
+
+    <div class="hype-grid">
+      <div class="hype-card reveal">
+        <div class="hype-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>
+        </div>
+        <h3>Strategy-first automation</h3>
+        <p>Every build starts with the bottleneck, the cost of it, and the simplest system that removes it.</p>
+      </div>
+      <div class="hype-card reveal" style="--d:.08s">
+        <div class="hype-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7v1h1a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1.1A7 7 0 0 1 5.1 17H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h1V9a7 7 0 0 1 7-7Z"/><circle cx="9" cy="13" r="1" fill="currentColor"/><circle cx="15" cy="13" r="1" fill="currentColor"/></svg>
+        </div>
+        <h3>Human-friendly AI agents</h3>
+        <p>Agents that sound natural, follow your rules, and hand off to a person the moment it matters.</p>
+      </div>
+      <div class="hype-card reveal" style="--d:.16s">
+        <div class="hype-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>
+        </div>
+        <h3>Clean operational systems</h3>
+        <p>Few moving parts, clear logs, manual overrides — machinery your team can actually trust.</p>
+      </div>
+      <div class="hype-card reveal" style="--d:.24s">
+        <div class="hype-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+        </div>
+        <h3>Scalable workflow architecture</h3>
+        <p>Designed for the size you're becoming, not just the size you are — no rebuilds at every stage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="cta-panel reveal">
+      <div class="cta-grid-bg" aria-hidden="true"></div>
+      <div class="cta-orb cta-orb-1" aria-hidden="true"></div>
+      <div class="cta-orb cta-orb-2" aria-hidden="true"></div>
+      <div class="cta-content">
+        <div class="cta-eyebrow">Limited to 4 new clients per quarter</div>
+        <h2>Ready to build the system behind your <span class="gold-word">next stage</span>?</h2>
+        <p>
+          A 30-minute strategy call. We'll map the three highest-impact
+          automations hiding in your business — and you keep the blueprint,
+          whether we work together or not.
+        </p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn-gold magnetic">
+            <span>Book a Strategy Call</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="cta-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Free consultation — no commitment, no pressure
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="MATIN SHAPE home">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#1C1917"/><path d="M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z" fill="url(#msGold)"/><path d="M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5" fill="none" stroke="url(#msGold)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          MATIN <span class="wm-gold">SHAPE</span>
+        </a>
+        <p>A founder-led AI automation studio. We build the quiet machinery behind exceptional businesses.</p>
+              </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="about.html#founder">The founder</a></li>
+          <li><a href="login.html" title="Private client access">Client Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@matinshape.studio">hello@matinshape.studio</a></li>
+          <li><a href="contact.html">Book a call</a></li>
+          <li><a href="contact.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-wordmark" aria-hidden="true">MATIN SHAPE</div>
+
+    <div class="footer-bottom">
+      <span>© 2026 MATIN SHAPE Automation Studio. All rights reserved.</span>
+      <span class="footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/observe.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

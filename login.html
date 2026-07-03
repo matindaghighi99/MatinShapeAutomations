@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-src 'none'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>Client Portal — MATIN SHAPE</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231C1917'/%3E%3Cpath d='M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z' fill='%23C6A15B'/%3E%3Cpath d='M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5' fill='none' stroke='%23C6A15B' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Italiana&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<div class="login-page page-enter">
+  <!-- Brand side -->
+  <div class="login-brand" aria-hidden="true">
+    <div class="cta-grid-bg"></div>
+    <div class="cta-orb cta-orb-1"></div>
+    <div class="cta-orb cta-orb-2"></div>
+    <a href="index.html" class="nav-logo" style="position:relative; z-index:2;">
+      <svg viewBox="0 0 32 32" fill="none">
+        <defs><linearGradient id="msTile" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#E4CD97"/><stop offset=".55" stop-color="#C6A15B"/><stop offset="1" stop-color="#A9853F"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#msTile)"/><path d="M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z" fill="#1C1917"/><path d="M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5" fill="none" stroke="#1C1917" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      MATIN <span class="wm-gold">SHAPE</span>
+    </a>
+    <div>
+      <p class="login-quote">"The business runs itself. I just steer."</p>
+      <p class="login-quote-sub">The Workshop — private command center</p>
+    </div>
+    <div class="login-brand-footer">
+      <p style="font-family: var(--font-mono); font-size: 10.5px; letter-spacing:.22em; text-transform:uppercase; color: var(--ink-mute);">
+        Private access · Clients &amp; studio only
+      </p>
+    </div>
+  </div>
+
+  <!-- Form side -->
+  <div class="login-form-side">
+    <a href="index.html" class="login-back">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      Back to site
+    </a>
+
+    <div class="login-card">
+      <span class="eyebrow">The Workshop</span>
+      <h1>Welcome back, <span class="gold-word">boss</span>.</h1>
+      <p class="login-note">
+        Your private command center: client calls, calendar, pipeline,
+        site health, and the tools that keep MATIN SHAPE running.
+      </p>
+
+      <div class="login-error" id="loginError" role="alert">
+        Enter both your username and password.
+      </div>
+
+      <form class="login-form" id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="lg-user">Username</label>
+          <input type="text" id="lg-user" name="username" autocomplete="username"
+                 autocapitalize="none" spellcheck="false" maxlength="40" placeholder="username" />
+        </div>
+        <div class="form-group">
+          <label for="lg-pass">Password</label>
+          <input type="password" id="lg-pass" name="password" autocomplete="current-password"
+                 maxlength="128" placeholder="••••••••••" />
+        </div>
+        <div class="login-extra">
+          <label><input type="checkbox" id="lg-remember" /> Keep me signed in (30 days)</label>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;">
+          <span>Enter the Workshop</span>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script src="assets/observe.js"></script>
+<script src="assets/auth.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
