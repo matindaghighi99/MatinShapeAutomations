@@ -591,52 +591,60 @@
 .founder-mark.has-photo .fm-plate { opacity: 1; }
 .fm-plate {
   position: absolute; left: 16px; right: 16px; bottom: 16px;
-  padding: 17px 22px 19px;
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(255,255,255,.80), rgba(255,255,255,.92));
-  backdrop-filter: blur(16px) saturate(1.25);
-  -webkit-backdrop-filter: blur(16px) saturate(1.25);
-  border: 1px solid rgba(255,255,255,.78);
-  outline: 1px solid var(--border);
-  box-shadow: 0 12px 34px rgba(28,25,23,.12);
+  padding: 20px 22px;
+  border-radius: 16px;
+  background:
+    linear-gradient(90deg, rgba(198,161,91,.9) 16px, transparent 16px) top left / 16px 1.5px no-repeat,
+    linear-gradient(180deg, rgba(198,161,91,.9) 16px, transparent 16px) top left / 1.5px 16px no-repeat,
+    linear-gradient(270deg, rgba(198,161,91,.9) 16px, transparent 16px) top right / 16px 1.5px no-repeat,
+    linear-gradient(180deg, rgba(198,161,91,.9) 16px, transparent 16px) top right / 1.5px 16px no-repeat,
+    linear-gradient(165deg, rgba(28,25,23,.92), rgba(28,25,23,.78));
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  border: 1px solid rgba(205,170,99,.22);
+  box-shadow: 0 18px 44px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.06);
   text-align: left;
   opacity: 0;
   transition: opacity .8s var(--ease-luxe) .2s;
   z-index: 2;
   overflow: hidden;
 }
-.fm-plate::before {
-  content: '';
-  position: absolute; top: 0; left: 22px; right: 22px; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
-}
 .fm-plate .fm-eyebrow {
   display: flex; align-items: center; gap: 8px;
   font-family: var(--font-mono);
   font-size: 9px; letter-spacing: .28em;
   text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 7px;
+  color: var(--gold-bright);
+  margin-bottom: 8px;
 }
 .fm-plate .fm-eyebrow svg { color: var(--gold-bright); flex-shrink: 0; }
 .fm-plate b {
   display: block;
-  font-family: var(--font-brand);
-  font-weight: 400;
-  font-size: 2.05rem;
-  letter-spacing: .05em;
-  line-height: 1;
-  color: var(--ink);
-  -webkit-text-stroke: .25px currentColor;
+  position: relative;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.7rem;
+  letter-spacing: 0;
+  line-height: 1.05;
+  padding-bottom: 13px;
+  color: #FDFDFB;
+}
+.fm-plate b::after {
+  content: '';
+  position: absolute; left: 2px; bottom: 0;
+  width: 34px; height: 2px;
+  background: linear-gradient(90deg, var(--gold-bright), transparent);
 }
 .founder-mark svg { width: 108px; height: 108px; position: relative; }
 .founder-mark .fm-name {
-  font-family: var(--font-brand);
-  font-size: 1.9rem;
-  letter-spacing: .2em;
-  color: var(--ink);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: .01em;
   position: relative;
-  -webkit-text-stroke: .4px currentColor;
+  color: var(--ink);
 }
 .founder-mark .fm-role {
   font-family: var(--font-mono);

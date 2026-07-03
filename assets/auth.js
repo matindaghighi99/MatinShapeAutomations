@@ -139,6 +139,23 @@
     }
   };
 
+  /* ---- password visibility toggle ---- */
+  document.querySelectorAll('.password-field').forEach(function (field) {
+    var input = field.querySelector('input');
+    var toggle = field.querySelector('.password-toggle');
+    if (!input || !toggle) return;
+    toggle.addEventListener('click', function () {
+      var shown = input.type === 'text';
+      input.type = shown ? 'password' : 'text';
+      toggle.setAttribute('aria-pressed', String(!shown));
+      toggle.setAttribute('aria-label', shown ? 'Show password' : 'Hide password');
+      toggle.setAttribute('title', shown ? 'Show password' : 'Hide password');
+      toggle.querySelector('.icon-eye').hidden = !shown;
+      toggle.querySelector('.icon-eye-off').hidden = shown;
+      if (window.MSObserve) MSObserve.log('auth', { event: 'password_toggle', action: shown ? 'hide' : 'show', field: input.id || null });
+    });
+  });
+
   /* ---- login page wiring ---- */
   var form = document.getElementById('loginForm');
   if (form) {

@@ -7,10 +7,10 @@
   --ink:           #1C1917;
   --ink-soft:      #44403C;
   --ink-mute:      #6E6862;
-  --gold:          #A16207;
-  --gold-bright:   #C6A15B;
-  --gold-pale:     #F3E9D2;
-  --gold-glow:     rgba(198, 161, 91, 0.35);
+  --gold:          #8F6A2A;
+  --gold-bright:   #CDAA63;
+  --gold-pale:     #F5E9D3;
+  --gold-glow:     rgba(205,170,99,.35);
   --border:        rgba(28, 25, 23, 0.08);
   --border-strong: rgba(28, 25, 23, 0.14);
   --glass:         rgba(255, 255, 255, 0.62);
@@ -18,7 +18,7 @@
   --shadow-sm:     0 1px 2px rgba(28,25,23,.04), 0 4px 12px rgba(28,25,23,.05);
   --shadow-md:     0 2px 6px rgba(28,25,23,.05), 0 12px 32px rgba(28,25,23,.08);
   --shadow-lg:     0 4px 12px rgba(28,25,23,.06), 0 24px 64px rgba(28,25,23,.12);
-  --shadow-gold:   0 8px 40px rgba(198,161,91,.28);
+  --shadow-gold:   0 8px 40px rgba(182, 123, 14, 0.28);
   --ease-luxe:     cubic-bezier(0.22, 1, 0.36, 1);
   --ease-soft:     cubic-bezier(0.4, 0, 0.2, 1);
   --font-display:  'Fraunces', Georgia, serif;
@@ -49,8 +49,9 @@ body.locked { overflow: hidden; }
 ::selection { background: var(--gold-pale); color: var(--ink); }
 
 img, svg { display: block; }
+svg[hidden] { display: none; }
 a { color: inherit; text-decoration: none; }
-button { font-family: inherit; border: none; background: none; cursor: pointer; }
+button { font-family: inherit; border: none; background: none; cursor: pointer; -webkit-appearance: none; appearance: none; }
 input, textarea, select { font-family: inherit; }
 
 .skip-link {
@@ -345,7 +346,6 @@ input, textarea, select { font-family: inherit; }
   padding: 19px 38px;
   border-radius: 100px;
   overflow: hidden;
-  isolation: isolate;
   background:
     linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,0) 40%),
     linear-gradient(120deg, #33291F, #1C1917 48%, #2E2820);
@@ -355,7 +355,6 @@ input, textarea, select { font-family: inherit; }
     0 1px 2px rgba(28,25,23,.25),
     0 10px 26px rgba(28,25,23,.20);
   transition: transform .45s var(--ease-luxe), box-shadow .45s;
-  will-change: transform;
   cursor: pointer;
   text-shadow: 0 1px 1px rgba(0,0,0,.45);
 }
@@ -396,53 +395,50 @@ input, textarea, select { font-family: inherit; }
 .btn-primary svg { transition: transform .4s var(--ease-luxe); }
 .btn-primary:hover svg { transform: translateX(5px); }
 
-/* -- Gold: brushed metal -- */
+/* -- Espresso ink: inverted, native to theme -- */
 .btn-gold {
   position: relative;
   display: inline-flex; align-items: center; justify-content: center; gap: 12px;
-  color: #33240A;
+  color: var(--gold-bright);
   font-size: 15.5px; font-weight: 700;
   letter-spacing: .01em;
   padding: 19px 40px;
   border-radius: 100px;
   overflow: hidden;
-  isolation: isolate;
-  background:
-    linear-gradient(180deg, rgba(255,247,220,.9) 0%, rgba(255,255,255,0) 44%),
-    linear-gradient(168deg, #F8DB92 0%, #ECBB55 42%, #DDA831 70%, #EFC66E 100%);
+  background: var(--ink);
   box-shadow:
-    inset 0 1px 0 rgba(255,250,228,.9),
-    inset 0 -3px 7px rgba(146,96,12,.35),
-    0 1px 2px rgba(146,96,12,.26),
-    0 12px 38px rgba(228,170,58,.42);
-  transition: transform .45s var(--ease-luxe), box-shadow .45s;
-  will-change: transform;
+    inset 0 1px 0 rgba(205,170,99,.16),
+    0 1px 2px rgba(28,25,23,.4),
+    0 14px 38px var(--gold-glow);
+  transition: transform .45s var(--ease-luxe), box-shadow .45s, background .3s;
   cursor: pointer;
-  text-shadow: 0 1px 0 rgba(255,246,214,.65);
 }
 .btn-gold::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,.28) 0%, rgba(255,255,255,0) 30%, rgba(146,96,12,.12) 100%);
+  background: linear-gradient(180deg, rgba(205,170,99,.14) 0%, rgba(205,170,99,0) 45%);
   pointer-events: none;
   z-index: 1;
 }
 .btn-gold::after {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.65) 50%, transparent 70%);
+  background: linear-gradient(110deg, transparent 30%, rgba(205,170,99,.3) 50%, transparent 70%);
   transform: translateX(-120%) skewX(-8deg);
   transition: transform .8s var(--ease-luxe);
   z-index: 2;
 }
 .btn-gold:hover::after { transform: translateX(120%) skewX(-8deg); }
-.btn-gold:hover { box-shadow: inset 0 1px 0 rgba(255,250,228,.95), inset 0 -3px 7px rgba(146,96,12,.35), 0 3px 6px rgba(146,96,12,.24), 0 18px 58px rgba(228,170,58,.55); }
+.btn-gold:hover {
+  background: #2A2523;
+  box-shadow: inset 0 1px 0 rgba(205,170,99,.22), 0 3px 6px rgba(28,25,23,.36), 0 20px 58px rgba(205,170,99,.5);
+}
 .btn-gold:active {
   transform: scale(.965) !important;
   box-shadow:
-    inset 0 3px 9px rgba(146,96,12,.4),
-    inset 0 -1px 0 rgba(255,250,228,.4),
-    0 2px 10px rgba(228,170,58,.32);
+    inset 0 2px 6px rgba(0,0,0,.45),
+    inset 0 -1px 0 rgba(205,170,99,.12),
+    0 2px 10px var(--gold-glow);
   transition-duration: .08s;
 }
 .btn-gold > span, .btn-gold > svg { position: relative; z-index: 3; }
@@ -459,7 +455,6 @@ input, textarea, select { font-family: inherit; }
   border-radius: 100px;
   border: 1px solid var(--border-strong);
   overflow: hidden;
-  isolation: isolate;
   background:
     linear-gradient(180deg, #FFFFFF, #F6F4EE);
   box-shadow:
@@ -500,23 +495,20 @@ input, textarea, select { font-family: inherit; }
 /* -- Nav CTA (compact primary) -- */
 .nav-cta {
   display: inline-flex; align-items: center; gap: 10px;
-  color: #fff;
+  color: var(--gold-bright);
   padding: 13px 26px;
   border-radius: 100px;
   font-size: 14px; font-weight: 600;
   letter-spacing: .02em;
   position: relative; overflow: hidden;
-  isolation: isolate;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,0) 40%),
-    linear-gradient(120deg, #33291F, #1C1917 48%, #2E2820);
+  background: var(--ink);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.14),
+    inset 0 1px 0 rgba(205,170,99,.16),
     inset 0 -2px 6px rgba(0,0,0,.4),
-    0 4px 14px rgba(28,25,23,.16);
-  transition: box-shadow .4s, transform .4s var(--ease-luxe);
+    0 4px 14px var(--gold-glow);
+  transition: box-shadow .4s, transform .4s var(--ease-luxe), background .3s;
   cursor: pointer;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  text-shadow: none;
 }
 .nav-cta::before {
   content: '';
@@ -529,12 +521,12 @@ input, textarea, select { font-family: inherit; }
 .nav-cta::after {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(110deg, transparent 30%, rgba(198,161,91,.45) 50%, transparent 70%);
+  background: linear-gradient(110deg, transparent 30%, rgba(205,170,99,.3) 50%, transparent 70%);
   transform: translateX(-110%) skewX(-8deg);
   transition: transform .8s var(--ease-luxe);
 }
 .nav-cta:hover::after { transform: translateX(110%) skewX(-8deg); }
-.nav-cta:hover { box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -2px 6px rgba(0,0,0,.4), 0 8px 26px rgba(198,161,91,.30); }
+.nav-cta:hover { background: #2A2523; box-shadow: inset 0 1px 0 rgba(205,170,99,.22), inset 0 -2px 6px rgba(0,0,0,.4), 0 8px 26px rgba(205,170,99,.5); }
 .nav-cta:active { transform: scale(.96); transition-duration: .08s; }
 
 /* -- Ripple (added via JS) -- */
@@ -681,7 +673,7 @@ input, textarea, select { font-family: inherit; }
   font-size: clamp(2.9rem, 8.2vw, 6.7rem);
   line-height: 1.06;
   letter-spacing: -0.015em;
-  margin: 36px auto 0;
+  margin: 16px auto 0;
   max-width: 20ch;
 }
 .hero h1 .line {
@@ -813,36 +805,6 @@ input, textarea, select { font-family: inherit; }
 }
 .fc-task svg { flex-shrink: 0; }
 .fc-task.done { opacity: .55; text-decoration: line-through; }
-
-.hero-scroll {
-  position: absolute; bottom: 26px; left: 50%;
-  transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  font-family: var(--font-mono);
-  font-size: 10px; letter-spacing: .3em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-  opacity: 0;
-  animation: rise 1s var(--ease-luxe) 2.7s forwards;
-  z-index: 2;
-}
-.hero-scroll .wheel {
-  width: 1px; height: 44px;
-  background: var(--border-strong);
-  position: relative;
-  overflow: hidden;
-}
-.hero-scroll .wheel::after {
-  content: '';
-  position: absolute; top: 0; left: 0;
-  width: 100%; height: 40%;
-  background: var(--gold);
-  animation: wheel-drop 1.8s var(--ease-soft) infinite;
-}
-@keyframes wheel-drop {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(260%); }
-}
 
 /* ============================================================
    Logo marquee
@@ -1628,6 +1590,18 @@ input, textarea, select { font-family: inherit; }
   box-shadow: 0 0 0 4px rgba(198,161,91,.14);
 }
 .form-group textarea { resize: vertical; min-height: 130px; }
+.password-field { position: relative; }
+.password-field input { padding-right: 46px; }
+.password-toggle {
+  position: absolute; top: 50%; right: 5px; transform: translateY(-50%);
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  color: var(--ink-mute);
+  transition: color .2s, background .2s;
+}
+.password-toggle:hover { color: var(--ink); background: rgba(28,25,23,.05); }
+.password-toggle:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 1px; }
 .form-hint { font-size: 12px; color: var(--ink-mute); margin-top: 6px; }
 .form-success {
   display: none;
@@ -1876,7 +1850,6 @@ input, textarea, select { font-family: inherit; }
   .hero-ctas { flex-direction: column; width: 100%; }
   .hero-ctas .btn-primary, .hero-ctas .btn-ghost { width: 100%; }
   .footer-top { grid-template-columns: 1fr; gap: 38px; }
-  .hero-scroll { display: none; }
   .form-row { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
@@ -1894,7 +1867,7 @@ input, textarea, select { font-family: inherit; }
   }
   html { scroll-behavior: auto; }
   .preloader { display: none; }
-  .hero-sub, .hero-ctas, .hero-scroll, .float-card { opacity: 1; transform: none; }
+  .hero-sub, .hero-ctas, .float-card { opacity: 1; transform: none; }
   .hero h1 .line > span { transform: none; }
   .reveal { opacity: 1; transform: none; }
   .marquee-track, .t-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; }

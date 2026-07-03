@@ -312,7 +312,7 @@
       ticking = true;
       requestAnimationFrame(function () {
         var y = Math.min(window.scrollY, 900);
-        wrap.style.transform = 'translateY(' + (y * 0.08) + 'px) rotate(' + (y * 0.004) + 'deg)';
+        wrap.style.transform = 'translateY(' + (y * 0.08) + 'px)';
         ticking = false;
       });
     }, { passive: true });
