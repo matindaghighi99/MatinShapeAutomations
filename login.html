@@ -37,7 +37,7 @@
     </div>
     <div class="login-brand-footer">
       <p style="font-family: var(--font-mono); font-size: 10.5px; letter-spacing:.22em; text-transform:uppercase; color: var(--ink-mute);">
-        Private access · Clients &amp; studio only
+        Private access · Studio only
       </p>
     </div>
   </div>
@@ -52,10 +52,6 @@
     <div class="login-card">
       <span class="eyebrow">The Workshop</span>
       <h1>Welcome back, <span class="gold-word">boss</span>.</h1>
-      <p class="login-note">
-        Your private command center: client calls, calendar, pipeline,
-        site health, and the tools that keep MATIN SHAPE running.
-      </p>
 
       <div class="login-error" id="loginError" role="alert">
         Enter both your username and password.
@@ -69,8 +65,14 @@
         </div>
         <div class="form-group">
           <label for="lg-pass">Password</label>
-          <input type="password" id="lg-pass" name="password" autocomplete="current-password"
-                 maxlength="128" placeholder="••••••••••" />
+          <div class="password-field">
+            <input type="password" id="lg-pass" name="password" autocomplete="current-password"
+                   maxlength="128" placeholder="••••••••••" />
+            <button type="button" class="password-toggle" id="lgPassToggle" aria-label="Show password" title="Show password" aria-pressed="false">
+              <svg class="icon-eye" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M1 12S5 5 12 5s11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="icon-eye-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" hidden><path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a19.4 19.4 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a19.5 19.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><path d="M1 1l22 22"/></svg>
+            </button>
+          </div>
         </div>
         <div class="login-extra">
           <label><input type="checkbox" id="lg-remember" /> Keep me signed in (30 days)</label>
