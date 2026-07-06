@@ -1,5 +1,5 @@
 /* ============================================================
-   MATIN SHAPE — Enhancement layer (light design system)
+   MATINSHAPE — Enhancement layer (light design system)
    Loaded by index.html, about.html, services.html after styles.css
    ============================================================ */
 
@@ -67,91 +67,120 @@
   flex-shrink: 0;
 }
 
-/* ---- the assembling automation core (light) ---- */
+/* ---- the living automation OS (light) ---- */
 .hh-visual { position: relative; z-index: 2; }
 .hh-visual-inner { will-change: transform; }
-.hh-visual svg { width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block; }
+.hh-visual svg { width: 100%; max-width: 600px; height: auto; margin: 0 auto; display: block; overflow: visible; }
+.hh-visual svg * { animation-play-state: paused; }           /* everything paused... */
+.hh-visual svg.hh-assembled * { animation-play-state: running; } /* ...until assembled */
 
-.hh-ring circle.ring-line {
-  fill: none;
-  stroke: rgba(161,98,7,.30);
-  stroke-width: 1;
-}
+/* orbital rings */
+.hh-ring circle.ring-line { fill: none; stroke: rgba(161,98,7,.26); stroke-width: 1; }
 .hh-ring { opacity: 0; transition: opacity 1.4s var(--ease-luxe); }
 .hh-assembled .hh-ring { opacity: 1; }
 .hh-assembled .hh-ring-a { transition-delay: .5s; }
 .hh-assembled .hh-ring-b { transition-delay: .7s; }
-.hh-spin-a, .hh-spin-b { transform-box: view-box; transform-origin: 280px 280px; }
-.hh-spin-a { animation: hh-rot 46s linear infinite; }
-.hh-spin-b { animation: hh-rot-rev 70s linear infinite; }
+.hh-spin-a, .hh-spin-b { transform-box: view-box; transform-origin: 300px 300px; }
+.hh-spin-a { animation: hh-rot 48s linear infinite; }
+.hh-spin-b { animation: hh-rot-rev 72s linear infinite; }
 @keyframes hh-rot { to { transform: rotate(360deg); } }
 @keyframes hh-rot-rev { to { transform: rotate(-360deg); } }
 .hh-sat { fill: var(--gold); }
 .hh-sat-2 { fill: rgba(161,98,7,.5); }
+.hh-gem { fill: var(--gold); }
 
-.hh-core { opacity: 0; transform: scale(.65); transform-box: fill-box; transform-origin: center;
+/* broadcast pulse rippling out of the core */
+.hh-cast { fill: none; stroke: rgba(198,161,91,.5); stroke-width: 1.2; transform-box: fill-box; transform-origin: center; opacity: 0; animation: hh-cast 4s ease-out infinite; }
+.hh-cast-2 { animation-delay: 2s; }
+@keyframes hh-cast { 0% { transform: scale(.85); opacity: 0; } 10% { opacity: .55; } 70%,100% { transform: scale(2.6); opacity: 0; } }
+
+/* core */
+.hh-core { opacity: 0; transform: scale(.6); transform-box: fill-box; transform-origin: center;
   transition: opacity 1s var(--ease-luxe) .15s, transform 1.2s var(--ease-luxe) .15s; }
 .hh-assembled .hh-core { opacity: 1; transform: scale(1); }
-.hh-core-glow { animation: hh-glow 4.5s ease-in-out infinite; }
-@keyframes hh-glow { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
+.hh-core-glow { transform-box: fill-box; transform-origin: center; animation: hh-glow 4.5s ease-in-out infinite; }
+@keyframes hh-glow { 0%,100% { opacity: .5; transform: scale(.94); } 50% { opacity: 1; transform: scale(1.06); } }
+.hh-arc { fill: none; stroke: url(#hhg); stroke-width: 2.4; stroke-linecap: round; }
+.hh-arc-spin { transform-box: fill-box; transform-origin: center; animation: hh-rot 5.5s linear infinite; }
+.hh-scan { fill: rgba(198,161,91,.55); opacity: 0; animation: hh-scan 3.2s ease-in-out infinite; }
+@keyframes hh-scan { 0% { transform: translateY(0); opacity: 0; } 12% { opacity: .85; } 58% { transform: translateY(82px); opacity: .85; } 72%,100% { transform: translateY(82px); opacity: 0; } }
 
-.hh-wire {
-  fill: none;
-  stroke: rgba(161,98,7,.45);
-  stroke-width: 1.3;
-  stroke-dasharray: 340;
-  stroke-dashoffset: 340;
-  transition: stroke-dashoffset 1.5s var(--ease-luxe);
-}
-.hh-assembled .hh-wire-1 { stroke-dashoffset: 0; transition-delay: 1.0s; }
-.hh-assembled .hh-wire-2 { stroke-dashoffset: 0; transition-delay: 1.15s; }
-.hh-assembled .hh-wire-3 { stroke-dashoffset: 0; transition-delay: 1.3s; }
-.hh-assembled .hh-wire-4 { stroke-dashoffset: 0; transition-delay: 1.45s; }
+/* wires: continuous data-flow dashes */
+.hh-wire { fill: none; stroke: rgba(161,98,7,.42); stroke-width: 1.4; stroke-linecap: round; stroke-dasharray: 2 8; opacity: 0; transition: opacity .8s var(--ease-luxe); animation: hh-flow 1.1s linear infinite; }
+.hh-assembled .hh-wire { opacity: 1; }
+.hh-assembled .hh-wire-1 { transition-delay: .9s; }
+.hh-assembled .hh-wire-2 { transition-delay: 1s; }
+.hh-assembled .hh-wire-3 { transition-delay: 1.1s; }
+.hh-assembled .hh-wire-4 { transition-delay: 1.2s; }
+.hh-assembled .hh-wire-5 { transition-delay: 1.3s; }
+.hh-assembled .hh-wire-6 { transition-delay: 1.4s; }
+@keyframes hh-flow { to { stroke-dashoffset: -10; } }
 
-.hh-mod {
-  opacity: 0;
-  transform-box: fill-box;
-  transform-origin: center;
-  transition: transform 1.2s var(--ease-luxe), opacity .9s var(--ease-luxe);
-}
-.hh-mod rect {
-  fill: rgba(255, 255, 255, .92);
-  stroke: rgba(28,25,23,.12);
-  stroke-width: 1;
-}
-.hh-mod text {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10.5px;
-  letter-spacing: .14em;
-  fill: #44403C;
-}
-.hh-mod .led { fill: var(--gold); }
-.hh-mod-1 { transform: translate(-64px, -46px); }
-.hh-mod-2 { transform: translate(58px, -52px); }
-.hh-mod-3 { transform: translate(-58px, 50px); }
-.hh-mod-4 { transform: translate(62px, 46px); }
-.hh-assembled .hh-mod { opacity: 1; transform: translate(0, 0); }
-.hh-assembled .hh-mod-1 { transition-delay: .85s; animation: hh-float 6.5s ease-in-out 2.4s infinite alternate; }
-.hh-assembled .hh-mod-2 { transition-delay: 1.0s;  animation: hh-float 7.5s ease-in-out 2.9s infinite alternate; }
-.hh-assembled .hh-mod-3 { transition-delay: 1.15s; animation: hh-float 7s ease-in-out 3.4s infinite alternate; }
-.hh-assembled .hh-mod-4 { transition-delay: 1.3s;  animation: hh-float 8s ease-in-out 3.9s infinite alternate; }
-@keyframes hh-float { to { transform: translateY(-7px); } }
+/* traveling data packets (offset-path set inline per wire) */
+.hh-pkt { fill: var(--gold); filter: drop-shadow(0 0 4px rgba(198,161,91,.85)); opacity: 0; animation-name: hh-run; animation-timing-function: linear; animation-iteration-count: infinite; }
+@keyframes hh-run { 0% { offset-distance: 0%; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+.hh-pkt-1 { animation-duration: 3s;   animation-delay: 1.5s; }
+.hh-pkt-2 { animation-duration: 3.4s; animation-delay: 2.1s; }
+.hh-pkt-3 { animation-duration: 2.7s; animation-delay: 2.5s; }
+.hh-pkt-4 { animation-duration: 3.2s; animation-delay: 1.9s; }
+.hh-pkt-5 { animation-duration: 3.6s; animation-delay: 2.8s; }
+.hh-pkt-6 { animation-duration: 2.9s; animation-delay: 2.3s; }
 
-.hh-pulse {
-  fill: var(--gold);
-  opacity: 0;
-  transition: opacity .6s 2s;
-  filter: drop-shadow(0 0 4px rgba(198,161,91,.8));
-}
-.hh-assembled .hh-pulse { opacity: 1; }
+/* module cards */
+.hh-mod { opacity: 0; transform-box: fill-box; transform-origin: center; transition: transform 1.1s var(--ease-luxe), opacity .9s var(--ease-luxe); }
+.hh-card { fill: rgba(255,255,255,.95); stroke: rgba(28,25,23,.12); stroke-width: 1; transition: stroke .35s, filter .4s; }
+.hh-mod text { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: .12em; fill: #44403C; }
+.hh-mod .led { fill: #10B981; }
+.hh-ico { fill: none; stroke: var(--gold); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke .3s; }
+.hh-mod-1 { transform: translate(-40px,-30px); }
+.hh-mod-2 { transform: translate(40px,-30px); }
+.hh-mod-3 { transform: translate(-46px,0); }
+.hh-mod-4 { transform: translate(46px,0); }
+.hh-mod-5 { transform: translate(-40px,30px); }
+.hh-mod-6 { transform: translate(40px,30px); }
+.hh-assembled .hh-mod { opacity: 1; transform: translate(0,0); }
+.hh-assembled .hh-mod-1 { transition-delay: .8s;  animation: hh-float 6.5s ease-in-out 2.2s infinite alternate; }
+.hh-assembled .hh-mod-2 { transition-delay: .9s;  animation: hh-float 7.4s ease-in-out 2.6s infinite alternate; }
+.hh-assembled .hh-mod-3 { transition-delay: 1s;   animation: hh-float 7s ease-in-out 3.1s infinite alternate; }
+.hh-assembled .hh-mod-4 { transition-delay: 1.1s; animation: hh-float 8s ease-in-out 3.5s infinite alternate; }
+.hh-assembled .hh-mod-5 { transition-delay: 1.2s; animation: hh-float 6.8s ease-in-out 2.9s infinite alternate; }
+.hh-assembled .hh-mod-6 { transition-delay: 1.3s; animation: hh-float 7.6s ease-in-out 3.3s infinite alternate; }
+@keyframes hh-float { to { transform: translateY(-6px); } }
 
+/* hover-to-focus: brighten the unit's card, wire and icon */
+.hh-mod, .hh-wire { pointer-events: auto; }
+.hh-unit { cursor: pointer; }
+.hh-unit:hover .hh-card { stroke: var(--gold); filter: drop-shadow(0 6px 16px rgba(198,161,91,.35)); }
+.hh-unit:hover .hh-wire { stroke: var(--gold); }
+.hh-unit:hover .hh-ico { stroke: var(--ink); }
+
+/* module micro-visuals */
+.hh-mv-bar { fill: var(--gold-bright); transform-box: fill-box; transform-origin: center; animation: hh-eq 1.15s ease-in-out infinite; }
+@keyframes hh-eq { 0%,100% { transform: scaleY(.4); } 50% { transform: scaleY(1); } }
+.hh-mv-stage { fill: rgba(28,25,23,.08); }
+.hh-mv-token { fill: var(--gold); transform-box: fill-box; animation: hh-token 2.6s var(--ease-luxe) infinite; }
+@keyframes hh-token { 0%,6% { transform: translateX(0); opacity: 1; } 32%,40% { transform: translateX(20px); } 66%,74% { transform: translateX(40px); } 94% { transform: translateX(40px); opacity: 1; } 100% { transform: translateX(40px); opacity: 0; } }
+.hh-mv-node { fill: #1C1917; }
+.hh-mv-arrow, .hh-mv-arrow-head { fill: none; stroke: var(--gold); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.hh-mv-arrow { stroke-dasharray: 3 3; animation: hh-flow2 .7s linear infinite; }
+@keyframes hh-flow2 { to { stroke-dashoffset: -6; } }
+.hh-mv-human { fill: #fff; stroke: var(--ink-soft); stroke-width: 1.4; }
+.hh-mv-ping2 { fill: none; stroke: var(--gold); stroke-width: 1.2; transform-box: fill-box; transform-origin: center; animation: hh-ping3 2.2s ease-out infinite; }
+@keyframes hh-ping3 { 0% { transform: scale(.6); opacity: .8; } 70%,100% { transform: scale(2); opacity: 0; } }
+.hh-mv-base { stroke: rgba(28,25,23,.14); stroke-width: 1.2; stroke-linecap: round; }
+.hh-mv-kpi { fill: var(--gold); transform-box: fill-box; transform-origin: bottom; animation: hh-kpi 2.2s ease-in-out infinite; }
+@keyframes hh-kpi { 0%,100% { transform: scaleY(.4); } 50% { transform: scaleY(1); } }
+.hh-mv-slot { fill: rgba(28,25,23,.08); }
+.hh-mv-slot.on { fill: var(--gold); animation: hh-slot 2s ease-in-out infinite; }
+@keyframes hh-slot { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
+.hh-mv-tick { fill: var(--gold); transform-box: fill-box; transform-origin: center; animation: hh-tick 2.6s ease-in-out infinite; }
+@keyframes hh-tick { 0%,8% { transform: scale(0); opacity: 0; } 20%,82% { transform: scale(1); opacity: 1; } 92%,100% { transform: scale(1); opacity: .3; } }
+.hh-mv-send { fill: var(--gold); }
+
+/* status */
 .hh-status { opacity: 0; transition: opacity .9s var(--ease-luxe) 2.2s; }
 .hh-assembled .hh-status { opacity: 1; }
-.hh-status text {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; letter-spacing: .22em;
-  fill: #047857;
-}
+.hh-status text { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .22em; fill: #047857; }
 .hh-status circle { fill: #10B981; animation: hh-glow 2.4s ease-in-out infinite; }
 
 /* ============================================================
@@ -772,11 +801,12 @@
    Reduced motion
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
-  .hh-beam, .hh-spin-a, .hh-spin-b, .hh-core-glow, .data-divider::after,
+  .hh-beam, .data-divider::after,
   .pv-eq rect, .pv-dash, .pv-blink, .pv-slide { animation: none !important; }
-  .hh-ring, .hh-core, .hh-mod, .hh-pulse, .hh-status { opacity: 1 !important; transform: none !important; }
-  .hh-wire { stroke-dashoffset: 0 !important; }
-  .hh-pulse { display: none; }
+  .hh-visual svg, .hh-visual svg * { animation: none !important; }
+  .hh-ring, .hh-core, .hh-mod, .hh-status, .hh-wire { opacity: 1 !important; transform: none !important; }
+  .hh-wire { stroke-dasharray: none; }
+  .hh-cast, .hh-scan, .hh-pkt { display: none; }
   .pv-pop { opacity: 1 !important; transform: none !important; }
   .home-hero .hero-eyebrow, .hh-trustline { opacity: 1; transform: none; animation: none; }
   .sim-step .sim-dot { transition: none; }
@@ -799,22 +829,6 @@
 }
 .sim-result.show { opacity: 1; transform: translateY(0) scale(1); }
 .sim-result svg { flex-shrink: 0; }
-
-/* ---- hero: extra modules + hover preview ---- */
-.hh-mod-5 { transform: translate(-72px, 0); }
-.hh-mod-6 { transform: translate(72px, 0); }
-.hh-assembled .hh-mod-5 { transition-delay: 1.45s; animation: hh-float 7.2s ease-in-out 3.2s infinite alternate; }
-.hh-assembled .hh-mod-6 { transition-delay: 1.6s;  animation: hh-float 6.8s ease-in-out 3.6s infinite alternate; }
-.hh-assembled .hh-wire-5 { stroke-dashoffset: 0; transition-delay: 1.55s; }
-.hh-assembled .hh-wire-6 { stroke-dashoffset: 0; transition-delay: 1.65s; }
-.hh-mod rect { transition: stroke .35s, filter .45s; }
-.hh-mod text { transition: fill .35s; }
-.hh-mod:hover rect {
-  stroke: var(--gold);
-  stroke-width: 1.3;
-  filter: drop-shadow(0 8px 18px rgba(198,161,91,.30));
-}
-.hh-mod:hover text { fill: var(--ink); }
 
 /* ---- pricing ranges ---- */
 .price-grid {

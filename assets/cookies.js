@@ -1,4 +1,4 @@
-/* MATIN SHAPE — cookie consent banner
+/* MATINSHAPE — cookie consent banner
    First-party only. Stores the visitor's choice for a year and re-shows
    nothing once a decision is made. Reopen anytime via MSCookies.open()
    or by clicking any element with [data-cookie-settings]. */

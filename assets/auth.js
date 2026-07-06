@@ -1,4 +1,4 @@
-/* MATIN SHAPE — portal authentication (client-side)
+/* MATINSHAPE — portal authentication (client-side)
    - Credentials are verified against a PBKDF2-SHA256 hash (210k iterations).
      The password itself is never stored anywhere in this codebase.
    - Sessions are random tokens with an expiry, renewed on activity.

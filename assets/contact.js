@@ -1,4 +1,4 @@
-/* MATIN SHAPE — System Intake Console (contact page)
+/* MATINSHAPE — System Intake Console (contact page)
    Multi-step wizard: step navigation, validation, live briefing panel,
    and real submission to /api/contact. */
 (function () {
@@ -165,20 +165,13 @@
     submitBtn.querySelector('span').textContent = 'Transmitting…';
     setStatus('transmitting', 'TRANSMITTING…');
 
-    fetch('/api/contact', {
+    fetch('https://hook.us2.make.com/nd8i1gosfvy4uvx2vr4cm3b3v9hikahk', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     })
       .then(function (res) {
-        return res.text().then(function (text) {
-          var body = null;
-          try { body = JSON.parse(text); } catch (e) { /* non-JSON error page */ }
-          return { ok: res.ok && body && body.ok, body: body };
-        });
-      })
-      .then(function (r) {
-        if (!r.ok) throw new Error((r.body && r.body.error) || 'Something went wrong. Please try again.');
+        if (!res.ok) throw new Error('Something went wrong. Please try again.');
         setStatus('received', 'RECEIVED');
         form.classList.add('done');
         var success = document.getElementById('icSuccess');

@@ -1,4 +1,4 @@
-/* MATIN SHAPE — The Workshop (CEO dashboard)
+/* MATINSHAPE — The Workshop (CEO dashboard)
    Front-end demo: all data lives in localStorage. */
 (function () {
   'use strict';

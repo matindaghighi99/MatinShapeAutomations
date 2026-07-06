@@ -1,4 +1,4 @@
-/* MATIN SHAPE — shared front-end behaviors */
+/* MATINSHAPE — shared front-end behaviors */
 (function () {
   'use strict';
 
@@ -47,8 +47,8 @@
         dot.style.top  = my + 'px';
       }, { passive: true });
       (function ringLoop() {
-        rx += (mx - rx) * 0.16;
-        ry += (my - ry) * 0.16;
+        rx += (mx - rx) * 0.45;
+        ry += (my - ry) * 0.45;
         ring.style.left = rx + 'px';
         ring.style.top  = ry + 'px';
         requestAnimationFrame(ringLoop);
@@ -338,7 +338,7 @@
   function finish() {
     steps.forEach(function (s) { s.classList.add('done'); s.classList.remove('active'); });
     if (line) line.style.transform = 'scaleX(1)';
-    caption.innerHTML = 'End to end, untouched by your team — <strong>this is what a MATIN SHAPE system does all day.</strong>';
+    caption.innerHTML = 'End to end, untouched by your team — <strong>this is what a MATINSHAPE system does all day.</strong>';
     if (resultEl) resultEl.classList.add('show');
     var lbl = replayBtn.querySelector('span');
     if (lbl) lbl.textContent = 'Run Again';

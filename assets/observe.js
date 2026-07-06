@@ -1,4 +1,4 @@
-/* MATIN SHAPE — first-party observability
+/* MATINSHAPE — first-party observability
    Captures pageviews, JS errors, performance timings, Core Web Vitals
    (LCP/CLS/INP), and CTA clicks into a localStorage ring buffer that the
    Workshop's "Site Health" view reads. No cookies, no third parties.

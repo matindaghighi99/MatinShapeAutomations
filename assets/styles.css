@@ -1,5 +1,5 @@
 /* ============================================================
-   MATIN SHAPE — Shared Design System
+   MATINSHAPE — Shared Design System
    ============================================================ */
 :root {
   --bg:            #FDFDFB;
@@ -175,7 +175,7 @@ input, textarea, select { font-family: inherit; }
               border-color .35s, background .35s, opacity .3s;
 }
 .cursor-ring.grow {
-  width: 64px; height: 64px;
+  width: 46px; height: 46px;
   background: rgba(198,161,91,.08);
   border-color: rgba(161,98,7,.8);
 }
@@ -530,7 +530,7 @@ input, textarea, select { font-family: inherit; }
 .nav-cta:active { transform: scale(.96); transition-duration: .08s; }
 
 /* -- Ripple (added via JS) -- */
-.ripple {
+span.ripple {
   position: absolute;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255,255,255,.45), rgba(255,255,255,0) 65%);

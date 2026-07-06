@@ -1,4 +1,4 @@
-/* MATIN SHAPE — System Vault behaviors
+/* MATINSHAPE — System Vault behaviors
    (schematic activation, 3D tilt, filter a11y, preview modal,
     choose-your-bottleneck recommender) */
 (function () {
