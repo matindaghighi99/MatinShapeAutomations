@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://hook.us2.make.com; base-uri 'self'; form-action 'self'; object-src 'none'; frame-src 'none'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>Careers — MATINSHAPE</title>
+<meta name="description" content="Join MATINSHAPE, a founder-led AI automation studio building agents, workflows, dashboards, and operating systems for modern businesses." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231C1917'/%3E%3Cpath d='M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z' fill='%23C6A15B'/%3E%3Cpath d='M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5' fill='none' stroke='%23C6A15B' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Italiana&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/enhance.css" />
+<link rel="stylesheet" href="assets/careers.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<!-- Navigation -->
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="MATINSHAPE home">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <defs><linearGradient id="msGold" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#E4CD97"/><stop offset=".55" stop-color="#C6A15B"/><stop offset="1" stop-color="#A9853F"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="#1C1917"/><path d="M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z" fill="url(#msGold)"/><path d="M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5" fill="none" stroke="url(#msGold)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="wm-text">MATIN<span class="wm-gold">SHAPE</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="login.html" class="nav-portal" aria-label="Client Portal — private access" title="Client Portal — for existing clients">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.6" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="contact.html" class="nav-cta magnetic">Book a call</a>
+      <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="careers.html">Careers</a>
+  <a href="login.html" class="portal-link">Client Portal</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="page-hero page-enter careers-hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="container page-hero-inner">
+    <span class="eyebrow centered">Careers at MATINSHAPE</span>
+    <h1>Build systems that <span class="gold-word">remove busywork</span>.</h1>
+    <p class="section-sub">
+      We're building a small, sharp automation studio for people who care about
+      clarity, taste, and execution — designing agents, workflows, dashboards,
+      and operating systems that make work feel lighter.
+    </p>
+    <div class="hero-ctas">
+      <a href="#open-roles" class="btn-gold magnetic">
+        <span>View Open Roles</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </a>
+      <a href="#apply" class="btn-ghost magnetic">
+        <span>Send Your Work</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="cr-visual" id="crVisual" aria-hidden="true">
+    <svg viewBox="0 0 880 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+         aria-label="An automation workflow: multiple inputs converge into an AI core, route through a branch, and fan out to CRM, booking, follow-up, dashboard, and human handoff — with live data flowing through.">
+      <defs>
+        <linearGradient id="msGold" x1="410" y1="150" x2="494" y2="230" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#E4CD97"/><stop offset=".55" stop-color="#C6A15B"/><stop offset="1" stop-color="#A9853F"/>
+        </linearGradient>
+      </defs>
+    <path class="cw-wire cw-opt" d="M84 66 C 170 66 182 190 224 190" style="transition-delay:0.20s"/>
+    <path class="cw-wire" d="M84 148 C 150 148 172 190 224 190" style="transition-delay:0.25s"/>
+    <path class="cw-wire" d="M84 230 C 150 230 172 190 224 190" style="transition-delay:0.30s"/>
+    <path class="cw-wire cw-opt" d="M84 312 C 170 312 182 190 224 190" style="transition-delay:0.35s"/>
+    <path class="cw-wire" d="M276 190 H 422" style="transition-delay:0.40s"/>
+    <path class="cw-wire" d="M482 190 H 616" style="transition-delay:0.45s"/>
+    <path class="cw-wire cw-opt" d="M668 190 C 740 190 762 58 796 58" style="transition-delay:0.50s"/>
+    <path class="cw-wire" d="M668 190 C 740 190 762 124 796 124" style="transition-delay:0.55s"/>
+    <path class="cw-wire" d="M668 190 H 796" style="transition-delay:0.60s"/>
+    <path class="cw-wire" d="M668 190 C 740 190 762 256 796 256" style="transition-delay:0.65s"/>
+    <path class="cw-wire cw-opt" d="M668 190 C 740 190 762 322 796 322" style="transition-delay:0.70s"/>
+    <g class="cw-core">
+      <circle class="cw-core-glow" cx="452" cy="190" r="48" fill="url(#msGold)"/>
+      <circle class="cw-core-halo" cx="452" cy="190" r="34"/>
+      <rect x="430" y="168" width="44" height="44" rx="13" fill="#1C1917"/>
+      <path d="M452 176 456.5 181 452 186 447.5 181Z" fill="url(#msGold)"/>
+      <path d="M441 204 V190 L452 199 463 190 V204" fill="none" stroke="url(#msGold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g class="cw-npos cw-opt" transform="translate(64,66)">
+      <g class="cw-node" style="transition-delay:0.10s">
+        <circle class="cw-ping" r="20" style="animation-delay:0.00s"/>
+        <circle class="cw-node-bg" r="20"/>
+        <path class="cw-ico" d="M-4 -6 h6 l2 2 v10 h-8 z M-1 -1 h4 M-1 2 h4"/>
+        <circle class="cw-led" cx="14.0" cy="-14.0" r="2.6"/>
+      </g>
+    </g>
+    <g class="cw-npos" transform="translate(64,148)">
+      <g class="cw-node" style="transition-delay:0.16s">
+        <circle class="cw-ping" r="20" style="animation-delay:0.10s"/>
+        <circle class="cw-node-bg" r="20"/>
+        <path class="cw-ico" d="M-4 -3 v6 M0 -6 v12 M4 -3 v6"/>
+        <circle class="cw-led" cx="14.0" cy="-14.0" r="2.6"/>
+      </g>
+    </g>
+    <g class="cw-npos" transform="translate(64,230)">
+      <g class="cw-node" style="transition-delay:0.22s">
+        <circle class="cw-ping" r="20" style="animation-delay:0.00s"/>
+        <circle class="cw-node-bg" r="20"/>
+        <path class="cw-ico" d="M-6 -4 h12 v9 h-12 z M-6 -4 l6 5 6 -5"/>
+        <circle class="cw-led" cx="14.0" cy="-14.0" r="2.6"/>
+      </g>
+    </g>
+    <g class="cw-npos cw-opt" transform="translate(64,312)">
+      <g class="cw-node" style="transition-delay:0.28s">
+        <circle class="cw-ping" r="20" style="animation-delay:0.10s"/>
+        <circle class="cw-node-bg" r="20"/>
+        <path class="cw-ico" d="M-6 -5 h12 v8 h-7 l-3 3 v-3 h-2 z"/>
+        <circle class="cw-led" cx="14.0" cy="-14.0" r="2.6"/>
+      </g>
+    </g>
+    <g class="cw-npos" transform="translate(250,190)">
+      <g class="cw-node" style="transition-delay:0.55s">
+        <circle class="cw-ping" r="26" style="animation-delay:0.55s"/>
+        <circle class="cw-node-bg" r="26"/>
+        <path class="cw-ico" d="M-6 -5 l6 5 6 -5 M-6 0 l6 5 6 -5"/>
+        <circle class="cw-led" cx="18.2" cy="-18.2" r="2.6"/>
+      </g>
+    </g>
+    <g class="cw-npos" transform="translate(642,190)">
+      <g class="cw-node" style="transition-delay:1.15s">
+        <circle class="cw-ping" r="26" style="animation-delay:1.15s"/>
+        <circle class="cw-node-bg" r="26"/>
+        <path class="cw-ico" d="M-6 0 h6 M0 0 l6 -6 M0 0 l6 6"/>
+        <circle class="cw-led" cx="18.2" cy="-18.2" r="2.6"/>
+      </g>
+    </g>
+    <g class="cw-npos cw-opt" transform="translate(816,58)">
+      <g class="cw-node" style="transition-delay:1.30s">
+        <circle class="cw-ping" r="20" style="animation-delay:1.55s"/>
+        <circle class="cw-node-bg" r="20"/>
+        <path class="cw-ico" d="M-5 -5 c0 -2 10 -2 10 0 v10 c0 2 -10 2 -10 0 z M-5 -5 c0 2 10 2 10 0"/>
+        <circle class="cw-led" cx="14.0" cy="-14.0" r="2.6"/>
+      </g>
+    </g>
+    <g class="cw-npos" transform="translate(816,124)">
+      <g class="cw-node" style="transition-delay:1.36s">
+        <circle class="cw-ping" r="20" style="animation-delay:1.60s"/>
+        <circle class="cw-node-bg" r="20"/>
+        <path class="cw-ico" d="M-6 -4 h12 v9 h-12 z M-6 0 h12 M-3 -7 v3 M3 -7 v3"/>
+        <circle class="cw-led" cx="14.0" cy="-14.0" r="2.6"/>
+      </g>
+    </g>
+    <g class="cw-npos" transform="translate(816,190)">
+      <g class="cw-node" style="transition-delay:1.42s">
+        <circle class="cw-ping" r="20" style="animation-delay:1.62s"/>
+        <circle class="cw-node-bg" r="20"/>
+        <path class="cw-ico" d="M-6 0 l12 -5 -5 12 -2 -5 z"/>
+        <circle class="cw-led" cx="14.0" cy="-14.0" r="2.6"/>
+      </g>
+    </g>
+    <g class="cw-npos" transform="translate(816,256)">
+      <g class="cw-node" style="transition-delay:1.48s">
+        <circle class="cw-ping" r="20" style="animation-delay:1.60s"/>
+        <circle class="cw-node-bg" r="20"/>
+        <path class="cw-ico" d="M-5 4 v-3 M0 4 v-7 M5 4 v-5"/>
+        <circle class="cw-led" cx="14.0" cy="-14.0" r="2.6"/>
+      </g>
+    </g>
+    <g class="cw-npos cw-opt" transform="translate(816,322)">
+      <g class="cw-node" style="transition-delay:1.54s">
+        <circle class="cw-ping" r="20" style="animation-delay:1.55s"/>
+        <circle class="cw-node-bg" r="20"/>
+        <path class="cw-ico" d="M0 -3 a3 3 0 1 0 0.01 0 M-5 6 a5.5 5.5 0 0 1 10 0"/>
+        <circle class="cw-led" cx="14.0" cy="-14.0" r="2.6"/>
+      </g>
+    </g>
+    <circle class="cw-pkt cw-pkt-1" r="4.5"/>
+    <circle class="cw-pkt cw-pkt-2 cw-opt" r="4.5"/>
+    <circle class="cw-pkt cw-pkt-3 cw-opt" r="4.5"/>
+    <circle class="cw-pkt cw-pkt-4" r="4.5"/>
+    </svg>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ WHY MATINSHAPE ============ -->
+<section class="section" aria-labelledby="whyTitle">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Why MATINSHAPE</span>
+      <h2 class="section-title" id="whyTitle">A small studio, built on <span class="gold-word">reasons</span> — not noise.</h2>
+      <p class="section-sub">
+        We're not trying to build a giant agency full of noise. We're building a
+        small, founder-led studio where every system has a reason, every
+        workflow is documented, and every client experience feels calm.
+      </p>
+    </div>
+
+    <div class="hype-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="hype-card reveal">
+        <div class="hype-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+        </div>
+        <h3>Founder-led standards</h3>
+        <p>You work close to the person responsible for the final system — no layers, no telephone game, no diluted quality.</p>
+      </div>
+      <div class="hype-card reveal" style="--d:.08s">
+        <div class="hype-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>
+        </div>
+        <h3>Systems over hype</h3>
+        <p>We care about useful automation that runs in real life — not flashy demos that break the moment a real business touches them.</p>
+      </div>
+      <div class="hype-card reveal" style="--d:.16s">
+        <div class="hype-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m12 2 3 7 7 .5-5.5 4.5 2 7-6.5-4-6.5 4 2-7L2 9.5 9 9Z"/></svg>
+        </div>
+        <h3>Taste and execution</h3>
+        <p>The work should be clean, reliable, understandable, and beautiful. Details are not decoration — they're the product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="data-divider" aria-hidden="true"></div>
+
+<!-- ============ HOW WE WORK ============ -->
+<section class="section process" aria-labelledby="howTitle" style="padding-top: clamp(50px, 7vw, 90px);">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">How we work</span>
+      <h2 class="section-title" id="howTitle">Every build follows the same <span class="gold-word">quiet</span> path.</h2>
+    </div>
+
+    <div class="process-track five" id="processTrack">
+      <div class="process-line" aria-hidden="true"><i></i></div>
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Understand the bottleneck</h3>
+        <p>We start with where the work actually leaks — not with a tool.</p>
+      </div>
+      <div class="step reveal" style="--d:.08s">
+        <div class="step-num">02</div>
+        <h3>Design the system</h3>
+        <p>A clear blueprint: logic, fallbacks, and what each step returns.</p>
+      </div>
+      <div class="step reveal" style="--d:.16s">
+        <div class="step-num">03</div>
+        <h3>Build the workflow</h3>
+        <p>Focused, tidy builds with the fewest moving parts that do the job.</p>
+      </div>
+      <div class="step reveal" style="--d:.24s">
+        <div class="step-num">04</div>
+        <h3>Test the edge cases</h3>
+        <p>We break it on purpose — bad inputs, failures, human overrides.</p>
+      </div>
+      <div class="step reveal" style="--d:.32s">
+        <div class="step-num">05</div>
+        <h3>Document and improve</h3>
+        <p>Plain-English docs, monitoring, and room for the next iteration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPEN ROLES ============ -->
+<section class="section" id="open-roles" aria-labelledby="rolesTitle">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Open roles</span>
+      <h2 class="section-title" id="rolesTitle">Six ways to <span class="gold-word">build</span> with us.</h2>
+      <p class="section-sub">
+        All remote, all contract or project-based to start — the right fit grows
+        from there. Every role works directly on real systems, close to the founder.
+      </p>
+    </div>
+
+    <div class="roles-grid">
+      <article class="role-card reveal">
+        <div class="role-viz" aria-hidden="true">
+          <svg viewBox="0 0 460 124" fill="none" preserveAspectRatio="xMidYMid meet">
+            <line class="rvp-track" x1="66" y1="62" x2="394" y2="62"/>
+            <g class="rvp-node"><rect x="26" y="44" width="80" height="36" rx="10"/><text x="66" y="66">TRIGGER</text></g>
+            <g class="rvp-node n2"><rect x="190" y="44" width="80" height="36" rx="10"/><text x="230" y="66">AI STEP</text></g>
+            <g class="rvp-node"><rect x="354" y="44" width="80" height="36" rx="10"/><text x="394" y="66">DONE</text></g>
+            <circle class="rvp-packet" r="5"/>
+          </svg>
+        </div>
+        <div class="role-head">
+          <h3>Automation Systems Builder</h3>
+          <span class="role-type"><i aria-hidden="true"></i>Contract · Part-time · Remote</span>
+        </div>
+        <p class="role-summary">For builders who can turn messy business workflows into clean, reliable automations that keep running long after launch.</p>
+        <div class="role-cols">
+          <div class="role-col">
+            <h4>What you'll work on</h4>
+            <ul>
+              <li>Make and n8n workflows</li>
+              <li>CRM automations</li>
+              <li>AI follow-up systems</li>
+              <li>Lead capture systems</li>
+              <li>Dashboards</li>
+              <li>Internal operations tools</li>
+            </ul>
+          </div>
+          <div class="role-col">
+            <h4>What we care about</h4>
+            <ul>
+              <li>Clean logic</li>
+              <li>Clear documentation</li>
+              <li>Reliability under real load</li>
+              <li>Human fallback paths</li>
+              <li>Simple systems clients can understand</li>
+            </ul>
+          </div>
+        </div>
+        <div class="role-tools"><span>Make</span><span>n8n</span><span>Airtable</span><span>HubSpot</span><span>GoHighLevel</span><span>OpenAI</span><span>Twilio</span><span>Slack</span><span>Google Workspace</span></div>
+        <div class="role-foot">
+          <button type="button" class="btn-primary magnetic" data-apply-role="Automation Systems Builder">
+            <span>Apply for this role</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <article class="role-card reveal">
+        <div class="role-viz" aria-hidden="true">
+          <svg viewBox="0 0 460 124" fill="none" preserveAspectRatio="xMidYMid meet">
+            <circle class="rva-ring" cx="98" cy="62" r="17"/>
+            <circle class="rva-ring r2" cx="98" cy="62" r="17"/>
+            <circle class="rva-core" cx="98" cy="62" r="16"/>
+            <path class="rva-glyph" d="M90 60h16M90 66h10"/>
+            <g class="rva-bubble bb1">
+              <rect x="176" y="40" width="150" height="24" rx="12"/>
+              <rect class="ln" x="188" y="50" width="96" height="4" rx="2"/>
+            </g>
+            <g class="rva-bubble bb2">
+              <rect x="176" y="70" width="120" height="24" rx="12"/>
+              <g class="rva-typing"><circle cx="194" cy="82" r="2.6"/><circle cx="204" cy="82" r="2.6"/><circle cx="214" cy="82" r="2.6"/></g>
+            </g>
+          </svg>
+        </div>
+        <div class="role-head">
+          <h3>AI Agent Builder</h3>
+          <span class="role-type"><i aria-hidden="true"></i>Contract · Project-based · Remote</span>
+        </div>
+        <p class="role-summary">For people who can design useful AI agents, voice flows, qualification bots, and human-friendly automation logic that businesses can actually trust.</p>
+        <div class="role-cols">
+          <div class="role-col">
+            <h4>What you'll work on</h4>
+            <ul>
+              <li>AI phone agents</li>
+              <li>Lead qualification bots</li>
+              <li>Customer support agents</li>
+              <li>Internal AI assistants</li>
+              <li>Prompt logic</li>
+              <li>Human handoff flows</li>
+            </ul>
+          </div>
+          <div class="role-col">
+            <h4>What we care about</h4>
+            <ul>
+              <li>Clear, maintainable prompts</li>
+              <li>Safe fallback paths</li>
+              <li>Natural conversations</li>
+              <li>Reliable workflows</li>
+              <li>Business-first thinking</li>
+            </ul>
+          </div>
+        </div>
+        <div class="role-tools"><span>OpenAI</span><span>Claude</span><span>ElevenLabs</span><span>Twilio</span><span>Make</span><span>n8n</span><span>Airtable</span><span>GoHighLevel</span></div>
+        <div class="role-foot">
+          <button type="button" class="btn-primary magnetic" data-apply-role="AI Agent Builder">
+            <span>Apply for this role</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <article class="role-card reveal">
+        <div class="role-viz" aria-hidden="true">
+          <svg viewBox="0 0 460 124" fill="none" preserveAspectRatio="xMidYMid meet">
+            <rect class="rvu-frame" x="150" y="30" width="164" height="66" rx="9"/>
+            <line class="rvu-bar" x1="150" y1="44" x2="314" y2="44"/>
+            <circle class="rvu-dot" cx="160" cy="37" r="2"/><circle class="rvu-dot" cx="168" cy="37" r="2"/><circle class="rvu-dot" cx="176" cy="37" r="2"/>
+            <rect class="rvu-block k1" x="160" y="52" width="64" height="12" rx="3"/>
+            <rect class="rvu-block k2" x="160" y="70" width="144" height="6" rx="3"/>
+            <rect class="rvu-block k3" x="160" y="82" width="96" height="6" rx="3"/>
+            <path class="rvu-cursor" d="M0 0l0 15 4-4 3 6 3-1-3-6 6 0z"/>
+          </svg>
+        </div>
+        <div class="role-head">
+          <h3>Creative Frontend Developer</h3>
+          <span class="role-type"><i aria-hidden="true"></i>Contract · Project-based · Remote</span>
+        </div>
+        <p class="role-summary">For frontend builders who can create premium web experiences, interactive demos, and clean interfaces for automation systems.</p>
+        <div class="role-cols">
+          <div class="role-col">
+            <h4>What you'll work on</h4>
+            <ul>
+              <li>Landing pages</li>
+              <li>Interactive system demos</li>
+              <li>Workflow visualizations</li>
+              <li>Dashboards</li>
+              <li>Motion UI</li>
+              <li>Responsive web experiences</li>
+            </ul>
+          </div>
+          <div class="role-col">
+            <h4>What we care about</h4>
+            <ul>
+              <li>Clean UI and strong spacing</li>
+              <li>Smooth, purposeful motion</li>
+              <li>Performance</li>
+              <li>Mobile polish</li>
+              <li>Accessible interfaces</li>
+            </ul>
+          </div>
+        </div>
+        <div class="role-tools"><span>React</span><span>Next.js / Vite</span><span>Tailwind / CSS</span><span>Framer Motion</span><span>GSAP</span><span>Supabase</span><span>APIs</span></div>
+        <div class="role-foot">
+          <button type="button" class="btn-primary magnetic" data-apply-role="Creative Frontend Developer">
+            <span>Apply for this role</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <article class="role-card reveal">
+        <div class="role-viz" aria-hidden="true">
+          <svg viewBox="0 0 460 124" fill="none" preserveAspectRatio="xMidYMid meet">
+            <path class="rvv-arc" d="M132 50a18 18 0 0 0 0 24"/>
+            <path class="rvv-arc" d="M120 44a30 30 0 0 0 0 36" style="animation-delay:.4s"/>
+            <rect class="rvv-bar" x="158" y="42" width="6" height="40" rx="3" style="animation-delay:0.00s"/>
+            <rect class="rvv-bar" x="170" y="42" width="6" height="40" rx="3" style="animation-delay:0.11s"/>
+            <rect class="rvv-bar" x="182" y="42" width="6" height="40" rx="3" style="animation-delay:0.22s"/>
+            <rect class="rvv-bar" x="194" y="42" width="6" height="40" rx="3" style="animation-delay:0.33s"/>
+            <rect class="rvv-bar" x="206" y="42" width="6" height="40" rx="3" style="animation-delay:0.44s"/>
+            <rect class="rvv-bar" x="218" y="42" width="6" height="40" rx="3" style="animation-delay:0.55s"/>
+            <rect class="rvv-bar" x="230" y="42" width="6" height="40" rx="3" style="animation-delay:0.66s"/>
+            <rect class="rvv-bar" x="242" y="42" width="6" height="40" rx="3" style="animation-delay:0.00s"/>
+            <rect class="rvv-bar" x="254" y="42" width="6" height="40" rx="3" style="animation-delay:0.11s"/>
+            <rect class="rvv-bar" x="266" y="42" width="6" height="40" rx="3" style="animation-delay:0.22s"/>
+            <rect class="rvv-bar" x="278" y="42" width="6" height="40" rx="3" style="animation-delay:0.33s"/>
+            <rect class="rvv-bar" x="290" y="42" width="6" height="40" rx="3" style="animation-delay:0.44s"/>
+            <rect class="rvv-bar" x="302" y="42" width="6" height="40" rx="3" style="animation-delay:0.55s"/>
+            <path class="rvv-arc" d="M328 50a18 18 0 0 1 0 24"/>
+            <path class="rvv-arc" d="M340 44a30 30 0 0 1 0 36" style="animation-delay:.4s"/>
+          </svg>
+        </div>
+        <div class="role-head">
+          <h3>Voice AI Conversation Designer</h3>
+          <span class="role-type"><i aria-hidden="true"></i>Contract · Project-based · Remote</span>
+        </div>
+        <p class="role-summary">For people who craft natural, on-brand phone conversations — the scripts, personas, and fallback moments that make an AI voice agent feel genuinely human.</p>
+        <div class="role-cols">
+          <div class="role-col">
+            <h4>What you'll work on</h4>
+            <ul>
+              <li>Voice agent scripts & personas</li>
+              <li>Call-flow branching logic</li>
+              <li>Objection &amp; FAQ handling</li>
+              <li>Tone and brand voice</li>
+              <li>Escalation-to-human moments</li>
+              <li>Multilingual call flows</li>
+            </ul>
+          </div>
+          <div class="role-col">
+            <h4>What we care about</h4>
+            <ul>
+              <li>Natural, unscripted-sounding phrasing</li>
+              <li>Graceful fallback when unsure</li>
+              <li>Brevity under pressure</li>
+              <li>Real caller empathy</li>
+              <li>Conversation logic we can test</li>
+            </ul>
+          </div>
+        </div>
+        <div class="role-tools"><span>ElevenLabs</span><span>OpenAI</span><span>Twilio</span><span>Vapi</span><span>Make</span><span>Airtable</span></div>
+        <div class="role-foot">
+          <button type="button" class="btn-primary magnetic" data-apply-role="Voice AI Conversation Designer">
+            <span>Apply for this role</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <article class="role-card reveal">
+        <div class="role-viz" aria-hidden="true">
+          <svg viewBox="0 0 460 124" fill="none" preserveAspectRatio="xMidYMid meet">
+            <g class="rvq-row">
+              <rect class="rvq-box" x="150" y="34" width="16" height="16" rx="4"/>
+              <path class="rvq-check" d="M153 42l3 3 6-7"/>
+              <rect class="ln" x="176" y="37" width="134" height="10" rx="4"/>
+            </g>
+            <g class="rvq-row">
+              <rect class="rvq-box" x="150" y="54" width="16" height="16" rx="4"/>
+              <path class="rvq-check c2" d="M153 62l3 3 6-7"/>
+              <rect class="ln" x="176" y="57" width="120" height="10" rx="4"/>
+            </g>
+            <g class="rvq-row">
+              <rect class="rvq-box" x="150" y="74" width="16" height="16" rx="4"/>
+              <path class="rvq-check c3" d="M153 82l3 3 6-7"/>
+              <rect class="ln" x="176" y="77" width="128" height="10" rx="4"/>
+            </g>
+            <rect class="rvq-scan" x="144" y="30" width="176" height="2" rx="1"/>
+          </svg>
+        </div>
+        <div class="role-head">
+          <h3>Automation QA &amp; Reliability Engineer</h3>
+          <span class="role-type"><i aria-hidden="true"></i>Contract · Part-time · Remote</span>
+        </div>
+        <p class="role-summary">For people who trust nothing until they've tried to break it — testing workflows, catching edge cases, and keeping live systems quietly reliable.</p>
+        <div class="role-cols">
+          <div class="role-col">
+            <h4>What you'll work on</h4>
+            <ul>
+              <li>Edge-case &amp; failure testing</li>
+              <li>Retry and recovery paths</li>
+              <li>Monitoring &amp; alerting</li>
+              <li>Regression checks before deploys</li>
+              <li>Rate-limit &amp; load handling</li>
+              <li>Incident runbooks</li>
+            </ul>
+          </div>
+          <div class="role-col">
+            <h4>What we care about</h4>
+            <ul>
+              <li>Reproducible bug reports</li>
+              <li>Safe failure modes</li>
+              <li>Clear, actionable alerts</li>
+              <li>Documented fixes</li>
+              <li>Systems that recover on their own</li>
+            </ul>
+          </div>
+        </div>
+        <div class="role-tools"><span>Make</span><span>n8n</span><span>Postman</span><span>Grafana</span><span>Airtable</span><span>Slack</span><span>Google Workspace</span></div>
+        <div class="role-foot">
+          <button type="button" class="btn-primary magnetic" data-apply-role="Automation QA & Reliability Engineer">
+            <span>Apply for this role</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <article class="role-card reveal">
+        <div class="role-viz" aria-hidden="true">
+          <svg viewBox="0 0 460 124" fill="none" preserveAspectRatio="xMidYMid meet">
+            <path class="rvf-funnel" d="M196 40h68l-20 26h-28zM222 66h16v14h-16z"/>
+            <circle class="rvf-drop d1" cx="214" cy="36" r="4" style="--dx:12px"/>
+            <circle class="rvf-drop d2" cx="230" cy="36" r="4" style="--dx:0px"/>
+            <circle class="rvf-drop d3" cx="246" cy="36" r="4" style="--dx:-12px"/>
+            <circle class="rvf-drop d4" cx="230" cy="36" r="4" style="--dx:0px"/>
+            <circle class="rvf-win" cx="230" cy="92" r="6"/>
+            <text class="rvf-label" x="230" y="112">BOOKED</text>
+          </svg>
+        </div>
+        <div class="role-head">
+          <h3>Growth &amp; Funnel Automation Specialist</h3>
+          <span class="role-type"><i aria-hidden="true"></i>Contract · Project-based · Remote</span>
+        </div>
+        <p class="role-summary">For people who wire marketing, capture, and follow-up into one measurable funnel — turning traffic into booked conversations, automatically.</p>
+        <div class="role-cols">
+          <div class="role-col">
+            <h4>What you'll work on</h4>
+            <ul>
+              <li>Landing-to-CRM lead capture</li>
+              <li>Lead scoring &amp; routing</li>
+              <li>Nurture &amp; follow-up sequences</li>
+              <li>Attribution &amp; reporting</li>
+              <li>A/B test automation</li>
+              <li>Booking-rate optimization</li>
+            </ul>
+          </div>
+          <div class="role-col">
+            <h4>What we care about</h4>
+            <ul>
+              <li>Clean, honest measurement</li>
+              <li>Fast speed-to-lead</li>
+              <li>Deliverability that lands</li>
+              <li>Funnels clients can read at a glance</li>
+              <li>Outcomes over vanity metrics</li>
+            </ul>
+          </div>
+        </div>
+        <div class="role-tools"><span>GoHighLevel</span><span>HubSpot</span><span>Make</span><span>Meta &amp; Google APIs</span><span>Stripe</span><span>Airtable</span></div>
+        <div class="role-foot">
+          <button type="button" class="btn-primary magnetic" data-apply-role="Growth & Funnel Automation Specialist">
+            <span>Apply for this role</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FUTURE ROLES ============ -->
+<section class="section" aria-labelledby="futureTitle" style="padding-top: clamp(30px, 4vw, 50px);">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Future roles</span>
+      <h2 class="section-title" id="futureTitle">Where the studio is <span class="gold-word">heading</span>.</h2>
+    </div>
+    <div class="future-grid">
+      <div class="future-card reveal">
+        <span class="fc-badge">Not open yet</span>
+        <h3>Client Systems Strategist</h3>
+      </div>
+      <div class="future-card reveal">
+        <span class="fc-badge">Not open yet</span>
+        <h3>Project Delivery Coordinator</h3>
+      </div>
+      <div class="future-card reveal">
+        <span class="fc-badge">Not open yet</span>
+        <h3>Head of Automation Systems</h3>
+      </div>
+      <div class="future-card reveal">
+        <span class="fc-badge">Not open yet</span>
+        <h3>AI Operations Analyst</h3>
+      </div>
+      <div class="future-card reveal">
+        <span class="fc-badge">Not open yet</span>
+        <h3>Partnerships &amp; Referral Lead</h3>
+      </div>
+      <div class="future-card reveal">
+        <span class="fc-badge">Not open yet</span>
+        <h3>Client Onboarding Specialist</h3>
+      </div>
+    </div>
+    <p class="future-note reveal">
+      These aren't open yet, but they map where MATINSHAPE is going as the studio
+      grows. If one sounds like you, send your work anyway — we like meeting the
+      right people early.
+    </p>
+  </div>
+</section>
+
+<div class="data-divider" aria-hidden="true"></div>
+
+<!-- ============ WHAT WE LOOK FOR ============ -->
+<section class="section" aria-labelledby="lookTitle" style="padding-top: clamp(50px, 7vw, 90px);">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">What we look for</span>
+      <h2 class="section-title" id="lookTitle">We care less about titles — and more about <span class="gold-word">proof</span>.</h2>
+      <p class="section-sub">
+        Show us what you've built, how you think, and how clearly you can
+        explain a system. That tells us more than any resume.
+      </p>
+    </div>
+
+    <div class="lookfor-grid">
+      <div class="hype-card reveal">
+        <div class="hype-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/></svg></div>
+        <h3>You explain complex systems simply</h3>
+        <p>If you can make a tangled workflow feel obvious, you'll fit here.</p>
+      </div>
+      <div class="hype-card reveal" style="--d:.06s">
+        <div class="hype-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h11l5 5v11H4Z"/><path d="M8 9h4M8 13h8M8 17h6"/></svg></div>
+        <h3>You document your work clearly</h3>
+        <p>The next person should understand it without a phone call.</p>
+      </div>
+      <div class="hype-card reveal" style="--d:.12s">
+        <div class="hype-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>You care about reliability</h3>
+        <p>You'd rather ship something calm than something clever-but-fragile.</p>
+      </div>
+      <div class="hype-card reveal" style="--d:.06s">
+        <div class="hype-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7l3 9M16 7l-3 9"/></svg></div>
+        <h3>You think in workflows, not just tools</h3>
+        <p>Tools change. The logic and the outcome are what matter.</p>
+      </div>
+      <div class="hype-card reveal" style="--d:.12s">
+        <div class="hype-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>You can work independently</h3>
+        <p>You take a clear brief and turn it into a finished system.</p>
+      </div>
+      <div class="hype-card reveal" style="--d:.18s">
+        <div class="hype-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 21V8l6-4 6 4v13"/><path d="M15 21V11l6 3v7"/><path d="M9 21v-5"/></svg></div>
+        <h3>You respect the client's context</h3>
+        <p>You design for the real business, not the impressive-looking one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPLICATION ============ -->
+<section class="section process" id="apply" aria-labelledby="applyTitle" style="padding-top: clamp(50px, 7vw, 90px);">
+  <div class="container">
+    <div class="reveal" style="text-align:center; display:flex; flex-direction:column; align-items:center;">
+      <span class="eyebrow centered">Send your work</span>
+      <h2 class="section-title" id="applyTitle" style="text-align:center;">The best application is <span class="gold-word">proof</span>.</h2>
+      <p class="section-sub" style="text-align:center;">
+        Show us a system, workflow, demo, interface, or automation you've built.
+        The clearest proof of how you think wins.
+      </p>
+    </div>
+
+    <form class="contact-form reveal" id="careersForm" style="max-width: 760px; margin: 48px auto 0;" novalidate>
+      <div class="form-fields">
+        <div class="login-error" id="careersError" role="alert" hidden></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cr-name">Name <em>*</em></label>
+            <input type="text" id="cr-name" name="name" required autocomplete="name" maxlength="80" placeholder="Alex Rivera" />
+          </div>
+          <div class="form-group">
+            <label for="cr-email">Email <em>*</em></label>
+            <input type="email" id="cr-email" name="email" required autocomplete="email" maxlength="120" placeholder="alex@email.com" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cr-location">Location / timezone</label>
+            <input type="text" id="cr-location" name="location" maxlength="80" placeholder="Lisbon · GMT+0" />
+          </div>
+          <div class="form-group">
+            <label for="cr-role">Role you're applying for</label>
+            <select id="cr-role" name="role">
+              <option value="">Select a role</option>
+              <option value="Automation Systems Builder">Automation Systems Builder</option>
+              <option value="AI Agent Builder">AI Agent Builder</option>
+              <option value="Creative Frontend Developer">Creative Frontend Developer</option>
+              <option value="Voice AI Conversation Designer">Voice AI Conversation Designer</option>
+              <option value="Automation QA & Reliability Engineer">Automation QA &amp; Reliability Engineer</option>
+              <option value="Growth & Funnel Automation Specialist">Growth &amp; Funnel Automation Specialist</option>
+              <option value="Future / general">Future role or general interest</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cr-portfolio">Portfolio / website / LinkedIn</label>
+          <input type="text" id="cr-portfolio" name="portfolio" maxlength="200" placeholder="https://…" />
+        </div>
+
+        <div class="form-group">
+          <label for="cr-tools">Tools you've used</label>
+          <input type="text" id="cr-tools" name="tools" maxlength="200" placeholder="e.g. Make, n8n, OpenAI, React, Airtable" />
+        </div>
+
+        <div class="form-group">
+          <label for="cr-best">The best automation, AI system, or interface you've built</label>
+          <textarea id="cr-best" name="best_work" maxlength="2000" placeholder="What was the problem, what did you build, and why did it work?"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="cr-demo">Link to a demo, Loom, GitHub, screenshots, or portfolio</label>
+          <input type="text" id="cr-demo" name="demo_link" maxlength="200" placeholder="https://… (the proof)" />
+        </div>
+
+        <div class="form-group">
+          <label for="cr-why">Why MATINSHAPE?</label>
+          <textarea id="cr-why" name="why" maxlength="1200" placeholder="What about calm, founder-led systems work appeals to you?"></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cr-availability">Availability</label>
+            <input type="text" id="cr-availability" name="availability" maxlength="80" placeholder="e.g. ~20 hrs/week, starting soon" />
+          </div>
+          <div class="form-group">
+            <label for="cr-rate">Expected hourly or project rate</label>
+            <input type="text" id="cr-rate" name="rate" maxlength="80" placeholder="e.g. $40/hr or per-project" />
+          </div>
+        </div>
+
+        <button type="submit" class="btn-gold magnetic" style="width:100%;">
+          <span>Submit Application</span>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="apply-hint">No generic resumes required. Show the clearest proof of how you think and build.</p>
+      </div>
+
+      <div class="form-success" role="status">
+        <div class="fs-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h3>Application received.</h3>
+        <p>Thanks for sending your work. Every application is read by a person — if there's a fit, Matin will reach out directly.</p>
+      </div>
+    </form>
+
+    <!-- Don't see your role -->
+    <div class="nocard reveal" style="max-width: 760px; margin: 40px auto 0;">
+      <h3>Don't see your role?</h3>
+      <p>
+        If you build clean systems, design useful interfaces, or understand how
+        businesses actually operate, send us your work anyway. We're always open
+        to rare people with taste and execution.
+      </p>
+      <a href="#apply" class="btn-ghost magnetic" data-apply-role="Future / general">
+        <span>Send Your Work</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-panel reveal">
+      <div class="cta-grid-bg" aria-hidden="true"></div>
+      <div class="cta-orb cta-orb-1" aria-hidden="true"></div>
+      <div class="cta-orb cta-orb-2" aria-hidden="true"></div>
+      <div class="cta-content">
+        <div class="cta-eyebrow">Small by design</div>
+        <h2>Help build the systems behind <span class="gold-word">calmer</span> businesses.</h2>
+        <p>
+          MATINSHAPE is small on purpose. Every person we work with should make
+          the work sharper, cleaner, and more useful.
+        </p>
+        <div class="cta-actions">
+          <a href="#apply" class="btn-gold magnetic">
+            <span>Apply Now</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="MATINSHAPE home">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#1C1917"/><path d="M16 4.8 18.3 7.6 16 10.4 13.7 7.6Z" fill="url(#msGold)"/><path d="M7.5 24.5V13.8L16 21.3l8.5-7.5V24.5" fill="none" stroke="url(#msGold)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="wm-text">MATIN<span class="wm-gold">SHAPE</span></span>
+        </a>
+        <p>A founder-led AI automation studio. We build the quiet machinery behind exceptional businesses.</p>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="about.html#founder">The founder</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="login.html" title="Private client access">Client Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@matinshape.com">info@matinshape.com</a></li>
+          <li><a href="contact.html">Book a call</a></li>
+          <li><a href="contact.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-wordmark" aria-hidden="true">MATINSHAPE</div>
+
+    <div class="footer-bottom">
+      <span>© 2026 MATINSHAPE Automation Studio. All rights reserved.</span>
+      <span class="footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/observe.js"></script>
+<script src="assets/cookies.js"></script>
+<script src="assets/main.js"></script>
+<script src="assets/careers.js"></script>
+</body>
+</html>
