@@ -1,4 +1,4 @@
-/* MATIN SHAPE — contact form handler (Cloudflare Pages Function)
+/* MATINSHAPE — contact form handler (Cloudflare Pages Function)
    POST /api/contact  →  validates the submission, then emails it via Resend.
    Required secrets/vars (set in Cloudflare Pages → Settings → Environment variables):
      RESEND_API_KEY   secret, from https://resend.com/api-keys
